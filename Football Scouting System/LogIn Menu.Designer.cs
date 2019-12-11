@@ -1,4 +1,4 @@
-﻿namespace Football_Management_System
+﻿namespace Football_Scouting_System
 {
     partial class Form1
     {
