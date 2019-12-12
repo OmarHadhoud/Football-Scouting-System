@@ -43,7 +43,7 @@
             this.addLeagueBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addLeagueBtn.Location = new System.Drawing.Point(53, 59);
             this.addLeagueBtn.Name = "addLeagueBtn";
-            this.addLeagueBtn.Size = new System.Drawing.Size(145, 83);
+            this.addLeagueBtn.Size = new System.Drawing.Size(157, 83);
             this.addLeagueBtn.TabIndex = 0;
             this.addLeagueBtn.Text = "Add League";
             this.addLeagueBtn.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             this.addClubBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addClubBtn.Location = new System.Drawing.Point(340, 59);
             this.addClubBtn.Name = "addClubBtn";
-            this.addClubBtn.Size = new System.Drawing.Size(145, 83);
+            this.addClubBtn.Size = new System.Drawing.Size(157, 83);
             this.addClubBtn.TabIndex = 1;
             this.addClubBtn.Text = "Add Club";
             this.addClubBtn.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.addStaffBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addStaffBtn.Location = new System.Drawing.Point(605, 59);
             this.addStaffBtn.Name = "addStaffBtn";
-            this.addStaffBtn.Size = new System.Drawing.Size(145, 83);
+            this.addStaffBtn.Size = new System.Drawing.Size(157, 83);
             this.addStaffBtn.TabIndex = 2;
             this.addStaffBtn.Text = "Add Staff";
             this.addStaffBtn.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             this.confRejSignBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confRejSignBtn.Location = new System.Drawing.Point(53, 255);
             this.confRejSignBtn.Name = "confRejSignBtn";
-            this.confRejSignBtn.Size = new System.Drawing.Size(145, 83);
+            this.confRejSignBtn.Size = new System.Drawing.Size(157, 83);
             this.confRejSignBtn.TabIndex = 3;
             this.confRejSignBtn.Text = "Confirm/Reject Signing";
             this.confRejSignBtn.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             this.retireBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.retireBtn.Location = new System.Drawing.Point(605, 255);
             this.retireBtn.Name = "retireBtn";
-            this.retireBtn.Size = new System.Drawing.Size(145, 83);
+            this.retireBtn.Size = new System.Drawing.Size(157, 83);
             this.retireBtn.TabIndex = 4;
             this.retireBtn.Text = "Retire Player/Staff";
             this.retireBtn.UseVisualStyleBackColor = true;
@@ -99,7 +99,7 @@
             this.logOutBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutBtn.Location = new System.Drawing.Point(633, 413);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(145, 25);
+            this.logOutBtn.Size = new System.Drawing.Size(157, 25);
             this.logOutBtn.TabIndex = 5;
             this.logOutBtn.Text = "Log out";
             this.logOutBtn.UseVisualStyleBackColor = false;
@@ -111,7 +111,7 @@
             this.changePasBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePasBtn.Location = new System.Drawing.Point(53, 407);
             this.changePasBtn.Name = "changePasBtn";
-            this.changePasBtn.Size = new System.Drawing.Size(160, 31);
+            this.changePasBtn.Size = new System.Drawing.Size(206, 31);
             this.changePasBtn.TabIndex = 6;
             this.changePasBtn.Text = "Change Password";
             this.changePasBtn.UseVisualStyleBackColor = false;
@@ -122,7 +122,7 @@
             this.AddClubToLeagueBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddClubToLeagueBtn.Location = new System.Drawing.Point(340, 255);
             this.AddClubToLeagueBtn.Name = "AddClubToLeagueBtn";
-            this.AddClubToLeagueBtn.Size = new System.Drawing.Size(145, 83);
+            this.AddClubToLeagueBtn.Size = new System.Drawing.Size(157, 83);
             this.AddClubToLeagueBtn.TabIndex = 7;
             this.AddClubToLeagueBtn.Text = "Add Club To League";
             this.AddClubToLeagueBtn.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(826, 459);
             this.Controls.Add(this.AddClubToLeagueBtn);
             this.Controls.Add(this.changePasBtn);
             this.Controls.Add(this.logOutBtn);
