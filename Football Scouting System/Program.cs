@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Football_Management_System
+namespace Football_Scouting_System
 {
     static class Program
     {
