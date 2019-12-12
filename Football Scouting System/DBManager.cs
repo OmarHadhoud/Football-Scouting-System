@@ -47,7 +47,7 @@ namespace Football_Scouting_System
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return 0;
+                throw ex;
             }
         }
 

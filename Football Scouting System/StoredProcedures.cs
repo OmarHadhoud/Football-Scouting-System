@@ -7,7 +7,7 @@ namespace Football_Scouting_System
 {
     public class StoredProcedures
     {
-        
+        public static string InsertLeague = "insertLeague";
         
     }
 }
