@@ -99,7 +99,10 @@ namespace Football_Scouting_System
             Parameters.Add("@Name", _Name);
             Parameters.Add("@Abbreviation", _Abbv);
             Parameters.Add("@City", _City);
-            Parameters.Add("@LeagueName", _LeagueName);
+            if (_LeagueName == "-1")
+                Parameters.Add("LeagueName", null);
+            else
+                Parameters.Add("@LeagueName", _LeagueName);
             Parameters.Add("@League_EFAID", _FA_ID);
             Parameters.Add("@Foundation_Date", _FD);
             Parameters.Add("@Password", _Pass);
@@ -143,8 +146,14 @@ namespace Football_Scouting_System
             Parameters.Add("@Name", _Name);
             Parameters.Add("@Bdate", _Bdate);
             Parameters.Add("@Nationality", _Nationality);
-            Parameters.Add("@ClubID", _ClubID);
-            Parameters.Add("@AgentID", _AgentID);
+            if (_ClubID == -1)
+                Parameters.Add("@ClubID", null);
+            else
+                Parameters.Add("@ClubID", _ClubID);
+            if (_AgentID == -1)
+                Parameters.Add("AgentID", null);
+            else
+                Parameters.Add("@AgentID", _AgentID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
@@ -201,6 +210,13 @@ namespace Football_Scouting_System
             Parameters.Add("@password", _Password);
             Parameters.Add("@ClubID", _ClubID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public DataTable GetAgents()
+        {
+            string StoredProcedureName = StoredProcedures.GetAgents;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
         }
 
 

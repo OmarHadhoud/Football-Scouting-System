@@ -36,6 +36,7 @@ namespace Football_Scouting_System.FA
                 string Abbv = GetClubAbbv();
                 string City = GetClubCity();
                 string LeagueName = Convert.ToString(comboBox1.SelectedValue);
+                if (comboBox1.SelectedValue == null) LeagueName = "-1";
                 DateTime FoundDate = GetClubFD();
                 string Pass = GetClubPass();
                 controllerobj.insertClub(ID, Name, Abbv, City, LeagueName, ParentForm_.GetFA_ID(), FoundDate, Pass);

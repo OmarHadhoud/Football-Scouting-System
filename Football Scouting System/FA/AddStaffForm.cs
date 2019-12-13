@@ -14,12 +14,14 @@ namespace Football_Scouting_System.FA
     {
         private FAHomeScreen ParentForm_;
         Controller controllerobj;
+        int FA_ID;
 
         public AddStaffForm(FAHomeScreen _ParentForm)
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
             controllerobj = new Controller();
+            FA_ID = ParentForm_.GetFA_ID();
         }
 
         private void AddStaffForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -52,6 +54,12 @@ namespace Football_Scouting_System.FA
         private void addScoutBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Getters
+        public int GetFA_ID()
+        {
+            return FA_ID;
         }
     }
 }
