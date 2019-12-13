@@ -271,6 +271,9 @@
     <EmbeddedResource Include="FA\AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddCoachForm.resx">
+      <DependentUpon>AddCoachForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FA\AddFa.resx">
       <DependentUpon>AddFa.cs</DependentUpon>
     </EmbeddedResource>

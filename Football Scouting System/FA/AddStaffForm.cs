@@ -38,7 +38,9 @@ namespace Football_Scouting_System.FA
 
         private void addCoachBtn_Click(object sender, EventArgs e)
         {
-
+            AddCoachForm acf = new AddCoachForm(this);
+            this.Hide();
+            acf.Show();
         }
 
         private void addAgentBtn_Click(object sender, EventArgs e)

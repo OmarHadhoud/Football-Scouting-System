@@ -165,7 +165,10 @@ namespace Football_Scouting_System
             Parameters.Add("@CID", _CID);
             Parameters.Add("@Name", _Name);
             Parameters.Add("@Bdate", _Bdate);
-            Parameters.Add("@ClubID", _ClubID);
+            if (_ClubID == -1)
+                Parameters.Add("@ClubID", null);
+            else
+                Parameters.Add("@ClubID", _ClubID);
             Parameters.Add("@LicenseNumber", _LicenseNumber);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
