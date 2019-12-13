@@ -7,6 +7,8 @@ namespace Football_Scouting_System
 {
     public class StoredProcedures
     {
+        //FA related procedures
+        public static string InsertFA = "InsertFA";
         //League related procedures
         public static string InsertLeague = "insertLeague";
         public static string GetLeagues = "GetLeagues";
