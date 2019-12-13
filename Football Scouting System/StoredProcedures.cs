@@ -20,5 +20,12 @@ namespace Football_Scouting_System
         public static string InsertClub = "InsertClub";
         public static string GetClubs = "GetClubs";
         public static string UpdateClubLeague = "UpdateClubLeague";
+        //Staff related
+        public static string AddManager = "AddManager";
+        public static string AddScout = "AddScout";
+        public static string AddJournalist = "AddJournalist";
+        public static string AddAgent = "AddAgent";
+        public static string AddCoach = "AddCoach";
+
     }
 }

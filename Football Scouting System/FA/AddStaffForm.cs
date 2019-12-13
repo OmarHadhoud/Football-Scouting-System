@@ -27,5 +27,32 @@ namespace Football_Scouting_System.FA
         {
             ParentForm_.Show();
         }
+
+        private void addManagerBtn_Click(object sender, EventArgs e)
+        {
+            AddManagerForm amf = new AddManagerForm(this);
+            this.Hide();
+            amf.Show();
+        }
+
+        private void addCoachBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addAgentBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addJournalistBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addScoutBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

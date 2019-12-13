@@ -114,11 +114,23 @@
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="FA\AddAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddAgentForm.Designer.cs">
+      <DependentUpon>AddAgentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FA\AddClubForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FA\AddClubForm.Designer.cs">
       <DependentUpon>AddClubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FA\AddCoachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddCoachForm.Designer.cs">
+      <DependentUpon>AddCoachForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FA\AddFa.cs">
       <SubType>Form</SubType>
@@ -126,11 +138,29 @@
     <Compile Include="FA\AddFa.Designer.cs">
       <DependentUpon>AddFa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FA\AddJournalistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddJournalistForm.Designer.cs">
+      <DependentUpon>AddJournalistForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FA\AddLeagueForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FA\AddLeagueForm.Designer.cs">
       <DependentUpon>AddLeagueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FA\AddManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddManagerForm.Designer.cs">
+      <DependentUpon>AddManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FA\AddScoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddScoutForm.Designer.cs">
+      <DependentUpon>AddScoutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FA\AddStaffForm.cs">
       <SubType>Form</SubType>
@@ -243,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FA\AddLeagueForm.resx">
       <DependentUpon>AddLeagueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddManagerForm.resx">
+      <DependentUpon>AddManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FA\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>

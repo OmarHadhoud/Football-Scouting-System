@@ -123,5 +123,8 @@ namespace Football_Scouting_System
             Parameters.Add("@LeagueName", _LeagueName);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        //Staff related functions
+
     }
 }
