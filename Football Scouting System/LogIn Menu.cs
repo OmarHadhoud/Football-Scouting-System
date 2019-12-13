@@ -34,7 +34,13 @@ namespace Football_Scouting_System
                 f.Show();
                 this.Hide();
             }
-            else if (userNameTxtbox.Text == "3")
+			else if (userNameTxtbox.Text == "2")
+			{
+				Club.ClubHomeScreen C = new Club.ClubHomeScreen(this);
+				C.Show();
+				this.Hide();
+			}
+			else if (userNameTxtbox.Text == "3")
             {
                 Scout.ScoutHomeScreen s = new Scout.ScoutHomeScreen(this);
                 s.Show();
