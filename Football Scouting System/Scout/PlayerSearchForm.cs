@@ -43,7 +43,7 @@ namespace Football_Scouting_System.Scout
         private void updatePlayersView()
         {
            
-            dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex, SearchBar.Text);
+            dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex+1, SearchBar.Text);
 
             PlayerDataGridView.DataSource = dt;
             PlayerDataGridView.Refresh();
