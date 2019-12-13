@@ -43,7 +43,9 @@ namespace Football_Scouting_System.FA
 
         private void addAgentBtn_Click(object sender, EventArgs e)
         {
-
+            AddAgentForm agf = new AddAgentForm(this);
+            this.Hide();
+            agf.Show();
         }
 
         private void addJournalistBtn_Click(object sender, EventArgs e)

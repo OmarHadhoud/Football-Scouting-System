@@ -265,6 +265,9 @@
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddAgentForm.resx">
+      <DependentUpon>AddAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FA\AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </EmbeddedResource>

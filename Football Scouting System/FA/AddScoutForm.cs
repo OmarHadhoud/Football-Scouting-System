@@ -24,9 +24,6 @@ namespace Football_Scouting_System.FA
             UpdateComboBoxes();
         }
 
-        
-
-        
 
         private void addScoutBtn_Click(object sender, EventArgs e)
         {

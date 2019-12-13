@@ -28,35 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clbComboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.addScoutBtn = new System.Windows.Forms.Button();
             this.nameTxtBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordTxtBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.clbComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // clbComboBox
-            // 
-            this.clbComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.clbComboBox.FormattingEnabled = true;
-            this.clbComboBox.Location = new System.Drawing.Point(160, 139);
-            this.clbComboBox.Name = "clbComboBox";
-            this.clbComboBox.Size = new System.Drawing.Size(121, 24);
-            this.clbComboBox.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(62, 175);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 24);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Password:";
             // 
             // dateTimePicker1
             // 
@@ -94,16 +75,6 @@
             this.nameTxtBox.Size = new System.Drawing.Size(153, 22);
             this.nameTxtBox.TabIndex = 24;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 24);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Club:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -122,6 +93,35 @@
             this.passwordTxtBox.PasswordChar = '*';
             this.passwordTxtBox.Size = new System.Drawing.Size(153, 22);
             this.passwordTxtBox.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(62, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 24);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Password:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(62, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 24);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Club:";
+            // 
+            // clbComboBox
+            // 
+            this.clbComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.clbComboBox.FormattingEnabled = true;
+            this.clbComboBox.Location = new System.Drawing.Point(160, 139);
+            this.clbComboBox.Name = "clbComboBox";
+            this.clbComboBox.Size = new System.Drawing.Size(121, 24);
+            this.clbComboBox.TabIndex = 30;
             // 
             // AddScoutForm
             // 
@@ -149,14 +149,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox clbComboBox;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addScoutBtn;
         private System.Windows.Forms.TextBox nameTxtBox;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox passwordTxtBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox clbComboBox;
     }
 }
