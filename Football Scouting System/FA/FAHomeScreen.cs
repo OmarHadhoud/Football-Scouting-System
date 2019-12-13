@@ -61,15 +61,19 @@ namespace Football_Scouting_System.FA
 
         }
 
+        private void addFaBtn_Click(object sender, EventArgs e)
+        {
+            AddFa aff = new AddFa(this);
+            this.Hide();
+            aff.Show();
+        }
+
         private void FAHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             ParentForm_.Show(); 
         }
 
-        private void addFaBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         //Getters
         public int GetFA_ID()
@@ -77,6 +81,10 @@ namespace Football_Scouting_System.FA
             return FA_ID;
         }
 
-        
+        private void FAHomeScreen_Load(object sender, EventArgs e)
+        {
+            if(FA_ID!=1)
+                addFaBtn.Enabled = false;
+        }
     }
 }

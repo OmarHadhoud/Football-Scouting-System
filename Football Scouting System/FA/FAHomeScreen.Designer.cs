@@ -165,6 +165,7 @@
             this.Name = "FAHomeScreen";
             this.Text = "FAHomeScreen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FAHomeScreen_FormClosed);
+            this.Load += new System.EventHandler(this.FAHomeScreen_Load);
             this.ResumeLayout(false);
 
         }
