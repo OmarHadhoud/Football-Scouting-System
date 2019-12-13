@@ -44,6 +44,7 @@ namespace Football_Scouting_System
         public static string GetCountOFClubs = "GetCountOFClubs";
         public static string GetCountOfAgents = "GetCountOfAgents";
         public static string GetCountOfManagers = "GetCountOfManagers";
+        public static string GetCountOfLicenseNumbers = "GetCountOfLicenseNumbers";
 
     }
 }

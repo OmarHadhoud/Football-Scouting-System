@@ -137,13 +137,71 @@ namespace Football_Scouting_System
         public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
         {
 
-            string StoredProcedureName = StoredProcedures.AddJournalist;
+            string StoredProcedureName = StoredProcedures.AddManager;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            //Parameters.Add("@EfaID", _FA_ID);
+            Parameters.Add("@MID", _MID);
             Parameters.Add("@Name", _Name);
+            Parameters.Add("@Bdate", _Bdate);
+            Parameters.Add("@Nationality", _Nationality);
+            Parameters.Add("@ClubID", _ClubID);
+            Parameters.Add("@AgentID", _AgentID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+        public int AddCoach(int _CID, string _Name, DateTime _Bdate, int _ClubID, int _LicenseNumber)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddCoach;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", _CID);
+            Parameters.Add("@Name", _Name);
+            Parameters.Add("@Bdate", _Bdate);
+            Parameters.Add("@ClubID", _ClubID);
+            Parameters.Add("@LicenseNumber", _LicenseNumber);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+        public int AddJournalist(int _JID, string _Name, DateTime _Bdate, string _Password)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddJournalist;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@JID", _JID);
+            Parameters.Add("@Name", _Name);
+            Parameters.Add("@Bdate", _Bdate);
+            Parameters.Add("@Password", _Password);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+        public int AddAgent(int _AID, string _Name, DateTime _Bdate, int _LicenseNumber)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddAgent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AID", _AID);
+            Parameters.Add("@Name", _Name);
+            Parameters.Add("@Bdate", _Bdate);
+            Parameters.Add("@LicenseNumber", _LicenseNumber);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        
+
+        public int AddScout(int _SID, string _Name, DateTime _Bdate, int _Endorses, string _Password, int _ClubID, int _LicenseNumber)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddScout;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", _SID);
+            Parameters.Add("@Name", _Name);
+            Parameters.Add("@Bdate", _Bdate);
+            Parameters.Add("@LicenseNumber", _LicenseNumber);
+            Parameters.Add("@Endorses", _Endorses);
+            Parameters.Add("@password", _Password);
+            Parameters.Add("@ClubID", _ClubID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
 
         //Counting functions
@@ -186,6 +244,12 @@ namespace Football_Scouting_System
         public int GetCountOfManagers()
         {
             string StoredProcedureName = StoredProcedures.GetCountOfManagers;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetCountOfLicenseNumbers()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfLicenseNumbers;
             return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
         }
 
