@@ -277,6 +277,9 @@
     <EmbeddedResource Include="FA\AddManagerForm.resx">
       <DependentUpon>AddManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddScoutForm.resx">
+      <DependentUpon>AddScoutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FA\AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>

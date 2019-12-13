@@ -53,7 +53,9 @@ namespace Football_Scouting_System.FA
 
         private void addScoutBtn_Click(object sender, EventArgs e)
         {
-
+            AddScoutForm asf = new AddScoutForm(this);
+            this.Hide();
+            asf.Show();
         }
 
         //Getters

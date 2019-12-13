@@ -27,6 +27,7 @@ namespace Football_Scouting_System
         public static string AddAgent = "AddAgent";
         public static string AddCoach = "AddCoach";
         public static string GetAgents = "GetAgents";
+        public static string AddLicense = "AddLicense";
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
 

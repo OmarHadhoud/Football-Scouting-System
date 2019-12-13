@@ -208,7 +208,19 @@ namespace Football_Scouting_System
             Parameters.Add("@LicenseNumber", _LicenseNumber);
             Parameters.Add("@Endorses", _Endorses);
             Parameters.Add("@password", _Password);
-            Parameters.Add("@ClubID", _ClubID);
+            if (_ClubID == -1)
+                Parameters.Add("@ClubID", null);
+            else
+                Parameters.Add("@ClubID", _ClubID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int AddLicense(int _LN)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddLicense;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@LN", _LN);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
