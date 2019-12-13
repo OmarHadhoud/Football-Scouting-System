@@ -14,11 +14,13 @@ namespace Football_Scouting_System.Club
 	{
 		private Form ParentForm_;
 		Controller controllerobj;
-		public AddPlayer(Form _ParentForm)
+		int clubidd;
+		public AddPlayer(Form _ParentForm,int id)
 		{
 			InitializeComponent();
 			ParentForm_ = _ParentForm;
 			controllerobj = new Controller();
+			clubidd = id;
 
 		}
 		private void AddPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -42,12 +44,12 @@ namespace Football_Scouting_System.Club
 				string bplace = Getplayerbirthplace();
 				string nationality = Getplayernationality();
 				DateTime bdate = GetPlayerBD();
-				float height = getplayerheight();
+				// double height = getplayerheight();//to be modified
 				int games = getplayergames();
 				int minutes = getplayerminutes();
-				float rating = getplayerrating();
+				//double rating = getplayerrating();
 				string status = Getplayerstatus();
-				controllerobj.insertPlayer(FName,MName,LName,bplace,nationality,bdate,height,games,minutes,rating,status,ID);
+				controllerobj.insertPlayer(FName,MName,LName,bplace,nationality,bdate,2.3,games,minutes,6.5,status,ID,clubidd);
 				MessageBox.Show("Player Successfully Inserted!");
 				this.Close();
 			}
@@ -143,7 +145,7 @@ namespace Football_Scouting_System.Club
 			return fd;
 		}
 
-		private float getplayerheight()
+		private double getplayerheight()
 		{
 			StringBuilder err = new StringBuilder();
 			Object data = ValidationClass.isPositiveInteger(heighttext.Text, err); //choose the textbox to be validated
@@ -154,7 +156,7 @@ namespace Football_Scouting_System.Club
 			}
 			else
 			{
-				float x = (float)data;
+				double x = (double)data;
 				return x;
 
 			}
@@ -172,7 +174,7 @@ namespace Football_Scouting_System.Club
 			}
 			else
 			{
-				int x = (int)data;
+				int x = Convert.ToInt32(gamesplayedtext.Text);
 				return x;
 
 			}
@@ -197,7 +199,7 @@ namespace Football_Scouting_System.Club
 			// return 0;
 		}
 
-		private float getplayerrating()
+		private double getplayerrating()
 		{
 			StringBuilder err = new StringBuilder();
 			Object data = ValidationClass.isPositiveInteger(ratingtext.Text, err); //choose the textbox to be validated
@@ -208,7 +210,7 @@ namespace Football_Scouting_System.Club
 			}
 			else
 			{
-				float x = (float)data;
+				double x = (double)data;
 				return x;
 
 			}

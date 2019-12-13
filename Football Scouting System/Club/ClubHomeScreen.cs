@@ -32,7 +32,7 @@ namespace Football_Scouting_System.Club
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			AddPlayer A = new AddPlayer(this);
+			AddPlayer A = new AddPlayer(this,clubID);
 			this.Hide();
 			A.Show();
 		}

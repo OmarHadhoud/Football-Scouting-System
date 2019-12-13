@@ -368,11 +368,24 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 		//players
-		public int insertPlayer(string _fname,string _mname,string _lname,string _bplace,string _nationality,DateTime _bdate,float _height,int _games,int _minutes,float _rating,string _status,int _id)
+		public int insertPlayer(string _fname,string _mname,string _lname,string _bplace,string _nationality,DateTime _bdate,double _height,int _games,int _minutes,double _rating,string _status,int _id,int _clubid)
 		{
 			string StoredProcedureName = StoredProcedures.InsertPlayer;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();
-			//Parameters.Add("@FA_ID", _FA_ID);
+			Parameters.Add("@fname", _fname);
+			Parameters.Add("@mname", _mname);
+			Parameters.Add("@lname", _lname);
+			Parameters.Add("@bdate", _bdate);
+			Parameters.Add("@bplace", _bplace);
+			Parameters.Add("@nationality", _nationality);
+			Parameters.Add("@height", _height);
+			Parameters.Add("@status", _status);
+			Parameters.Add("@games", _games);
+			Parameters.Add("@minutes", _minutes);
+			Parameters.Add("@rating", _rating);
+			Parameters.Add("@id", _id);
+			Parameters.Add("@clubid", _clubid);
+
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 		public DataTable GetPlayers(int _Club_ID)
