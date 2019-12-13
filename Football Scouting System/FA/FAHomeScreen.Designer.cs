@@ -36,6 +36,7 @@
             this.logOutBtn = new System.Windows.Forms.Button();
             this.changePasBtn = new System.Windows.Forms.Button();
             this.AddClubToLeagueBtn = new System.Windows.Forms.Button();
+            this.addFaBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addLeagueBtn
@@ -133,12 +134,25 @@
             this.AddClubToLeagueBtn.Text = "Add Club To League";
             this.AddClubToLeagueBtn.UseVisualStyleBackColor = false;
             // 
+            // addFaBtn
+            // 
+            this.addFaBtn.BackColor = System.Drawing.Color.Orange;
+            this.addFaBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addFaBtn.Location = new System.Drawing.Point(633, 12);
+            this.addFaBtn.Name = "addFaBtn";
+            this.addFaBtn.Size = new System.Drawing.Size(157, 25);
+            this.addFaBtn.TabIndex = 8;
+            this.addFaBtn.Text = "Add Another FA";
+            this.addFaBtn.UseVisualStyleBackColor = false;
+            this.addFaBtn.Click += new System.EventHandler(this.addFaBtn_Click);
+            // 
             // FAHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(826, 459);
+            this.Controls.Add(this.addFaBtn);
             this.Controls.Add(this.AddClubToLeagueBtn);
             this.Controls.Add(this.changePasBtn);
             this.Controls.Add(this.logOutBtn);
@@ -165,5 +179,6 @@
         private System.Windows.Forms.Button logOutBtn;
         private System.Windows.Forms.Button changePasBtn;
         private System.Windows.Forms.Button AddClubToLeagueBtn;
+        private System.Windows.Forms.Button addFaBtn;
     }
 }

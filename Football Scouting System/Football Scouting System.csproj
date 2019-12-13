@@ -54,6 +54,12 @@
     <Compile Include="FA\AddClubForm.Designer.cs">
       <DependentUpon>AddClubForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FA\AddFa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\AddFa.Designer.cs">
+      <DependentUpon>AddFa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FA\AddLeagueForm.cs">
       <SubType>Form</SubType>
     </Compile>

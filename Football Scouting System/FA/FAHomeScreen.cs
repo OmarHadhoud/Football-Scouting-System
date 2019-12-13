@@ -66,10 +66,17 @@ namespace Football_Scouting_System.FA
             ParentForm_.Show(); 
         }
 
+        private void addFaBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //Getters
         public int GetFA_ID()
         {
             return FA_ID;
         }
+
+        
     }
 }
