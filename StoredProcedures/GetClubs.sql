@@ -18,19 +18,15 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE insertClub
-	-- Add the parameters for the stored procedure here
-	@CID	int	,	
-	@Name	varchar(50)	,
-	@Abbreviation	varchar(3) 	,
-	@City	varchar(50)	= NULL,
-	@LeagueName	varchar(50)	= NULL,
-	@League_EFAID	int	= NULL,
-	@Foundation_Date	date	= NULL,
-	@Password	varchar(50)	
+CREATE PROCEDURE GetClubs
+	@FA_ID int  = null
 AS
 BEGIN
-INSERT INTO Club(CID,Name,Abbreviation, City, LeagueName, League_EFAID, Foundation_Date, Password)
-Values (@CID, @Name, @Abbreviation, @City, @LeagueName, @League_EFAID, @Foundation_Date, @Password)
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	Select * From Club where League_EFAID = @FA_ID or League_EFAID = null 
 END
 GO
