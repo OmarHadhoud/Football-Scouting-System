@@ -62,7 +62,7 @@ namespace Football_Scouting_System
         
         public int InsertTelNum(int _FA_ID, string _TelNum)
         {
-            string StoredProcedureName = StoredProcedures.UpdateFAAddress;
+            string StoredProcedureName = StoredProcedures.AddFATelNum;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@FA_ID", _FA_ID);
             Parameters.Add("@TelNum", _TelNum);

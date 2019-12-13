@@ -52,6 +52,7 @@
             // emailTxtBox
             // 
             this.emailTxtBox.Location = new System.Drawing.Point(176, 50);
+            this.emailTxtBox.MaxLength = 50;
             this.emailTxtBox.Name = "emailTxtBox";
             this.emailTxtBox.Size = new System.Drawing.Size(194, 22);
             this.emailTxtBox.TabIndex = 1;
@@ -59,6 +60,7 @@
             // addressTxtBox
             // 
             this.addressTxtBox.Location = new System.Drawing.Point(176, 131);
+            this.addressTxtBox.MaxLength = 50;
             this.addressTxtBox.Name = "addressTxtBox";
             this.addressTxtBox.Size = new System.Drawing.Size(194, 22);
             this.addressTxtBox.TabIndex = 3;
@@ -76,6 +78,7 @@
             // telNumTxtBox
             // 
             this.telNumTxtBox.Location = new System.Drawing.Point(176, 209);
+            this.telNumTxtBox.MaxLength = 15;
             this.telNumTxtBox.Name = "telNumTxtBox";
             this.telNumTxtBox.Size = new System.Drawing.Size(194, 22);
             this.telNumTxtBox.TabIndex = 5;
@@ -98,6 +101,7 @@
             this.emailBtn.TabIndex = 6;
             this.emailBtn.Text = "Update";
             this.emailBtn.UseVisualStyleBackColor = true;
+            this.emailBtn.Click += new System.EventHandler(this.emailBtn_Click);
             // 
             // addressBtn
             // 
@@ -107,6 +111,7 @@
             this.addressBtn.TabIndex = 7;
             this.addressBtn.Text = "Update";
             this.addressBtn.UseVisualStyleBackColor = true;
+            this.addressBtn.Click += new System.EventHandler(this.addressBtn_Click);
             // 
             // telNumBtn
             // 
@@ -116,6 +121,7 @@
             this.telNumBtn.TabIndex = 8;
             this.telNumBtn.Text = "Add";
             this.telNumBtn.UseVisualStyleBackColor = true;
+            this.telNumBtn.Click += new System.EventHandler(this.telNumBtn_Click);
             // 
             // UpdateFA
             // 
@@ -134,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UpdateFA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateFA";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UpdateFA_FormClosed);
             this.ResumeLayout(false);
