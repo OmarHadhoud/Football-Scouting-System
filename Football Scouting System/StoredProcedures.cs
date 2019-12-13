@@ -17,5 +17,18 @@ namespace Football_Scouting_System
         public static string InsertClub = "InsertClub";
         public static string GetClubs = "GetClubs";
         public static string UpdateClubLeague = "UpdateClubLeague";
-    }
+		//Player related procedures
+		public static string InsertPlayer = "Addplayerbeta";
+		public static string GetPlayerclub = "Getplayerclubid";
+		public static string UpdatePlayerStatus = "updatestatus";
+
+		//news
+		public static string InsertNews = "insertnews";
+
+		//scout
+		public static string EndorseScout = "Endorsenonsignedscout";
+
+
+
+	}
 }

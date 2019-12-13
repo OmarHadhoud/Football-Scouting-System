@@ -36,8 +36,6 @@
 			this.playerstatusbutt = new System.Windows.Forms.Button();
 			this.Transfersbutton = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
-			this.Stadiumbutt = new System.Windows.Forms.Button();
-			this.Leaguebutton = new System.Windows.Forms.Button();
 			this.LogoutButt = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -103,7 +101,7 @@
 			// 
 			// Transfersbutton
 			// 
-			this.Transfersbutton.Location = new System.Drawing.Point(44, 175);
+			this.Transfersbutton.Location = new System.Drawing.Point(220, 175);
 			this.Transfersbutton.Name = "Transfersbutton";
 			this.Transfersbutton.Size = new System.Drawing.Size(170, 60);
 			this.Transfersbutton.TabIndex = 6;
@@ -113,33 +111,13 @@
 			// 
 			// button8
 			// 
-			this.button8.Location = new System.Drawing.Point(220, 175);
+			this.button8.Location = new System.Drawing.Point(396, 175);
 			this.button8.Name = "button8";
 			this.button8.Size = new System.Drawing.Size(170, 60);
 			this.button8.TabIndex = 7;
 			this.button8.Text = "Endorse non-signed scouts";
 			this.button8.UseVisualStyleBackColor = true;
 			this.button8.Click += new System.EventHandler(this.button8_Click);
-			// 
-			// Stadiumbutt
-			// 
-			this.Stadiumbutt.Location = new System.Drawing.Point(396, 175);
-			this.Stadiumbutt.Name = "Stadiumbutt";
-			this.Stadiumbutt.Size = new System.Drawing.Size(170, 60);
-			this.Stadiumbutt.TabIndex = 8;
-			this.Stadiumbutt.Text = "Edit Stadium";
-			this.Stadiumbutt.UseVisualStyleBackColor = true;
-			this.Stadiumbutt.Click += new System.EventHandler(this.Stadiumbutt_Click);
-			// 
-			// Leaguebutton
-			// 
-			this.Leaguebutton.Location = new System.Drawing.Point(572, 175);
-			this.Leaguebutton.Name = "Leaguebutton";
-			this.Leaguebutton.Size = new System.Drawing.Size(170, 60);
-			this.Leaguebutton.TabIndex = 9;
-			this.Leaguebutton.Text = "Check league status";
-			this.Leaguebutton.UseVisualStyleBackColor = true;
-			this.Leaguebutton.Click += new System.EventHandler(this.Leaguebutton_Click);
 			// 
 			// LogoutButt
 			// 
@@ -159,8 +137,6 @@
 			this.BackColor = System.Drawing.Color.DarkGreen;
 			this.ClientSize = new System.Drawing.Size(800, 322);
 			this.Controls.Add(this.LogoutButt);
-			this.Controls.Add(this.Leaguebutton);
-			this.Controls.Add(this.Stadiumbutt);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.Transfersbutton);
 			this.Controls.Add(this.playerstatusbutt);
@@ -191,8 +167,6 @@
 		private System.Windows.Forms.Button playerstatusbutt;
 		private System.Windows.Forms.Button Transfersbutton;
 		private System.Windows.Forms.Button button8;
-		private System.Windows.Forms.Button Stadiumbutt;
-		private System.Windows.Forms.Button Leaguebutton;
 		private System.Windows.Forms.Button LogoutButt;
 	}
 }

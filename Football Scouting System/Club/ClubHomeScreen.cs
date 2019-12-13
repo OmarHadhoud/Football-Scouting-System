@@ -13,10 +13,13 @@ namespace Football_Scouting_System.Club
 	public partial class ClubHomeScreen : Form
 	{
 		private Form ParentForm_;
-		public ClubHomeScreen(Form _ParentForm)
+		int clubID;
+		public ClubHomeScreen(Form _ParentForm,int id)
 		{
 			InitializeComponent();
 			ParentForm_ = _ParentForm;
+			clubID = id;
+			
 		}
 		private void ClubHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
 		{
@@ -57,14 +60,15 @@ namespace Football_Scouting_System.Club
 
 		private void Postbutton_Click(object sender, EventArgs e)
 		{
-			Postnews P = new Postnews(this);
+			
+			Postnews P = new Postnews(this,clubID);
 			this.Hide();
 			P.Show();
 		}
 
 		private void playerstatusbutt_Click(object sender, EventArgs e)
 		{
-			Postplayerstatus P = new Postplayerstatus(this);
+			Postplayerstatus P = new Postplayerstatus(this,clubID);
 			this.Hide();
 			P.Show();
 		}

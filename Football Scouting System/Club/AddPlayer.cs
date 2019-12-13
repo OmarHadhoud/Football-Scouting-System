@@ -12,11 +12,13 @@ namespace Football_Scouting_System.Club
 {
 	public partial class AddPlayer : Form
 	{
-		Form ParentForm_;
+		private Form ParentForm_;
+		Controller controllerobj;
 		public AddPlayer(Form _ParentForm)
 		{
 			InitializeComponent();
 			ParentForm_ = _ParentForm;
+			controllerobj = new Controller();
 
 		}
 		private void AddPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -25,6 +27,31 @@ namespace Football_Scouting_System.Club
 		}
 		private void AddPlayer_Load(object sender, EventArgs e)
 		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			/*try
+			{
+				int ID = GetClubId();
+				string FName = GetClubName();
+				string Abbv = GetClubAbbv();
+				string City = GetClubCity();
+				string LeagueName = Convert.ToString(comboBox1.SelectedValue);
+				DateTime FoundDate = GetClubFD();
+				string Pass = GetClubPass();
+				controllerobj.insertClub(ID, Name, Abbv, City, LeagueName, ParentForm_.GetFA_ID(), FoundDate, Pass);
+				MessageBox.Show("Club added!");
+				this.Close();
+			}
+			catch (System.Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			controllerobj.insertPlayer();
+			MessageBox.Show("Player Successfully Inserted!");
+			this.Close();*/
 
 		}
 	}

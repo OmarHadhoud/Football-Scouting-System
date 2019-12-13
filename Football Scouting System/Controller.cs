@@ -33,6 +33,8 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+		
+
         public int UpdateFAPassword(int _FA_ID, string _Password)
         {
             string StoredProcedureName = StoredProcedures.UpdateFAPassword;
@@ -94,5 +96,53 @@ namespace Football_Scouting_System
             Parameters.Add("@LeagueName", _LeagueName);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-    }
+		//News
+		
+
+		public int insertnews(int _no, int _id,DateTime _foundationdate,string _title,string _text)
+		{
+			string StoredProcedureName = StoredProcedures.InsertNews;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@newsno",_no);
+			Parameters.Add("@id", _id);
+			Parameters.Add("@date", _foundationdate);
+			Parameters.Add("@tit", _title);
+			Parameters.Add("@text", _text);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+		//players
+		public int insertPlayer()
+		{
+			string StoredProcedureName = StoredProcedures.InsertPlayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			//Parameters.Add("@FA_ID", _FA_ID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+		public DataTable GetPlayers(int _Club_ID)
+		{
+			string StoredProcedureName = StoredProcedures.GetPlayerclub;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@CID", _Club_ID);
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+		public int UpdateStatus(string _status,int _playerID)
+		{
+			string StoredProcedureName = StoredProcedures.UpdatePlayerStatus;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@stat", _status);
+			Parameters.Add("@ID", _playerID);
+
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+		//scout
+		public int Endorsenonsigned(int _ID)
+		{
+			string StoredProcedureName = StoredProcedures.EndorseScout;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@id", _ID);
+
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+	}
 }
