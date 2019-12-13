@@ -29,7 +29,9 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = GetClubId();
+                int ID = controllerobj.GetCountOFClubs()+100+1;       
+                if (ID >=2000)
+                    throw new System.Exception("You have reached the maximum number of Clubs!");
                 string Name = GetClubName();
                 string Abbv = GetClubAbbv();
                 string City = GetClubCity();
@@ -38,6 +40,7 @@ namespace Football_Scouting_System.FA
                 string Pass = GetClubPass();
                 controllerobj.insertClub(ID, Name, Abbv, City, LeagueName, ParentForm_.GetFA_ID(), FoundDate, Pass);
                 MessageBox.Show("Club added!");
+                MessageBox.Show("The ID of the Club (use it to sign in) is " + Convert.ToString(ID));
                 this.Close();
             }
             catch (System.Exception ex)
@@ -47,20 +50,7 @@ namespace Football_Scouting_System.FA
         }
 
         //To get Club data and validate it
-        private int GetClubId()
-        {
-            try
-            {
-                int id = Convert.ToInt32(clubIdTxtBox.Text);
-                if (id < 100 || id >= 2000)
-                    throw new System.Exception("Please enter the id between 100 and 2000!");
-                return id;
-            }
-            catch
-            {
-                throw new System.Exception("Please make sure you entered numbers only in ID!");
-            }
-        }
+        
 
         private string GetClubName()
         {
