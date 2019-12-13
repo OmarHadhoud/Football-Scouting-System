@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // SigningsForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "SigningsForm";
-            this.Text = "SigningsForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SigningsForm_FormClosed);
-            this.ResumeLayout(false);
+			this.SuspendLayout();
+			// 
+			// SigningsForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(700, 450);
+			this.Name = "SigningsForm";
+			this.Text = "SigningsForm";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SigningsForm_FormClosed);
+			this.Load += new System.EventHandler(this.SigningsForm_Load);
+			this.ResumeLayout(false);
 
         }
 

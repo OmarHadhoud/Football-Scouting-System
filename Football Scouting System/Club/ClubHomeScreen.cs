@@ -96,5 +96,10 @@ namespace Football_Scouting_System.Club
 			this.Hide();
 			C.Show();
 		}
+
+		private void LogoutButt_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
