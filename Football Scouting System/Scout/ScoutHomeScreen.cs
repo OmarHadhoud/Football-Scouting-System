@@ -64,5 +64,10 @@ namespace Football_Scouting_System.Scout
 		{
 
 		}
-	}
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }

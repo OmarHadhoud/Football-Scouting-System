@@ -48,5 +48,15 @@ namespace Football_Scouting_System.Scout
             PlayerDataGridView.DataSource = dt;
             PlayerDataGridView.Refresh();
         }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ViewStatsBtn_Click(object sender, EventArgs e)
+        {
+            // PlayerDataGridView.SelectedRows
+        }
     }
 }
