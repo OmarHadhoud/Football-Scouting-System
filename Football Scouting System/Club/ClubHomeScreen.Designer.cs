@@ -49,6 +49,7 @@
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Add Players";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Searchfreebutt
 			// 
@@ -58,6 +59,7 @@
 			this.Searchfreebutt.TabIndex = 1;
 			this.Searchfreebutt.Text = "Search for free players";
 			this.Searchfreebutt.UseVisualStyleBackColor = true;
+			this.Searchfreebutt.Click += new System.EventHandler(this.Searchfreebutt_Click);
 			// 
 			// button3
 			// 
@@ -67,6 +69,7 @@
 			this.button3.TabIndex = 2;
 			this.button3.Text = "Sign Staff\r\n(Coach/Scout/Agent)\r\n";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// Searchnonfree
 			// 
@@ -76,6 +79,7 @@
 			this.Searchnonfree.TabIndex = 3;
 			this.Searchnonfree.Text = "Search for non free players";
 			this.Searchnonfree.UseVisualStyleBackColor = true;
+			this.Searchnonfree.Click += new System.EventHandler(this.Searchnonfree_Click);
 			// 
 			// Postbutton
 			// 
@@ -85,6 +89,7 @@
 			this.Postbutton.TabIndex = 4;
 			this.Postbutton.Text = "Post official news";
 			this.Postbutton.UseVisualStyleBackColor = true;
+			this.Postbutton.Click += new System.EventHandler(this.Postbutton_Click);
 			// 
 			// playerstatusbutt
 			// 
@@ -94,6 +99,7 @@
 			this.playerstatusbutt.TabIndex = 5;
 			this.playerstatusbutt.Text = "Post player status";
 			this.playerstatusbutt.UseVisualStyleBackColor = true;
+			this.playerstatusbutt.Click += new System.EventHandler(this.playerstatusbutt_Click);
 			// 
 			// Transfersbutton
 			// 
@@ -101,8 +107,9 @@
 			this.Transfersbutton.Name = "Transfersbutton";
 			this.Transfersbutton.Size = new System.Drawing.Size(170, 60);
 			this.Transfersbutton.TabIndex = 6;
-			this.Transfersbutton.Text = "Transfers approached by another clubs";
+			this.Transfersbutton.Text = "Transfers approached by other clubs";
 			this.Transfersbutton.UseVisualStyleBackColor = true;
+			this.Transfersbutton.Click += new System.EventHandler(this.Transfersbutton_Click);
 			// 
 			// button8
 			// 
@@ -112,6 +119,7 @@
 			this.button8.TabIndex = 7;
 			this.button8.Text = "Endorse non-signed scouts";
 			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
 			// Stadiumbutt
 			// 
@@ -121,6 +129,7 @@
 			this.Stadiumbutt.TabIndex = 8;
 			this.Stadiumbutt.Text = "Edit Stadium";
 			this.Stadiumbutt.UseVisualStyleBackColor = true;
+			this.Stadiumbutt.Click += new System.EventHandler(this.Stadiumbutt_Click);
 			// 
 			// Leaguebutton
 			// 
@@ -130,6 +139,7 @@
 			this.Leaguebutton.TabIndex = 9;
 			this.Leaguebutton.Text = "Check league status";
 			this.Leaguebutton.UseVisualStyleBackColor = true;
+			this.Leaguebutton.Click += new System.EventHandler(this.Leaguebutton_Click);
 			// 
 			// LogoutButt
 			// 
@@ -159,6 +169,7 @@
 			this.Controls.Add(this.Searchfreebutt);
 			this.Controls.Add(this.button1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "ClubHomeScreen";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Welcome";
