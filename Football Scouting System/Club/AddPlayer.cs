@@ -54,5 +54,78 @@ namespace Football_Scouting_System.Club
 			this.Close();*/
 
 		}
+		//Get and validate players data
+		private string GetplayerfirstName()
+		{
+			string Name = fnametext.Text;
+			if (Name == "")
+				throw new System.Exception("Please enter the player's first name!");
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the player name!");
+			}
+			return Name;
+		}
+
+		private string GetplayermiddleName()
+		{
+			string Name = fnametext.Text;
+			/*if (Name == "")
+				throw new System.Exception("Please enter the player's middle name!");*/
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the player name!");
+			}
+			return Name;
+		}
+
+		private string GetplayerlastName()
+		{
+			string Name = fnametext.Text;
+			if (Name == "")
+				throw new System.Exception("Please enter the player's last name!");
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the player name!");
+			}
+			return Name;
+		}
+
+		private string Getplayerbirthplace()
+		{
+			string Name = fnametext.Text;
+			/*if (Name == "")
+				throw new System.Exception("Please enter the player's birthplace!");*/
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the player's birthplace!");
+			}
+			return Name;
+		}
+
+		private string Getplayernationality()
+		{
+			string Name = fnametext.Text;
+			if (Name == "")
+				throw new System.Exception("Please enter the player's nationality!");
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the player's nationality!");
+			}
+			return Name;
+		}
+
+		private DateTime GetPlayerBD()
+		{
+			DateTime fd = dateTimePicker1.Value.Date;
+			return fd;
+		}
+
+
 	}
 }

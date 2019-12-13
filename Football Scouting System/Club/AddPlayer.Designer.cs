@@ -52,7 +52,7 @@
 			this.label12 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.IDtext = new System.Windows.Forms.TextBox();
-			this.birthdatetext = new System.Windows.Forms.TextBox();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -161,6 +161,7 @@
 			this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.Location = new System.Drawing.Point(258, 261);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(217, 111);
@@ -207,7 +208,7 @@
 			// 
 			// ratingtext
 			// 
-			this.ratingtext.Location = new System.Drawing.Point(375, 157);
+			this.ratingtext.Location = new System.Drawing.Point(375, 208);
 			this.ratingtext.Name = "ratingtext";
 			this.ratingtext.Size = new System.Drawing.Size(100, 24);
 			this.ratingtext.TabIndex = 19;
@@ -253,7 +254,7 @@
 			this.label12.AutoSize = true;
 			this.label12.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label12.Location = new System.Drawing.Point(258, 157);
+			this.label12.Location = new System.Drawing.Point(258, 208);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(54, 19);
 			this.label12.TabIndex = 24;
@@ -277,13 +278,14 @@
 			this.IDtext.Size = new System.Drawing.Size(100, 24);
 			this.IDtext.TabIndex = 26;
 			// 
-			// birthdatetext
+			// dateTimePicker1
 			// 
-			this.birthdatetext.Location = new System.Drawing.Point(105, 160);
-			this.birthdatetext.Name = "birthdatetext";
-			this.birthdatetext.Size = new System.Drawing.Size(100, 24);
-			this.birthdatetext.TabIndex = 27;
-			this.birthdatetext.Text = "YYYY-MM-DD";
+			this.dateTimePicker1.Location = new System.Drawing.Point(109, 160);
+			this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
+			this.dateTimePicker1.MinDate = new System.DateTime(1960, 12, 31, 0, 0, 0, 0);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+			this.dateTimePicker1.TabIndex = 27;
 			// 
 			// AddPlayer
 			// 
@@ -291,7 +293,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.SkyBlue;
 			this.ClientSize = new System.Drawing.Size(490, 396);
-			this.Controls.Add(this.birthdatetext);
+			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.IDtext);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label12);
@@ -354,6 +356,6 @@
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox IDtext;
-		private System.Windows.Forms.TextBox birthdatetext;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 	}
 }

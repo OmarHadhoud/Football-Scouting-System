@@ -41,14 +41,10 @@ namespace Football_Scouting_System
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
 
+		public static string EndorseScout = "Endorsenonsignedscout";
 
-
-
-
-
-
-        //Counting functions
-        public static string GetCountOfScouts = "GetCountOfScouts";
+		//Counting functions
+		public static string GetCountOfScouts = "GetCountOfScouts";
         public static string GetCountOfJournalists = "GetCountOfJournalists";
         public static string GetCountOfFA = "GetCountOfFA";
         public static string GetCountOfCoaches = "GetCountOfCoaches";
@@ -67,7 +63,6 @@ namespace Football_Scouting_System
 		public static string InsertNews = "insertnews";
 
 		//scout
-		public static string EndorseScout = "Endorsenonsignedscout";
 
 
 

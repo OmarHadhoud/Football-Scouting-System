@@ -42,29 +42,31 @@
 			// 
 			// userNameTxtbox
 			// 
-			this.userNameTxtbox.Location = new System.Drawing.Point(125, 281);
+			this.userNameTxtbox.BackColor = System.Drawing.Color.DarkGray;
+			this.userNameTxtbox.Location = new System.Drawing.Point(135, 276);
 			this.userNameTxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.userNameTxtbox.Name = "userNameTxtbox";
-			this.userNameTxtbox.Size = new System.Drawing.Size(148, 24);
+			this.userNameTxtbox.Size = new System.Drawing.Size(203, 24);
 			this.userNameTxtbox.TabIndex = 0;
 			this.userNameTxtbox.Text = "Username";
 			// 
 			// passTxtBox
 			// 
-			this.passTxtBox.Location = new System.Drawing.Point(125, 326);
+			this.passTxtBox.BackColor = System.Drawing.Color.DarkGray;
+			this.passTxtBox.Location = new System.Drawing.Point(135, 321);
 			this.passTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.passTxtBox.Name = "passTxtBox";
-			this.passTxtBox.Size = new System.Drawing.Size(148, 24);
+			this.passTxtBox.Size = new System.Drawing.Size(203, 24);
 			this.passTxtBox.TabIndex = 1;
 			this.passTxtBox.Text = "Password";
 			// 
 			// LogInBtn
 			// 
 			this.LogInBtn.BackColor = System.Drawing.Color.MediumSpringGreen;
-			this.LogInBtn.Location = new System.Drawing.Point(115, 364);
+			this.LogInBtn.Location = new System.Drawing.Point(47, 367);
 			this.LogInBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.LogInBtn.Name = "LogInBtn";
-			this.LogInBtn.Size = new System.Drawing.Size(148, 39);
+			this.LogInBtn.Size = new System.Drawing.Size(120, 39);
 			this.LogInBtn.TabIndex = 2;
 			this.LogInBtn.Text = "Login";
 			this.LogInBtn.UseVisualStyleBackColor = false;
@@ -73,10 +75,10 @@
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.button2.Location = new System.Drawing.Point(115, 446);
+			this.button2.Location = new System.Drawing.Point(218, 369);
 			this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(148, 37);
+			this.button2.Size = new System.Drawing.Size(120, 37);
 			this.button2.TabIndex = 3;
 			this.button2.Text = "View As Guest";
 			this.button2.UseVisualStyleBackColor = false;
@@ -84,17 +86,22 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Urdu Typesetting", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(74, 28);
+			this.label1.BackColor = System.Drawing.Color.DimGray;
+			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.label1.Font = new System.Drawing.Font("Algerian", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.White;
+			this.label1.Location = new System.Drawing.Point(12, 21);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(275, 44);
+			this.label1.Size = new System.Drawing.Size(363, 28);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "Football Scouting System";
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(45, 75);
+			this.pictureBox1.Location = new System.Drawing.Point(47, 64);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(291, 174);
@@ -105,20 +112,26 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.DimGray;
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(38, 281);
+			this.label2.ForeColor = System.Drawing.Color.White;
+			this.label2.Location = new System.Drawing.Point(47, 276);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(81, 17);
+			this.label2.Size = new System.Drawing.Size(83, 19);
 			this.label2.TabIndex = 6;
 			this.label2.Text = "Username";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
+			this.label3.BackColor = System.Drawing.Color.DimGray;
+			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(42, 326);
+			this.label3.ForeColor = System.Drawing.Color.White;
+			this.label3.Location = new System.Drawing.Point(47, 321);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(77, 17);
+			this.label3.Size = new System.Drawing.Size(79, 19);
 			this.label3.TabIndex = 7;
 			this.label3.Text = "Password";
 			// 
@@ -126,8 +139,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.Honeydew;
-			this.ClientSize = new System.Drawing.Size(384, 543);
+			this.BackColor = System.Drawing.Color.Black;
+			this.ClientSize = new System.Drawing.Size(391, 445);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.pictureBox1);
@@ -136,8 +149,9 @@
 			this.Controls.Add(this.LogInBtn);
 			this.Controls.Add(this.passTxtBox);
 			this.Controls.Add(this.userNameTxtbox);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.MaximizeBox = false;
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Football Scouting System";
