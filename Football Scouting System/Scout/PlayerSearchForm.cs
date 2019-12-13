@@ -23,5 +23,10 @@ namespace Football_Scouting_System.Scout
         {
             ParentForm_.Show();
         }
-    }
+
+		private void PlayerSearchForm_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

@@ -46,11 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Club\AddPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\AddPlayer.Designer.cs">
+      <DependentUpon>AddPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Approchedtransfersotherclubs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Approchedtransfersotherclubs.Designer.cs">
+      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Checkleaguestatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Checkleaguestatus.Designer.cs">
+      <DependentUpon>Checkleaguestatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club\ClubHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Club\ClubHomeScreen.Designer.cs">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Editclubstadium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Editclubstadium.Designer.cs">
+      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Endorsenonsignedscouts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Endorsenonsignedscouts.Designer.cs">
+      <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Postnews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Postnews.Designer.cs">
+      <DependentUpon>Postnews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Postplayerstatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Postplayerstatus.Designer.cs">
+      <DependentUpon>Postplayerstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Searchforfreeplayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Searchforfreeplayers.Designer.cs">
+      <DependentUpon>Searchforfreeplayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Searchnonfreeplayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Searchnonfreeplayers.Designer.cs">
+      <DependentUpon>Searchnonfreeplayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Signstaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Signstaff.Designer.cs">
+      <DependentUpon>Signstaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
@@ -118,8 +178,38 @@
     </Compile>
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="ValidationClass.cs" />
+    <EmbeddedResource Include="Club\AddPlayer.resx">
+      <DependentUpon>AddPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Approchedtransfersotherclubs.resx">
+      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Checkleaguestatus.resx">
+      <DependentUpon>Checkleaguestatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Club\ClubHomeScreen.resx">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Editclubstadium.resx">
+      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Endorsenonsignedscouts.resx">
+      <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Postnews.resx">
+      <DependentUpon>Postnews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Postplayerstatus.resx">
+      <DependentUpon>Postplayerstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Searchforfreeplayers.resx">
+      <DependentUpon>Searchforfreeplayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Searchnonfreeplayers.resx">
+      <DependentUpon>Searchnonfreeplayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Signstaff.resx">
+      <DependentUpon>Signstaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FA\AddClubForm.resx">
       <DependentUpon>AddClubForm.cs</DependentUpon>
