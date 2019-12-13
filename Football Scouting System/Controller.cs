@@ -352,7 +352,7 @@ namespace Football_Scouting_System
         }
 
 
-    }
+    
 		//News
 		
 

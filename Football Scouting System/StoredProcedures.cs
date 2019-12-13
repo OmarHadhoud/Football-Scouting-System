@@ -57,7 +57,7 @@ namespace Football_Scouting_System
         public static string GetCountOfManagers = "GetCountOfManagers";
         public static string GetCountOfLicenseNumbers = "GetCountOfLicenseNumbers";
 
-    }
+    
 		//Player related procedures
 		public static string InsertPlayer = "Addplayerbeta";
 		public static string GetPlayerclub = "Getplayerclubid";
