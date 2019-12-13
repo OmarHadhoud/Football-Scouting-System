@@ -124,7 +124,7 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         //Scout related functions
-        sspublic DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
+        public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
         {
             string StoredProcedureName = StoredProcedures.Order_search_PlayerForScouts;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
