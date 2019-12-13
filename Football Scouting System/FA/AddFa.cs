@@ -46,6 +46,8 @@ namespace Football_Scouting_System.FA
             try
             {
                 int id = Convert.ToInt32(faIdTxtBox.Text);
+                if (id >= 100)
+                    throw new System.Exception("Please make sure you entered an id between 1 and 100!");
                 return id;
             }
             catch

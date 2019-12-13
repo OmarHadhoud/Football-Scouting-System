@@ -12,9 +12,19 @@ namespace Football_Scouting_System.FA
 {
     public partial class SigningsForm : Form
     {
-        public SigningsForm()
+        private FAHomeScreen ParentForm_;
+        Controller controllerobj;
+
+        public SigningsForm(FAHomeScreen _ParentForm)
         {
             InitializeComponent();
+            ParentForm_ = _ParentForm;
+            controllerobj = new Controller();
+        }
+
+        private void SigningsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ParentForm_.Show();
         }
     }
 }

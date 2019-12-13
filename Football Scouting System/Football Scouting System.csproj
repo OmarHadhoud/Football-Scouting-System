@@ -138,6 +138,18 @@
     <Compile Include="FA\AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FA\ChangeFAPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\ChangeFAPasswordForm.Designer.cs">
+      <DependentUpon>ChangeFAPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FA\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FA\FAHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +167,12 @@
     </Compile>
     <Compile Include="FA\SigningsForm.Designer.cs">
       <DependentUpon>SigningsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FA\UpdateClubLeague.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\UpdateClubLeague.Designer.cs">
+      <DependentUpon>UpdateClubLeague.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn Menu.cs">
       <SubType>Form</SubType>
@@ -220,8 +238,26 @@
     <EmbeddedResource Include="FA\AddLeagueForm.resx">
       <DependentUpon>AddLeagueForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\ChangeFAPasswordForm.resx">
+      <DependentUpon>ChangeFAPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FA\FAHomeScreen.resx">
       <DependentUpon>FAHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\RetireForm.resx">
+      <DependentUpon>RetireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\SigningsForm.resx">
+      <DependentUpon>SigningsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\UpdateClubLeague.resx">
+      <DependentUpon>UpdateClubLeague.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn Menu.resx">
       <DependentUpon>LogIn Menu.cs</DependentUpon>

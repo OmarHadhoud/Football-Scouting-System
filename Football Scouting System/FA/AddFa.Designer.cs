@@ -37,6 +37,7 @@
             this.adrsTxtBox = new System.Windows.Forms.TextBox();
             this.passTxtBox = new System.Windows.Forms.TextBox();
             this.addFaBtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -45,9 +46,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 24);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "FA ID:";
+            this.label1.Text = "FA ID:*";
             // 
             // label2
             // 
@@ -122,12 +123,23 @@
             this.addFaBtn.UseVisualStyleBackColor = true;
             this.addFaBtn.Click += new System.EventHandler(this.addFaBtn_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(25, 320);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(308, 17);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "* Id must be larger than 0 and smaller than 100.";
+            // 
             // AddFa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(441, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.addFaBtn);
             this.Controls.Add(this.passTxtBox);
             this.Controls.Add(this.adrsTxtBox);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.TextBox adrsTxtBox;
         private System.Windows.Forms.TextBox passTxtBox;
         private System.Windows.Forms.Button addFaBtn;
+        private System.Windows.Forms.Label label8;
     }
 }

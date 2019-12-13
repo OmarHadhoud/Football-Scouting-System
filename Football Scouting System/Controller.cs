@@ -33,7 +33,14 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-
+        public int UpdateFAPassword(int _FA_ID, string _Password)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateFAPassword;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@Password", _Password);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         //League related functions
         public int insertLeague(int _FA_ID, string _Name)
         {
@@ -67,6 +74,24 @@ namespace Football_Scouting_System
             Parameters.Add("@League_EFAID", _FA_ID);
             Parameters.Add("@Foundation_Date", _FD);
             Parameters.Add("@Password", _Pass);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public DataTable GetClubs(int _FA_ID)
+        {
+            string StoredProcedureName = StoredProcedures.GetClubs;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
+        public int UpdateClubLeague(int _CID, int _FA_ID, string _LeagueName)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateClubLeague;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", _CID);
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@LeagueName", _LeagueName);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
     }

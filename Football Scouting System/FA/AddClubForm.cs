@@ -52,6 +52,8 @@ namespace Football_Scouting_System.FA
             try
             {
                 int id = Convert.ToInt32(clubIdTxtBox.Text);
+                if (id < 100 || id >= 2000)
+                    throw new System.Exception("Please enter the id between 100 and 2000!");
                 return id;
             }
             catch

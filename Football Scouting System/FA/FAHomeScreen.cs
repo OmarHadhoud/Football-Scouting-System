@@ -38,27 +38,35 @@ namespace Football_Scouting_System.FA
 
         private void addStaffBtn_Click(object sender, EventArgs e)
         {
-
+            AddStaffForm asf = new AddStaffForm(this);
+            this.Hide();
+            asf.Show();
         }
 
         private void confRejSignBtn_Click(object sender, EventArgs e)
         {
-
+            SigningsForm sf = new SigningsForm(this);
+            this.Hide();
+            sf.Show();
         }
 
         private void retireBtn_Click(object sender, EventArgs e)
         {
-
+            RetireForm rf = new RetireForm(this);
+            this.Hide();
+            rf.Show();
         }
 
         private void changePasBtn_Click(object sender, EventArgs e)
         {
-
+            ChangeFAPasswordForm cfpf = new ChangeFAPasswordForm(this);
+            this.Hide();
+            cfpf.Show();
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void addFaBtn_Click(object sender, EventArgs e)
@@ -66,6 +74,13 @@ namespace Football_Scouting_System.FA
             AddFa aff = new AddFa(this);
             this.Hide();
             aff.Show();
+        }
+
+        private void AddClubToLeagueBtn_Click(object sender, EventArgs e)
+        {
+            UpdateClubLeague uclf = new UpdateClubLeague(this);
+            this.Hide();
+            uclf.Show();
         }
 
         private void FAHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
@@ -86,5 +101,7 @@ namespace Football_Scouting_System.FA
             if(FA_ID!=1)
                 addFaBtn.Enabled = false;
         }
+
+       
     }
 }

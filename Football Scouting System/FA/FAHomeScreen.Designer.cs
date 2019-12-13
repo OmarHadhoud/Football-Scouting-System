@@ -131,8 +131,9 @@
             this.AddClubToLeagueBtn.Name = "AddClubToLeagueBtn";
             this.AddClubToLeagueBtn.Size = new System.Drawing.Size(157, 83);
             this.AddClubToLeagueBtn.TabIndex = 7;
-            this.AddClubToLeagueBtn.Text = "Add Club To League";
+            this.AddClubToLeagueBtn.Text = "Update Club\'s league";
             this.AddClubToLeagueBtn.UseVisualStyleBackColor = false;
+            this.AddClubToLeagueBtn.Click += new System.EventHandler(this.AddClubToLeagueBtn_Click);
             // 
             // addFaBtn
             // 

@@ -43,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.clubCityTxtBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -61,9 +62,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(28, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
+            this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Club ID:";
+            this.label2.Text = "Club ID:*";
             // 
             // label3
             // 
@@ -130,6 +131,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(181, 262);
             this.comboBox1.Name = "comboBox1";
@@ -181,12 +183,23 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Club City:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 414);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(332, 17);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "* Id must be larger than 100 and smaller than 2000.";
+            // 
             // AddClubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.clubCityTxtBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
@@ -228,5 +241,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox clubCityTxtBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
