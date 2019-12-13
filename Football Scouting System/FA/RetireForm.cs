@@ -12,9 +12,19 @@ namespace Football_Scouting_System.FA
 {
     public partial class RetireForm : Form
     {
-        public RetireForm()
+        private FAHomeScreen ParentForm_;
+        Controller controllerobj;
+
+        public RetireForm(FAHomeScreen _ParentForm)
         {
             InitializeComponent();
+            ParentForm_ = _ParentForm;
+            controllerobj = new Controller();
+        }
+
+        private void RetireForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ParentForm_.Show();
         }
     }
 }

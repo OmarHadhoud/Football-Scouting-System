@@ -1,6 +1,6 @@
 ﻿namespace Football_Scouting_System.FA
 {
-    partial class AddStaffForm
+    partial class ChangePassword
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // AddStaffForm
+            // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(434, 370);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "AddStaffForm";
-            this.Text = "AddStaffForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddStaffForm_FormClosed);
+            this.Name = "ChangePassword";
+            this.Text = "ChangePassword";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChangePassword_FormClosed);
             this.ResumeLayout(false);
 
         }

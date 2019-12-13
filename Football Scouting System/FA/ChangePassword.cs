@@ -10,20 +10,19 @@ using System.Windows.Forms;
 
 namespace Football_Scouting_System.FA
 {
-    public partial class AddStaffForm : Form
+    public partial class ChangePassword : Form
     {
         private FAHomeScreen ParentForm_;
         Controller controllerobj;
-        DataTable FA_Leagues;
 
-        public AddStaffForm(FAHomeScreen _ParentForm)
+        public ChangePassword(FAHomeScreen _ParentForm)
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
             controllerobj = new Controller();
         }
 
-        private void AddStaffForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void ChangePassword_FormClosed(object sender, FormClosedEventArgs e)
         {
             ParentForm_.Show();
         }

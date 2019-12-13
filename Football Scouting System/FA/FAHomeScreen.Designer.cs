@@ -36,6 +36,8 @@
             this.logOutBtn = new System.Windows.Forms.Button();
             this.changePasBtn = new System.Windows.Forms.Button();
             this.AddClubToLeagueBtn = new System.Windows.Forms.Button();
+            this.addFaBtn = new System.Windows.Forms.Button();
+            this.updtFaBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addLeagueBtn
@@ -130,8 +132,33 @@
             this.AddClubToLeagueBtn.Name = "AddClubToLeagueBtn";
             this.AddClubToLeagueBtn.Size = new System.Drawing.Size(157, 83);
             this.AddClubToLeagueBtn.TabIndex = 7;
-            this.AddClubToLeagueBtn.Text = "Add Club To League";
+            this.AddClubToLeagueBtn.Text = "Update Club\'s league";
             this.AddClubToLeagueBtn.UseVisualStyleBackColor = false;
+            this.AddClubToLeagueBtn.Click += new System.EventHandler(this.AddClubToLeagueBtn_Click);
+            // 
+            // addFaBtn
+            // 
+            this.addFaBtn.BackColor = System.Drawing.Color.Orange;
+            this.addFaBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addFaBtn.Location = new System.Drawing.Point(633, 12);
+            this.addFaBtn.Name = "addFaBtn";
+            this.addFaBtn.Size = new System.Drawing.Size(157, 25);
+            this.addFaBtn.TabIndex = 8;
+            this.addFaBtn.Text = "Add Another FA";
+            this.addFaBtn.UseVisualStyleBackColor = false;
+            this.addFaBtn.Click += new System.EventHandler(this.addFaBtn_Click);
+            // 
+            // updtFaBtn
+            // 
+            this.updtFaBtn.BackColor = System.Drawing.Color.Orange;
+            this.updtFaBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updtFaBtn.Location = new System.Drawing.Point(53, 12);
+            this.updtFaBtn.Name = "updtFaBtn";
+            this.updtFaBtn.Size = new System.Drawing.Size(206, 25);
+            this.updtFaBtn.TabIndex = 9;
+            this.updtFaBtn.Text = "Update this FA";
+            this.updtFaBtn.UseVisualStyleBackColor = false;
+            this.updtFaBtn.Click += new System.EventHandler(this.updtFaBtn_Click);
             // 
             // FAHomeScreen
             // 
@@ -139,6 +166,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(826, 459);
+            this.Controls.Add(this.updtFaBtn);
+            this.Controls.Add(this.addFaBtn);
             this.Controls.Add(this.AddClubToLeagueBtn);
             this.Controls.Add(this.changePasBtn);
             this.Controls.Add(this.logOutBtn);
@@ -149,8 +178,10 @@
             this.Controls.Add(this.addLeagueBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FAHomeScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAHomeScreen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FAHomeScreen_FormClosed);
+            this.Load += new System.EventHandler(this.FAHomeScreen_Load);
             this.ResumeLayout(false);
 
         }
@@ -165,5 +196,7 @@
         private System.Windows.Forms.Button logOutBtn;
         private System.Windows.Forms.Button changePasBtn;
         private System.Windows.Forms.Button AddClubToLeagueBtn;
+        private System.Windows.Forms.Button addFaBtn;
+        private System.Windows.Forms.Button updtFaBtn;
     }
 }

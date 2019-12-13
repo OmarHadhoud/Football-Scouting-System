@@ -59,5 +59,10 @@ namespace Football_Scouting_System.Scout
         {
 
         }
-    }
+
+		private void ScoutHomeScreen_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
