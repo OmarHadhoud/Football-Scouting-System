@@ -124,7 +124,7 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         //Scout related functions
-        sspublic DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
+        public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
         {
             string StoredProcedureName = StoredProcedures.Order_search_PlayerForScouts;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -134,6 +134,61 @@ namespace Football_Scouting_System
         }
 
         //Staff related functions
+        public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+        {
+
+            string StoredProcedureName = StoredProcedures.AddJournalist;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            //Parameters.Add("@EfaID", _FA_ID);
+            Parameters.Add("@Name", _Name);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+
+        //Counting functions
+        public int GetCountOfScouts()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfScouts;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetCountOfJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfJournalists;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+        
+        public int GetCountOfFA()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfFA;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+        
+        public int GetCountOfCoaches()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfCoaches;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+        
+        public int GetCountOFClubs()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOFClubs;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+        
+        public int GetCountOfAgents()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfAgents;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+        
+        public int GetCountOfManagers()
+        {
+            string StoredProcedureName = StoredProcedures.GetCountOfManagers;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
 
     }
 }

@@ -14,7 +14,6 @@ namespace Football_Scouting_System.FA
     {
         private FAHomeScreen ParentForm_;
         Controller controllerobj;
-        DataTable FA_Leagues;
 
         public AddStaffForm(FAHomeScreen _ParentForm)
         {

@@ -29,5 +29,21 @@ namespace Football_Scouting_System
 
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
+
+
+
+
+
+
+
+        //Counting functions
+        public static string GetCountOfScouts = "GetCountOfScouts";
+        public static string GetCountOfJournalists = "GetCountOfJournalists";
+        public static string GetCountOfFA = "GetCountOfFA";
+        public static string GetCountOfCoaches = "GetCountOfCoaches";
+        public static string GetCountOFClubs = "GetCountOFClubs";
+        public static string GetCountOfAgents = "GetCountOfAgents";
+        public static string GetCountOfManagers = "GetCountOfManagers";
+
     }
 }
