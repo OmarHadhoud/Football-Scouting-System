@@ -368,7 +368,7 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 		//players
-		public int insertPlayer()
+		public int insertPlayer(string _fname,string _mname,string _lname,string _bplace,string _nationality,DateTime _bdate,float _height,int _games,int _minutes,float _rating,string _status,int _id)
 		{
 			string StoredProcedureName = StoredProcedures.InsertPlayer;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();

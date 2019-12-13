@@ -55,7 +55,7 @@ namespace Football_Scouting_System
 
     
 		//Player related procedures
-		public static string InsertPlayer = "Addplayerbeta";
+		public static string InsertPlayer = "Addplayer";
 		public static string GetPlayerclub = "Getplayerclubid";
 		public static string UpdatePlayerStatus = "updatestatus";
 
