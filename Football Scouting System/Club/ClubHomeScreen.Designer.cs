@@ -150,6 +150,7 @@
 			this.LogoutButt.TabIndex = 10;
 			this.LogoutButt.Text = "Logout";
 			this.LogoutButt.UseVisualStyleBackColor = false;
+			this.LogoutButt.Click += new System.EventHandler(this.LogoutButt_Click);
 			// 
 			// ClubHomeScreen
 			// 
