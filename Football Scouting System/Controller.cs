@@ -117,6 +117,13 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        public DataTable GetPlayers()
+        {
+            string StoredProcedureName = StoredProcedures.GetPlayers;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
         public int UpdateClubLeague(int _CID, int _FA_ID, string _LeagueName)
         {
             string StoredProcedureName = StoredProcedures.UpdateClubLeague;
@@ -126,6 +133,16 @@ namespace Football_Scouting_System
             Parameters.Add("@LeagueName", _LeagueName);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public int DeletePlayer(int _PID)
+        {
+
+            string StoredProcedureName = StoredProcedures.DeletePlayer;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", _PID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
         //Scout related functions
         public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
         {
@@ -232,6 +249,47 @@ namespace Football_Scouting_System
             string StoredProcedureName = StoredProcedures.GetAgents;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetManagers()
+        {
+            string StoredProcedureName = StoredProcedures.GetManagers;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetCoaches()
+        {
+            string StoredProcedureName = StoredProcedures.GetCoaches;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public int DeleteAgent(int _AID)
+        {
+
+            string StoredProcedureName = StoredProcedures.DeleteAgent;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AID", _AID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int DeleteManager(int _MID)
+        {
+
+            string StoredProcedureName = StoredProcedures.DeleteManager;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@MID", _MID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        
+        public int DeleteCoach(int _CID)
+        {
+
+            string StoredProcedureName = StoredProcedures.DeleteCoach;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", _CID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
 
