@@ -40,6 +40,7 @@
             // 
             // AddYouthPlayerBtn
             // 
+            this.AddYouthPlayerBtn.BackColor = System.Drawing.Color.OldLace;
             this.AddYouthPlayerBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddYouthPlayerBtn.Location = new System.Drawing.Point(220, 224);
             this.AddYouthPlayerBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -47,7 +48,7 @@
             this.AddYouthPlayerBtn.Size = new System.Drawing.Size(118, 67);
             this.AddYouthPlayerBtn.TabIndex = 15;
             this.AddYouthPlayerBtn.Text = "Add Youth Player";
-            this.AddYouthPlayerBtn.UseVisualStyleBackColor = true;
+            this.AddYouthPlayerBtn.UseVisualStyleBackColor = false;
             this.AddYouthPlayerBtn.Click += new System.EventHandler(this.AddYouthPlayerBtn_Click);
             // 
             // ProfileBtn
@@ -76,6 +77,7 @@
             // 
             // ScoutsBtn
             // 
+            this.ScoutsBtn.BackColor = System.Drawing.Color.OldLace;
             this.ScoutsBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoutsBtn.Location = new System.Drawing.Point(436, 224);
             this.ScoutsBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -83,11 +85,12 @@
             this.ScoutsBtn.Size = new System.Drawing.Size(118, 67);
             this.ScoutsBtn.TabIndex = 12;
             this.ScoutsBtn.Text = "Scouts";
-            this.ScoutsBtn.UseVisualStyleBackColor = true;
+            this.ScoutsBtn.UseVisualStyleBackColor = false;
             this.ScoutsBtn.Click += new System.EventHandler(this.ScoutsBtn_Click);
             // 
             // ClubsBtn
             // 
+            this.ClubsBtn.BackColor = System.Drawing.Color.OldLace;
             this.ClubsBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClubsBtn.Location = new System.Drawing.Point(22, 224);
             this.ClubsBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -95,11 +98,12 @@
             this.ClubsBtn.Size = new System.Drawing.Size(118, 67);
             this.ClubsBtn.TabIndex = 11;
             this.ClubsBtn.Text = "Clubs";
-            this.ClubsBtn.UseVisualStyleBackColor = true;
+            this.ClubsBtn.UseVisualStyleBackColor = false;
             this.ClubsBtn.Click += new System.EventHandler(this.ClubsBtn_Click);
             // 
             // StadiumsBtn
             // 
+            this.StadiumsBtn.BackColor = System.Drawing.Color.OldLace;
             this.StadiumsBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StadiumsBtn.Location = new System.Drawing.Point(436, 65);
             this.StadiumsBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -107,11 +111,12 @@
             this.StadiumsBtn.Size = new System.Drawing.Size(118, 67);
             this.StadiumsBtn.TabIndex = 10;
             this.StadiumsBtn.Text = "Stadiums";
-            this.StadiumsBtn.UseVisualStyleBackColor = true;
+            this.StadiumsBtn.UseVisualStyleBackColor = false;
             this.StadiumsBtn.Click += new System.EventHandler(this.StadiumsBtn_Click);
             // 
             // NewsBtn
             // 
+            this.NewsBtn.BackColor = System.Drawing.Color.OldLace;
             this.NewsBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewsBtn.Location = new System.Drawing.Point(220, 65);
             this.NewsBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -119,11 +124,12 @@
             this.NewsBtn.Size = new System.Drawing.Size(118, 67);
             this.NewsBtn.TabIndex = 9;
             this.NewsBtn.Text = "News and Notifications";
-            this.NewsBtn.UseVisualStyleBackColor = true;
+            this.NewsBtn.UseVisualStyleBackColor = false;
             this.NewsBtn.Click += new System.EventHandler(this.NewsBtn_Click);
             // 
             // PlayerSearchBtn
             // 
+            this.PlayerSearchBtn.BackColor = System.Drawing.Color.OldLace;
             this.PlayerSearchBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayerSearchBtn.Location = new System.Drawing.Point(22, 65);
             this.PlayerSearchBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -131,13 +137,14 @@
             this.PlayerSearchBtn.Size = new System.Drawing.Size(118, 67);
             this.PlayerSearchBtn.TabIndex = 8;
             this.PlayerSearchBtn.Text = "Player Search";
-            this.PlayerSearchBtn.UseVisualStyleBackColor = true;
+            this.PlayerSearchBtn.UseVisualStyleBackColor = false;
             this.PlayerSearchBtn.Click += new System.EventHandler(this.PlayerSearchBtn_Click);
             // 
             // ScoutHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(600, 417);
             this.Controls.Add(this.AddYouthPlayerBtn);
             this.Controls.Add(this.ProfileBtn);
@@ -147,6 +154,7 @@
             this.Controls.Add(this.StadiumsBtn);
             this.Controls.Add(this.NewsBtn);
             this.Controls.Add(this.PlayerSearchBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ScoutHomeScreen";
             this.Text = "Welcome";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ScoutHomeScreen_FormClosed);

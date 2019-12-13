@@ -56,5 +56,14 @@ namespace Football_Scouting_System
             Parameters.Add("@Password", _Pass);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        //Scout related functions
+        public DataTable Order_search_PlayerForScouts(int order,string NameKeyWord)
+        {
+            string StoredProcedureName = StoredProcedures.Order_search_PlayerForScouts;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@orderby", order);
+            Parameters.Add("@inputN", NameKeyWord);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
     }
 }

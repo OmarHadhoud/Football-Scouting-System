@@ -13,15 +13,40 @@ namespace Football_Scouting_System.Scout
     public partial class PlayerSearchForm : Form
     {
         Form ParentForm_;
+        Controller controllerobj;
+        DataTable dt;
         public PlayerSearchForm(Form _ParentForm)
         {
             InitializeComponent();
+            controllerobj = new Controller();
             ParentForm_ = _ParentForm;
+            comboBox1.SelectedIndex = 0;
+            updatePlayersView();
         }
 
         private void PlayerSearchForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             ParentForm_.Show();
+        }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            updatePlayersView();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updatePlayersView();
+        }
+
+        private void updatePlayersView()
+        {
+           
+            dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex, SearchBar.Text);
+
+            PlayerDataGridView.DataSource = dt;
+            PlayerDataGridView.Refresh();
         }
     }
 }
