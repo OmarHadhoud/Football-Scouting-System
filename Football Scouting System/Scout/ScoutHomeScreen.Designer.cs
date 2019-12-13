@@ -74,6 +74,7 @@
             this.logOutBtn.TabIndex = 13;
             this.logOutBtn.Text = "Log out";
             this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // ScoutsBtn
             // 

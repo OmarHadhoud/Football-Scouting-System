@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SearchBar = new System.Windows.Forms.TextBox();
             this.SearchBtn = new System.Windows.Forms.Button();
+            this.logOutBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.ViewStatsBtn.TabIndex = 1;
             this.ViewStatsBtn.Text = "View stats";
             this.ViewStatsBtn.UseVisualStyleBackColor = false;
+            this.ViewStatsBtn.Click += new System.EventHandler(this.ViewStatsBtn_Click);
             // 
             // FavoriteBtn
             // 
@@ -134,12 +136,26 @@
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.button5_Click);
             // 
+            // logOutBtn
+            // 
+            this.logOutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.logOutBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutBtn.Location = new System.Drawing.Point(488, 394);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(87, 25);
+            this.logOutBtn.TabIndex = 14;
+            this.logOutBtn.Text = "Back";
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // PlayerSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(586, 430);
+            this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.label1);
@@ -170,5 +186,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchBar;
         private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Button logOutBtn;
     }
 }
