@@ -57,5 +57,9 @@ namespace Football_Scouting_System.FA
             comboBox2.SelectedItem = null;
         }
 
+        private void UpdateClubLeague_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ParentForm_.Show();
+        }
     }
 }

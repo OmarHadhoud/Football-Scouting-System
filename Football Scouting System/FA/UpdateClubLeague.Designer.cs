@@ -99,6 +99,7 @@
             this.Name = "UpdateClubLeague";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateClubLeague";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UpdateClubLeague_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

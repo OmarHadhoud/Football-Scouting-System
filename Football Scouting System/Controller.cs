@@ -41,6 +41,35 @@ namespace Football_Scouting_System
             Parameters.Add("@Password", _Password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public int UpdateFAEmail(int _FA_ID, string _Email)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateFAEmail;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@Email", _Email);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int UpdateFAAddress(int _FA_ID, string _Address)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateFAAddress;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@Address", _Address);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        
+        public int InsertTelNum(int _FA_ID, string _TelNum)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateFAAddress;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@TelNum", _TelNum);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
         //League related functions
         public int insertLeague(int _FA_ID, string _Name)
         {
