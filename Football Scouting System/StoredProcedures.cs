@@ -13,6 +13,7 @@ namespace Football_Scouting_System
         public static string UpdateFAEmail = "UpdateFAEmail";
         public static string UpdateFAAddress = "UpdateFAAddress";
         public static string AddFATelNum = "AddFATelNum";
+        public static string GetFreePlayerOffers = "GetFreePlayerOffers";
         //League related procedures
         public static string InsertLeague = "insertLeague";
         public static string GetLeagues = "GetLeagues";

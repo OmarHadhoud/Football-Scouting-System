@@ -29,7 +29,20 @@ namespace Football_Scouting_System.FA
 
 		private void SigningsForm_Load(object sender, EventArgs e)
 		{
-
+            dataGridView1.DataSource = controllerobj.GetFreePlayerOffers(ParentForm_.GetFA_ID());
 		}
-	}
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DialogResult d  = MessageBox.Show("Approve this signing?","Approve signing",MessageBoxButtons.YesNoCancel);
+            }
+            catch
+            {
+                MessageBox.Show("An unexpected error has occured!");
+            }
+
+        }
+    }
 }

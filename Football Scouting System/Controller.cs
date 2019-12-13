@@ -69,6 +69,13 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+        public DataTable GetFreePlayerOffers(int _FA_ID)
+        {
+            string StoredProcedureName = StoredProcedures.GetFreePlayerOffers;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
 
         //League related functions
         public int insertLeague(int _FA_ID, string _Name)
