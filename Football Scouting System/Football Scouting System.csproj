@@ -277,6 +277,9 @@
     <EmbeddedResource Include="FA\AddFa.resx">
       <DependentUpon>AddFa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FA\AddJournalistForm.resx">
+      <DependentUpon>AddJournalistForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FA\AddLeagueForm.resx">
       <DependentUpon>AddLeagueForm.cs</DependentUpon>
     </EmbeddedResource>

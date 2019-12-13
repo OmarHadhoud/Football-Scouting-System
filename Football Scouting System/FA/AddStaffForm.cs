@@ -52,7 +52,9 @@ namespace Football_Scouting_System.FA
 
         private void addJournalistBtn_Click(object sender, EventArgs e)
         {
-
+            AddJournalistForm ajf = new AddJournalistForm(this);
+            this.Hide();
+            ajf.Show();
         }
 
         private void addScoutBtn_Click(object sender, EventArgs e)
