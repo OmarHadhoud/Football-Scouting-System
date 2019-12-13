@@ -162,7 +162,7 @@
 			this.Name = "ClubHomeScreen";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Welcome";
-			this.TransparencyKey = System.Drawing.Color.Black;
+			this.TransparencyKey = System.Drawing.Color.Transparent;
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClubHomeScreen_FormClosed);
 			this.Load += new System.EventHandler(this.ClubHomeScreen_Load);
 			this.ResumeLayout(false);
