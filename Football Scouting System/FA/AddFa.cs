@@ -26,12 +26,15 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = GetFAId();
+                int ID = controllerobj.GetCountOfFA()+1;
+                if (ID >= 100)
+                    throw new System.Exception("You have reached the maximum number of FAs!");
                 string Email = GetFAEmail();
                 string Address = GetFAAdress();
                 string Pass = GetFAPass();
                 controllerobj.insertFA(ID, Email, Address, Pass);
                 MessageBox.Show("FA added!");
+                MessageBox.Show("The ID of the FA (use it to sign in) is " + Convert.ToString(ID));
                 this.Close();
             }
             catch (System.Exception ex)
@@ -41,20 +44,7 @@ namespace Football_Scouting_System.FA
         }
 
         //To get Club data and validate it
-        private int GetFAId()
-        {
-            try
-            {
-                int id = Convert.ToInt32(faIdTxtBox.Text);
-                if (id >= 100)
-                    throw new System.Exception("Please make sure you entered an id between 1 and 100!");
-                return id;
-            }
-            catch
-            {
-                throw new System.Exception("Please make sure you entered numbers only in ID!");
-            }
-        }
+        
 
         private string GetFAEmail()
         {

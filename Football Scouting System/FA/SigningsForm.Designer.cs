@@ -28,21 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.SuspendLayout();
-			// 
-			// SigningsForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(700, 450);
-			this.Name = "SigningsForm";
-			this.Text = "SigningsForm";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SigningsForm_FormClosed);
-			this.Load += new System.EventHandler(this.SigningsForm_Load);
-			this.ResumeLayout(false);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(651, 353);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // SigningsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "SigningsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SigningsForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SigningsForm_FormClosed);
+            this.Load += new System.EventHandler(this.SigningsForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

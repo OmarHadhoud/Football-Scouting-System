@@ -88,7 +88,12 @@ namespace Football_Scouting_System.FA
             ParentForm_.Show(); 
         }
 
-        
+        private void updtFaBtn_Click(object sender, EventArgs e)
+        {
+            UpdateFA uff = new UpdateFA(this);
+            this.Hide();
+            uff.Show();
+        }
 
         //Getters
         public int GetFA_ID()
@@ -102,6 +107,6 @@ namespace Football_Scouting_System.FA
                 addFaBtn.Enabled = false;
         }
 
-       
+        
     }
 }

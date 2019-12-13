@@ -14,9 +14,12 @@ namespace Football_Scouting_System.Scout
     public partial class ScoutHomeScreen : Form
     {
         private Form ParentForm_;
+        Controller controllerobj;
+
         public ScoutHomeScreen(Form _ParentForm)
         {
             InitializeComponent();
+            controllerobj = new Controller();
             ParentForm_ = _ParentForm;
         }
 
@@ -61,5 +64,10 @@ namespace Football_Scouting_System.Scout
 		{
 
 		}
-	}
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
