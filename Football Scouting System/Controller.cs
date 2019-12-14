@@ -79,6 +79,18 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        public int DeleteC2EOffer(int _FA_ID, int _SCID,int _PID)
+        {
+            string StoredProcedureName = StoredProcedures.DeleteC2EOffer;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@SCID", _SCID);
+            Parameters.Add("@PID", _PID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+
         //League related functions
         public int insertLeague(int _FA_ID, string _Name)
         {
@@ -421,8 +433,17 @@ namespace Football_Scouting_System
 
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
-		//scout
-		public int Endorsenonsigned(int _ID)
+
+        public int SetPlayerClub(int _CID, int _PID)
+        {
+            string StoredProcedureName = StoredProcedures.SetPlayerClub;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", _CID);
+            Parameters.Add("@PID", _PID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //scout
+        public int Endorsenonsigned(int _ID)
 		{
 			string StoredProcedureName = StoredProcedures.EndorseScout;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();

@@ -38,7 +38,6 @@
             this.AddClubToLeagueBtn = new System.Windows.Forms.Button();
             this.addFaBtn = new System.Windows.Forms.Button();
             this.updtFaBtn = new System.Windows.Forms.Button();
-            this.updtStaffBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addLeagueBtn
@@ -161,24 +160,12 @@
             this.updtFaBtn.UseVisualStyleBackColor = false;
             this.updtFaBtn.Click += new System.EventHandler(this.updtFaBtn_Click);
             // 
-            // updtStaffBtn
-            // 
-            this.updtStaffBtn.BackColor = System.Drawing.Color.Orange;
-            this.updtStaffBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updtStaffBtn.Location = new System.Drawing.Point(605, 148);
-            this.updtStaffBtn.Name = "updtStaffBtn";
-            this.updtStaffBtn.Size = new System.Drawing.Size(157, 25);
-            this.updtStaffBtn.TabIndex = 10;
-            this.updtStaffBtn.Text = "Update Staff";
-            this.updtStaffBtn.UseVisualStyleBackColor = false;
-            // 
             // FAHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(826, 459);
-            this.Controls.Add(this.updtStaffBtn);
             this.Controls.Add(this.updtFaBtn);
             this.Controls.Add(this.addFaBtn);
             this.Controls.Add(this.AddClubToLeagueBtn);
@@ -211,6 +198,5 @@
         private System.Windows.Forms.Button AddClubToLeagueBtn;
         private System.Windows.Forms.Button addFaBtn;
         private System.Windows.Forms.Button updtFaBtn;
-        private System.Windows.Forms.Button updtStaffBtn;
     }
 }

@@ -14,6 +14,8 @@ namespace Football_Scouting_System
         public static string UpdateFAAddress = "UpdateFAAddress";
         public static string AddFATelNum = "AddFATelNum";
         public static string GetFreePlayerOffers = "GetFreePlayerOffers";
+        public static string DeleteC2EOffer = "DeleteC2EOffer";
+        
         //League related procedures
         public static string InsertLeague = "insertLeague";
         public static string GetLeagues = "GetLeagues";
@@ -60,6 +62,7 @@ namespace Football_Scouting_System
 		public static string InsertPlayer = "Addplayer";
 		public static string GetPlayerclub = "Getplayerclubid";
 		public static string UpdatePlayerStatus = "updatestatus";
+		public static string SetPlayerClub = "SetPlayerClub";
 
 		//news
 		public static string InsertNews = "insertnews";
