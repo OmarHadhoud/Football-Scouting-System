@@ -18,10 +18,11 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE GetFreePlayerOffers
-	@FA_ID int
-AS	
+CREATE PROCEDURE SetPlayerClub 
+	@PID int,
+	@CID int
+AS
 BEGIN
-	Select c.Name as 'Sender club', c.CID as 'Club ID', p.Fname as 'Player first name', p.Lname as 'Player last name', p.PID as 'Player ID', Fee from OfferPlayerC2E o ,Player p,Club c where o.PlayerID = p.PID and c.CID = o.SenderClubID and o.EFAID = @FA_ID and Suggestion = 0 and p.ClubID is NULL 
+	update Player set ClubID = @CID where PID = @PID
 END
 GO
