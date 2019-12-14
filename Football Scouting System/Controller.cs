@@ -153,12 +153,22 @@ namespace Football_Scouting_System
         }
 
         //Scout related functions
-        public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord)
+        public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
         {
             string StoredProcedureName = StoredProcedures.Order_search_PlayerForScouts;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@orderby", order);
             Parameters.Add("@inputN", NameKeyWord);
+            Parameters.Add("@OrderDir", dir);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable Order_Search_Club (int order, string NameKeyWord, int dir)
+        {
+            string StoredProcedureName = StoredProcedures.Order_Search_Club;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@orderby", order);
+            Parameters.Add("@inputN", NameKeyWord);
+            Parameters.Add("@OrderDir", dir);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 

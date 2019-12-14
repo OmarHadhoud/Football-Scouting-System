@@ -40,6 +40,7 @@ namespace Football_Scouting_System
 
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
+        public static string Order_Search_Club = "Order_Search_Club";
 
 		public static string EndorseScout = "Endorsenonsignedscout";
 

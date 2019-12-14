@@ -36,15 +36,16 @@
             this.RequestSigningBtn = new System.Windows.Forms.Button();
             this.ViewDetailsBtn = new System.Windows.Forms.Button();
             this.RequestWorkingBtn = new System.Windows.Forms.Button();
-            this.PlayerDataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerDataGridView)).BeginInit();
+            this.ClubDataGridView = new System.Windows.Forms.DataGridView();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ClubDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // logOutBtn
             // 
             this.logOutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.logOutBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutBtn.Location = new System.Drawing.Point(544, 416);
+            this.logOutBtn.Location = new System.Drawing.Point(544, 421);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(87, 25);
@@ -62,6 +63,7 @@
             this.SearchBtn.TabIndex = 23;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_click);
             // 
             // SearchBar
             // 
@@ -95,6 +97,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // RequestSigningBtn
             // 
@@ -126,27 +129,39 @@
             this.RequestWorkingBtn.Text = "Request Working";
             this.RequestWorkingBtn.UseVisualStyleBackColor = false;
             // 
-            // PlayerDataGridView
+            // ClubDataGridView
             // 
-            this.PlayerDataGridView.AllowUserToAddRows = false;
-            this.PlayerDataGridView.AllowUserToDeleteRows = false;
-            this.PlayerDataGridView.BackgroundColor = System.Drawing.Color.OldLace;
-            this.PlayerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PlayerDataGridView.Location = new System.Drawing.Point(12, 38);
-            this.PlayerDataGridView.MultiSelect = false;
-            this.PlayerDataGridView.Name = "PlayerDataGridView";
-            this.PlayerDataGridView.ReadOnly = true;
-            this.PlayerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PlayerDataGridView.ShowEditingIcon = false;
-            this.PlayerDataGridView.Size = new System.Drawing.Size(619, 333);
-            this.PlayerDataGridView.TabIndex = 15;
+            this.ClubDataGridView.AllowUserToAddRows = false;
+            this.ClubDataGridView.AllowUserToDeleteRows = false;
+            this.ClubDataGridView.BackgroundColor = System.Drawing.Color.OldLace;
+            this.ClubDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClubDataGridView.Location = new System.Drawing.Point(12, 38);
+            this.ClubDataGridView.MultiSelect = false;
+            this.ClubDataGridView.Name = "ClubDataGridView";
+            this.ClubDataGridView.ReadOnly = true;
+            this.ClubDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ClubDataGridView.ShowEditingIcon = false;
+            this.ClubDataGridView.Size = new System.Drawing.Size(619, 333);
+            this.ClubDataGridView.TabIndex = 15;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(510, 402);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 17);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.Text = "Decending";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ViewClubs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(643, 450);
+            this.ClientSize = new System.Drawing.Size(642, 457);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.SearchBar);
@@ -155,12 +170,12 @@
             this.Controls.Add(this.RequestSigningBtn);
             this.Controls.Add(this.ViewDetailsBtn);
             this.Controls.Add(this.RequestWorkingBtn);
-            this.Controls.Add(this.PlayerDataGridView);
+            this.Controls.Add(this.ClubDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ViewClubs";
             this.Text = "ViewClubs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewClubs_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.PlayerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClubDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +191,7 @@
         private System.Windows.Forms.Button RequestSigningBtn;
         private System.Windows.Forms.Button ViewDetailsBtn;
         private System.Windows.Forms.Button RequestWorkingBtn;
-        private System.Windows.Forms.DataGridView PlayerDataGridView;
+        private System.Windows.Forms.DataGridView ClubDataGridView;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

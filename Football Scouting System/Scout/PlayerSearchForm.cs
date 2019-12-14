@@ -30,7 +30,7 @@ namespace Football_Scouting_System.Scout
         }
 
 
-        private void button5_Click(object sender, EventArgs e)
+        private void SearchBtn_click(object sender, EventArgs e)
         {
             updatePlayersView();
         }
@@ -42,11 +42,14 @@ namespace Football_Scouting_System.Scout
 
         private void updatePlayersView()
         {
-           
-            dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex+1, SearchBar.Text);
-
+            int dir = checkBox1.Checked ? 1 : 0;
+            dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex+1, SearchBar.Text,dir);
             PlayerDataGridView.DataSource = dt;
             PlayerDataGridView.Refresh();
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            updatePlayersView();
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -58,5 +61,7 @@ namespace Football_Scouting_System.Scout
         {
             // PlayerDataGridView.SelectedRows
         }
+
+        
     }
 }
