@@ -15,12 +15,14 @@ namespace Football_Scouting_System.Scout
     {
         private Form ParentForm_;
         Controller controllerobj;
+        private int ID;
 
-        public ScoutHomeScreen(Form _ParentForm)
+        public ScoutHomeScreen(Form _ParentForm, int ID_)
         {
             InitializeComponent();
             controllerobj = new Controller();
             ParentForm_ = _ParentForm;
+            ID = ID_;
         }
 
         private void ScoutHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
@@ -73,6 +75,11 @@ namespace Football_Scouting_System.Scout
         private void logOutBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ProfileBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

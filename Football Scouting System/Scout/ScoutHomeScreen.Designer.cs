@@ -62,6 +62,7 @@
             this.ProfileBtn.TabIndex = 14;
             this.ProfileBtn.Text = "Profile";
             this.ProfileBtn.UseVisualStyleBackColor = false;
+            this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
             // 
             // logOutBtn
             // 
