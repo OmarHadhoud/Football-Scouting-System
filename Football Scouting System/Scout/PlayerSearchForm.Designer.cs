@@ -43,10 +43,16 @@
             // 
             // PlayerDataGridView
             // 
+            this.PlayerDataGridView.AllowUserToAddRows = false;
+            this.PlayerDataGridView.AllowUserToDeleteRows = false;
             this.PlayerDataGridView.BackgroundColor = System.Drawing.Color.OldLace;
             this.PlayerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PlayerDataGridView.Location = new System.Drawing.Point(0, 33);
+            this.PlayerDataGridView.MultiSelect = false;
             this.PlayerDataGridView.Name = "PlayerDataGridView";
+            this.PlayerDataGridView.ReadOnly = true;
+            this.PlayerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PlayerDataGridView.ShowEditingIcon = false;
             this.PlayerDataGridView.Size = new System.Drawing.Size(586, 285);
             this.PlayerDataGridView.TabIndex = 0;
             // 

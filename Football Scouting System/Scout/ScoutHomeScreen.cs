@@ -37,7 +37,9 @@ namespace Football_Scouting_System.Scout
 
         private void NewsBtn_Click(object sender, EventArgs e)
         {
-
+            NewsForm nf = new NewsForm(this);
+            this.Hide();
+            nf.Show();
         }
 
         private void StadiumsBtn_Click(object sender, EventArgs e)
@@ -52,7 +54,10 @@ namespace Football_Scouting_System.Scout
 
         private void ClubsBtn_Click(object sender, EventArgs e)
         {
-
+            ViewClubs vc = new ViewClubs(this);
+            this.Hide();
+            vc.Show();
+            
         }
 
         private void AddYouthPlayerBtn_Click(object sender, EventArgs e)
