@@ -143,7 +143,7 @@
             // 
             this.logOutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.logOutBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutBtn.Location = new System.Drawing.Point(555, 413);
+            this.logOutBtn.Location = new System.Drawing.Point(300, 280);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(87, 25);
@@ -157,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(653, 449);
+            this.ClientSize = new System.Drawing.Size(411, 316);
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.LicenseNoLbl);
             this.Controls.Add(this.ClubLbl);

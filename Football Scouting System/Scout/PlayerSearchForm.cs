@@ -45,6 +45,7 @@ namespace Football_Scouting_System.Scout
             int dir = checkBox1.Checked ? 1 : 0;
             dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex+1, SearchBar.Text,dir);
             PlayerDataGridView.DataSource = dt;
+            PlayerDataGridView.Columns[0].Visible = false;
             PlayerDataGridView.Refresh();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace Football_Scouting_System.Scout
 
         private void ViewStatsBtn_Click(object sender, EventArgs e)
         {
-            // PlayerDataGridView.SelectedRows
+            label1.Text =PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
         }
 
         private void SearchBar_TextChanged(object sender, EventArgs e)
