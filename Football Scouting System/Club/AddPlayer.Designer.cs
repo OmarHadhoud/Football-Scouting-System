@@ -53,6 +53,11 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.IDtext = new System.Windows.Forms.TextBox();
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.label13 = new System.Windows.Forms.Label();
+			this.radioButton1 = new System.Windows.Forms.RadioButton();
+			this.radioButton2 = new System.Windows.Forms.RadioButton();
+			this.choice = new System.Windows.Forms.Panel();
+			this.choice.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -162,9 +167,9 @@
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(258, 261);
+			this.button1.Location = new System.Drawing.Point(258, 303);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(217, 111);
+			this.button1.Size = new System.Drawing.Size(217, 69);
 			this.button1.TabIndex = 14;
 			this.button1.Text = "Add Player";
 			this.button1.UseVisualStyleBackColor = false;
@@ -208,7 +213,7 @@
 			// 
 			// ratingtext
 			// 
-			this.ratingtext.Location = new System.Drawing.Point(375, 208);
+			this.ratingtext.Location = new System.Drawing.Point(375, 26);
 			this.ratingtext.Name = "ratingtext";
 			this.ratingtext.Size = new System.Drawing.Size(100, 24);
 			this.ratingtext.TabIndex = 19;
@@ -254,7 +259,7 @@
 			this.label12.AutoSize = true;
 			this.label12.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label12.Location = new System.Drawing.Point(258, 208);
+			this.label12.Location = new System.Drawing.Point(258, 26);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(54, 19);
 			this.label12.TabIndex = 24;
@@ -265,27 +270,71 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label5.Location = new System.Drawing.Point(258, 29);
+			this.label5.Location = new System.Drawing.Point(325, 160);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(29, 19);
+			this.label5.Size = new System.Drawing.Size(38, 19);
 			this.label5.TabIndex = 25;
-			this.label5.Text = "ID:";
+			this.label5.Text = "Age:";
+			this.label5.Click += new System.EventHandler(this.label5_Click);
 			// 
 			// IDtext
 			// 
-			this.IDtext.Location = new System.Drawing.Point(375, 26);
+			this.IDtext.Location = new System.Drawing.Point(375, 157);
 			this.IDtext.Name = "IDtext";
 			this.IDtext.Size = new System.Drawing.Size(100, 24);
 			this.IDtext.TabIndex = 26;
 			// 
 			// dateTimePicker1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(109, 160);
+			this.dateTimePicker1.Location = new System.Drawing.Point(105, 160);
 			this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
 			this.dateTimePicker1.MinDate = new System.DateTime(1960, 12, 31, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+			this.dateTimePicker1.Size = new System.Drawing.Size(214, 24);
 			this.dateTimePicker1.TabIndex = 27;
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.BackColor = System.Drawing.Color.DeepSkyBlue;
+			this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label13.Location = new System.Drawing.Point(227, 208);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(248, 19);
+			this.label13.TabIndex = 28;
+			this.label13.Text = "Choose whether professional or youth:";
+			// 
+			// radioButton1
+			// 
+			this.radioButton1.AutoSize = true;
+			this.radioButton1.Location = new System.Drawing.Point(12, 3);
+			this.radioButton1.Name = "radioButton1";
+			this.radioButton1.Size = new System.Drawing.Size(100, 21);
+			this.radioButton1.TabIndex = 29;
+			this.radioButton1.TabStop = true;
+			this.radioButton1.Text = "Professional";
+			this.radioButton1.UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this.radioButton2.AutoSize = true;
+			this.radioButton2.Location = new System.Drawing.Point(12, 30);
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.Size = new System.Drawing.Size(66, 21);
+			this.radioButton2.TabIndex = 30;
+			this.radioButton2.TabStop = true;
+			this.radioButton2.Text = "Youth";
+			this.radioButton2.UseVisualStyleBackColor = true;
+			// 
+			// choice
+			// 
+			this.choice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.choice.Controls.Add(this.radioButton1);
+			this.choice.Controls.Add(this.radioButton2);
+			this.choice.Location = new System.Drawing.Point(258, 230);
+			this.choice.Name = "choice";
+			this.choice.Size = new System.Drawing.Size(217, 67);
+			this.choice.TabIndex = 31;
 			// 
 			// AddPlayer
 			// 
@@ -293,6 +342,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.SkyBlue;
 			this.ClientSize = new System.Drawing.Size(490, 396);
+			this.Controls.Add(this.choice);
+			this.Controls.Add(this.label13);
 			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.IDtext);
 			this.Controls.Add(this.label5);
@@ -325,6 +376,8 @@
 			this.Text = "Insert Player";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddPlayerForm_FormClosed);
 			this.Load += new System.EventHandler(this.AddPlayer_Load);
+			this.choice.ResumeLayout(false);
+			this.choice.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -357,5 +410,9 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox IDtext;
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.Panel choice;
 	}
 }

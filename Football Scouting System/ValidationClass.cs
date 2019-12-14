@@ -34,8 +34,50 @@ namespace Football_Scouting_System
             return returnData;
         }
 
-        
-    }
+		public static Object isPositiveFloat(String input, StringBuilder err)
+		{
+			Object returnData = null;
+			try
+			{
+				Single x = Convert.ToSingle(input);
+				if (x < 0)
+				{
+					err.Append("Input " + input + " is a negative number");
+				}
+				else
+				{
+					returnData = x;
+				}
+			}
+			catch
+			{
+				err.Append("Input " + input + " is not a valid integer");
+			}
+			return returnData;
+		}
+
+		public static Object isPositivedouble(String input, StringBuilder err)
+		{
+			Object returnData = null;
+			try
+			{
+				double x = Convert.ToDouble(input);
+				if (x < 0)
+				{
+					err.Append("Input " + input + " is a negative number");
+				}
+				else
+				{
+					returnData = x;
+				}
+			}
+			catch
+			{
+				err.Append("Input " + input + " is not a valid integer");
+			}
+			return returnData;
+		}
+	}
 
     
 }

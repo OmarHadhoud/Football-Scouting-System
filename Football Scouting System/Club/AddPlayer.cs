@@ -36,22 +36,45 @@ namespace Football_Scouting_System.Club
 		{
 			try
 			{
+				if (radioButton1.Checked==true)
+				{
+					string FName = GetplayerfirstName();
+					string MName = GetplayermiddleName();
+					string LName = GetplayerlastName();
+					int ID = controllerobj.GetCountOfProfPlayers() + 1;
+					int age = getplayerAge();
+					string bplace = Getplayerbirthplace();
+					string nationality = Getplayernationality();
+					DateTime bdate = GetPlayerBD();
+					double height = getplayerheight();
+					int games = getplayergames();
+					int minutes = getplayerminutes();
+					double rating = getplayerrating();
+					string status = Getplayerstatus();
+					controllerobj.insertPlayer(FName, MName, LName, bplace, nationality, bdate, age, height, games, minutes, rating, status, ID, clubidd);
+					MessageBox.Show("Player Successfully Inserted!");
+					this.Close();
+				}
+				else
+				{
+					string FName = GetplayerfirstName();
+					string MName = GetplayermiddleName();
+					string LName = GetplayerlastName();
+					int ID = controllerobj.GetCountOfProfPlayers() + 1;
+					int age = getplayerAge();
+					string bplace = Getplayerbirthplace();
+					string nationality = Getplayernationality();
+					DateTime bdate = GetPlayerBD();
+					double height = getplayerheight();
+					int games = getplayergames();
+					int minutes = getplayerminutes();
+					double rating = getplayerrating();
+					string status = Getplayerstatus();
+					controllerobj.insertYouthPlayer(FName, MName, LName, bplace, nationality, bdate, age, height, games, minutes, rating, status, ID, clubidd);
+					MessageBox.Show("Player Successfully Inserted!");
+					this.Close();
+				}
 				
-				string FName = GetplayerfirstName();
-				string MName = GetplayermiddleName();
-				string LName = GetplayerlastName();
-				int ID = getplayerID();
-				string bplace = Getplayerbirthplace();
-				string nationality = Getplayernationality();
-				DateTime bdate = GetPlayerBD();
-				// double height = getplayerheight();//to be modified
-				int games = getplayergames();
-				int minutes = getplayerminutes();
-				//double rating = getplayerrating();
-				string status = Getplayerstatus();
-				controllerobj.insertPlayer(FName,MName,LName,bplace,nationality,bdate,2.3,games,minutes,6.5,status,ID,clubidd);
-				MessageBox.Show("Player Successfully Inserted!");
-				this.Close();
 			}
 			catch (System.Exception ex)
 			{
@@ -148,7 +171,7 @@ namespace Football_Scouting_System.Club
 		private double getplayerheight()
 		{
 			StringBuilder err = new StringBuilder();
-			Object data = ValidationClass.isPositiveInteger(heighttext.Text, err); //choose the textbox to be validated
+			Object data = ValidationClass.isPositivedouble(heighttext.Text, err); //choose the textbox to be validated
 			if (data == null)
 			{
 				throw new System.Exception(err.ToString());
@@ -202,7 +225,7 @@ namespace Football_Scouting_System.Club
 		private double getplayerrating()
 		{
 			StringBuilder err = new StringBuilder();
-			Object data = ValidationClass.isPositiveInteger(ratingtext.Text, err); //choose the textbox to be validated
+			Object data = ValidationClass.isPositivedouble(ratingtext.Text, err); //choose the textbox to be validated
 			if (data == null)
 			{
 				throw new System.Exception(err.ToString());
@@ -217,7 +240,7 @@ namespace Football_Scouting_System.Club
 			// return 0;
 		}
 
-		private int getplayerID()
+		private int getplayerAge()
 		{
 			StringBuilder err = new StringBuilder();
 			Object data = ValidationClass.isPositiveInteger(IDtext.Text, err); //choose the textbox to be validated
@@ -235,7 +258,14 @@ namespace Football_Scouting_System.Club
 			// return 0;
 		}
 
+		private void label5_Click(object sender, EventArgs e)
+		{
 
+		}
 
+		private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
