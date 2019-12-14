@@ -30,7 +30,8 @@ select PID
       ,[Position]
       ,[Height]      
       ,[Status]
-  FROM [Player] where (@inputN is null )or  Fname Like @inputN+'%'  or Lname Like @inputN + '%' 
+  ,club.[Name] as [Club]
+  FROM [Player] join club on (CID=ClubID or CID=YouthClubID) where (@inputN is null )or  Fname Like @inputN+'%'  or Lname Like @inputN + '%' 
 	order by 
 	
 	case WHEN @orderby = 1 AND @orderDir =0 THEN [Fname] end asc,
@@ -38,6 +39,7 @@ select PID
 	case WHEN @orderby = 3 AND @orderDir =0 THEN DATEDIFF(YY,Bdate,GETDATE()) end asc,
     case WHEN @orderby = 4 AND @orderDir =0 THEN [Position] end asc,
 	case WHEN @orderby = 5 AND @orderDir =0 THEN [Height]end asc,
+	
 	case WHEN @orderby = 1 AND @orderDir =1 THEN [Fname] end desc,
     case WHEN @orderby = 2 AND @orderDir =1 THEN [Lname] end desc,
 	case WHEN @orderby = 3 AND @orderDir =1 THEN DATEDIFF(YY,Bdate,GETDATE()) end desc,
