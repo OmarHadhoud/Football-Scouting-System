@@ -18,7 +18,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE GetPlayerStats_ID 
+CREATE PROCEDURE GetPlayerStats_ID 
 	-- Add the parameters for the stored procedure here
 	@ID int
 AS
