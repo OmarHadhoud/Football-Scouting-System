@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace Football_Scouting_System
 {
-    public partial class Form1 : Form
+
+	public partial class Form1 : Form
     {
-        public Form1()
+		public int ID;
+
+		public Form1()
         {
             InitializeComponent();
         }
@@ -24,6 +27,7 @@ namespace Football_Scouting_System
 
         private void LogInBtn_Click(object sender, EventArgs e)
         {
+			ID =Convert.ToInt32(userNameTxtbox.Text);
             //TODO: The function should be implemented, now for testing purposes
             // just enter 1 in username to sign in as FA, 2 to sign in as club, 3 to sign in as scout, 4 to sign in as Journalist, 5 to sign in as guest
             if(userNameTxtbox.Text=="1")
@@ -36,7 +40,7 @@ namespace Football_Scouting_System
             }
 			else if (userNameTxtbox.Text == "2")
 			{
-				Club.ClubHomeScreen C = new Club.ClubHomeScreen(this);
+				Club.ClubHomeScreen C = new Club.ClubHomeScreen(this,ID);
 				C.Show();
 				this.Hide();
 			}

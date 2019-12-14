@@ -10,8 +10,8 @@ namespace Football_Scouting_System
 {
     public class DBManager
     {
-        static string DB_Connection_String = Properties.Settings.Default.ConnectionString;
-        SqlConnection myConnection;
+		static string DB_Connection_String = @"Data Source=OSAMA-PC\SQLEXPRESS;Initial Catalog=Scouting System;Integrated Security=True";
+		SqlConnection myConnection;
 
     public DBManager()
         {
