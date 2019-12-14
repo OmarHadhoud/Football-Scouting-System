@@ -32,12 +32,12 @@ namespace Football_Scouting_System.Scout
         {
             NameLbl.Text = Stats.Name;
             /* [Goals] [Assists] [Games Played] [Minutes Played] [Chances Created] [Match Rating] */
-            GoalsLbl.Text = Convert.ToString(Stats.Attributes[0]);
-            AssistsLbl.Text = Convert.ToString(Stats.Attributes[1]);
-            GamesPLbl.Text = Convert.ToString(Stats.Attributes[2]);
-            MinutesPLbl.Text = Convert.ToString(Stats.Attributes[3]);
-            ChancesCLbl.Text = Convert.ToString(Stats.Attributes[4]);
-            MatchRLbl.Text = Convert.ToString(Stats.Attributes[5]);
+            GoalsLbl.Text = Convert.ToString(Stats.Stats[0]);
+            AssistsLbl.Text = Convert.ToString(Stats.Stats[1]);
+            GamesPLbl.Text = Convert.ToString(Stats.Stats[2]);
+            MinutesPLbl.Text = Convert.ToString(Stats.Stats[3]);
+            ChancesCLbl.Text = Convert.ToString(Stats.Stats[4]);
+            MatchRLbl.Text = Convert.ToString(Stats.Stats[5]);
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)

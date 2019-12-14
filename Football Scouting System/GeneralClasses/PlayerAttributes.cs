@@ -25,12 +25,13 @@ namespace Football_Scouting_System.GeneralClasses
         {
             Controller controller = new Controller();
             DataTable dt = controller.GetAvgAttrib(ID);
-            var PlayerAttrib = dt.Rows[0].ItemArray.ToArray(); //itr 0 is for the id
+            try{   var PlayerAttrib = dt.Rows[0].ItemArray.ToArray(); //itr 0 is for the id
             for (int i = 0; i < 12; i++) 
             {
                 Attributes[i] =Convert.ToInt32(PlayerAttrib[i+1]); 
             }
-            
+                }catch { System.Windows.Forms.MessageBox.Show("No attributes available for selected player");}
+
         }
     }
 }

@@ -38,7 +38,10 @@ namespace Football_Scouting_System.Scout
             EndorsesLbl.Text =Convert.ToString( Sc.Endorses);
             LicenseNoLbl.Text = Convert.ToString(Sc.LicenseNumber);
             dateTimePicker1.Value = Sc.BirthDate;
-
+            if (Sc.BirthDate <= dateTimePicker1.MinDate)
+            {
+                dateTimePicker1.Visible = false;
+            }
         }
     }
 }

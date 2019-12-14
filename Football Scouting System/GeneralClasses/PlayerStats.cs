@@ -12,7 +12,7 @@ namespace Football_Scouting_System.GeneralClasses
         public PlayerStats(int _ID = -1)
         {
             ID = 0;
-            Attributes = new int[6];
+            Stats = new int[6];
             if (_ID > -1)
             {
                 ID = _ID;
@@ -21,19 +21,18 @@ namespace Football_Scouting_System.GeneralClasses
         }
         public int ID { get; set; }
         public string Name { get; set; }
-        public int[] Attributes { get; set; } /* [Goals] [Assists] [Games Played] [Minutes Played] [Chances Created] [Match Rating] */
+        public int[] Stats { get; set; } /* [Goals] [Assists] [Games Played] [Minutes Played] [Chances Created] [Match Rating] */
         private void SetInitialValues(int ID)
         {
             Controller controller = new Controller();
             DataTable dt = controller.GetPlayerStats_ID(ID);
-            var PlayerAttrib = dt.Rows[0].ItemArray.ToArray(); //itr 0 is for the id
-            Name = PlayerAttrib[1].ToString();
-            Name +=" "+ PlayerAttrib[2].ToString();
-            for (int i = 0; i < 6; i++)
-            {
-                Attributes[i] = Convert.ToInt32(PlayerAttrib[i + 3]);
-            }
-
+             var PlayerAttrib = dt.Rows[0].ItemArray.ToArray(); //itr 0 is for the id
+                Name = PlayerAttrib[1].ToString();
+                Name += " " + PlayerAttrib[2].ToString();
+                for (int i = 0; i < 6; i++)
+                {
+                    Stats[i] = Convert.ToInt32(PlayerAttrib[i + 3]);
+                }
         }
     }
 }

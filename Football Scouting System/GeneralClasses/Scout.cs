@@ -28,15 +28,29 @@ namespace Football_Scouting_System.GeneralClasses
 
         private void SetInitialValues(int ID)
         {
+            try { 
             Controller controller = new Controller();
             DataTable dt = controller.GetScoutWithID(ID);
             var ScoutInfo = dt.Rows[0].ItemArray.ToArray();
             Name = Convert.ToString(ScoutInfo[0]);
-            BirthDate = Convert.ToDateTime(ScoutInfo[1]);
+            try{ BirthDate = Convert.ToDateTime(ScoutInfo[1]);}
+            catch { BirthDate = Convert.ToDateTime("1 / 1 / 1753"); }
             Endorses = Convert.ToInt32(ScoutInfo[2]);
             Club = Convert.ToString(ScoutInfo[3]);
             Password = Convert.ToString(ScoutInfo[4]);
             LicenseNumber = Convert.ToInt32(ScoutInfo[5]);
+            }
+            catch(Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error, Scout"+ID+" data not found");
+                Name = "Error not found";
+                BirthDate =Convert.ToDateTime("2000-2-2");
+                LicenseNumber = -1;
+                Endorses = -1;
+                Club = "Error not found";
+                Password = "Error";
+                throw;
+            }
         }
     }
 }

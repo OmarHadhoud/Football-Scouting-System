@@ -56,8 +56,12 @@ namespace Football_Scouting_System
             else if (userNameTxtbox.Text == "3")
             {
                 Scout.ScoutHomeScreen s = new Scout.ScoutHomeScreen(this,ID);
-                s.Show();
-                this.Hide();
+                try
+                {
+                    s.Show();
+                    this.Hide();
+                }
+                catch (Exception) { }
             }
         }
     }

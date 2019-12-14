@@ -124,6 +124,7 @@
             this.ClubDataGridView.AllowUserToAddRows = false;
             this.ClubDataGridView.AllowUserToDeleteRows = false;
             this.ClubDataGridView.BackgroundColor = System.Drawing.Color.OldLace;
+            this.ClubDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ClubDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClubDataGridView.Location = new System.Drawing.Point(12, 38);
             this.ClubDataGridView.MultiSelect = false;

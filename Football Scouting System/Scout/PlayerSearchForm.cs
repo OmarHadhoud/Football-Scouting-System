@@ -45,7 +45,7 @@ namespace Football_Scouting_System.Scout
             int dir = checkBox1.Checked ? 1 : 0;
             dt = controllerobj.Order_search_PlayerForScouts(comboBox1.SelectedIndex+1, SearchBar.Text,dir);
             PlayerDataGridView.DataSource = dt;
-            PlayerDataGridView.Columns[0].Visible = false;
+            try { PlayerDataGridView.Columns[0].Visible = false; } catch{ }
             PlayerDataGridView.Refresh();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -60,17 +60,24 @@ namespace Football_Scouting_System.Scout
 
         private void ViewStatsBtn_Click(object sender, EventArgs e)
         {
-            int id =Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+            try { int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString()); 
             ViewPlayerStats vps = new ViewPlayerStats(this,id);
             vps.Show();
+            }
+            catch { MessageBox.Show("Please select a valid player !"); }
         }
 
         private void ViewAttributesBtn_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
-            ViewPlayerAttributes vpa = new ViewPlayerAttributes(this, id);
-            vpa.Show();
+            try
+            {
+                int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                ViewPlayerAttributes vpa = new ViewPlayerAttributes(this, id);
+                vpa.Show();
+            }
+            catch { MessageBox.Show("Please select a valid player !"); }
         }
+
 
         private void SearchBar_TextChanged(object sender, EventArgs e)
         {

@@ -23,7 +23,14 @@ namespace Football_Scouting_System.Scout
             controllerobj = new Controller();
             ParentForm_ = _ParentForm;
             ID = ID_;
-            Sc = new GeneralClasses.Scout(ID);
+            try
+            {
+                Sc = new GeneralClasses.Scout(ID);
+            }
+            catch(Exception ex)
+            {
+                this.Close();
+            }
         }
 
         private void ScoutHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
