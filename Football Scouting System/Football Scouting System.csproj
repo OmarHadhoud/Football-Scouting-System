@@ -366,6 +366,9 @@
     <EmbeddedResource Include="Scout\PlayerSearchForm.resx">
       <DependentUpon>PlayerSearchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Scout\Scout profile.resx">
+      <DependentUpon>Scout profile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scout\ScoutHomeScreen.resx">
       <DependentUpon>ScoutHomeScreen.cs</DependentUpon>
     </EmbeddedResource>

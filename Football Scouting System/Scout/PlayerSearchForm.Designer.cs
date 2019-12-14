@@ -36,9 +36,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchBar = new System.Windows.Forms.TextBox();
-            this.SearchBtn = new System.Windows.Forms.Button();
             this.logOutBtn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,21 +127,11 @@
             // SearchBar
             // 
             this.SearchBar.BackColor = System.Drawing.Color.OldLace;
-            this.SearchBar.Location = new System.Drawing.Point(10, 8);
+            this.SearchBar.Location = new System.Drawing.Point(74, 7);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.Size = new System.Drawing.Size(462, 20);
             this.SearchBar.TabIndex = 8;
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.BackColor = System.Drawing.Color.OldLace;
-            this.SearchBtn.Location = new System.Drawing.Point(488, 4);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
-            this.SearchBtn.TabIndex = 9;
-            this.SearchBtn.Text = "Search";
-            this.SearchBtn.UseVisualStyleBackColor = false;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_click);
+            this.SearchBar.TextChanged += new System.EventHandler(this.SearchBar_TextChanged);
             // 
             // logOutBtn
             // 
@@ -167,15 +157,24 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Search :";
+            // 
             // PlayerSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(586, 430);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.logOutBtn);
-            this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.SearchBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -204,8 +203,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchBar;
-        private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button logOutBtn;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

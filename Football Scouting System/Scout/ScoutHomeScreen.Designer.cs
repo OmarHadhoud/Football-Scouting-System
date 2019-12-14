@@ -160,6 +160,7 @@
             this.Name = "ScoutHomeScreen";
             this.Text = "Welcome";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ScoutHomeScreen_FormClosed);
+            this.Load += new System.EventHandler(this.ScoutHomeScreen_Load_1);
             this.ResumeLayout(false);
 
         }

@@ -56,5 +56,9 @@ namespace Football_Scouting_System.Scout
             this.Close();
         }
 
+        private void SearchBar_TextChanged(object sender, EventArgs e)
+        {
+            updateClubsView();
+        }
     }
 }

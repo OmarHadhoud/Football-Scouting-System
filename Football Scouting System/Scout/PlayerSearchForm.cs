@@ -62,6 +62,9 @@ namespace Football_Scouting_System.Scout
             // PlayerDataGridView.SelectedRows
         }
 
-        
+        private void SearchBar_TextChanged(object sender, EventArgs e)
+        {
+            updatePlayersView();
+        }
     }
 }
