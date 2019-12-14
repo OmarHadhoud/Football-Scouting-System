@@ -89,7 +89,8 @@ namespace Football_Scouting_System.FA
         {
             Players = controllerobj.GetPlayers();
             playerComboBox.DataSource = Players;
-            playerComboBox.DisplayMember = "Name";
+            Players.Columns.Add("FullName", typeof(string), "Fname + ' ' + Lname");
+            playerComboBox.DisplayMember = "FullName";
             playerComboBox.ValueMember = "PID";
             playerComboBox.SelectedItem = null;
 

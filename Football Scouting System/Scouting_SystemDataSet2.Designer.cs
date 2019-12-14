@@ -983,7 +983,7 @@ namespace Football_Scouting_System.Scouting_SystemDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Football_Scouting_System.Properties.Settings.Default.Scouting_SystemConnectionString;
+            this._connection.ConnectionString = global::Football_Scouting_System.Properties.Settings.Default.ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

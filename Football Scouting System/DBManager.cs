@@ -10,7 +10,7 @@ namespace Football_Scouting_System
 {
     public class DBManager
     {
-		static string DB_Connection_String = @"Data Source=LILKAPPALITE;Initial Catalog=""Scouting System"";Integrated Security=True";
+        static string DB_Connection_String = Properties.Settings.Default.ConnectionString;
 		SqlConnection myConnection;
 
     public DBManager()
