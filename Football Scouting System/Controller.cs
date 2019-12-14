@@ -507,8 +507,23 @@ namespace Football_Scouting_System
             Parameters.Add("@PID", _PID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        //scout
-        public int Endorsenonsigned(int _ID)
+
+		public DataTable GetAllFreePlayers()
+		{
+			string StoredProcedureName = StoredProcedures.GetAllfreePlayers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+
+		public DataTable GetAllNonFreePlayers()
+		{
+			string StoredProcedureName = StoredProcedures.GetAllnonfreePlayers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+
+		//scout
+		public int Endorsenonsigned(int _ID)
 		{
 			string StoredProcedureName = StoredProcedures.EndorseScout;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();

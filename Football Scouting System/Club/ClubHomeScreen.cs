@@ -44,16 +44,11 @@ namespace Football_Scouting_System.Club
 			S.Show();
 		}
 
-		private void Searchfreebutt_Click(object sender, EventArgs e)
-		{
-			Searchforfreeplayers S = new Searchforfreeplayers(this);
-			this.Hide();
-			S.Show();
-		}
+		
 
 		private void Searchnonfree_Click(object sender, EventArgs e)
 		{
-			Searchnonfreeplayers S = new Searchnonfreeplayers(this);
+			Searchplayers S = new Searchplayers(this);
 			this.Hide();
 			S.Show();
 		}

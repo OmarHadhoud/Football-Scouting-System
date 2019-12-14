@@ -1,6 +1,6 @@
 ﻿namespace Football_Scouting_System.Club
 {
-	partial class Searchnonfreeplayers
+	partial class Signplayer
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -30,19 +30,19 @@
 		{
 			this.SuspendLayout();
 			// 
-			// Searchnonfreeplayers
+			// Signplayer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
-			this.Name = "Searchnonfreeplayers";
+			this.Name = "Signplayer";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Search non-free players";
-			this.Load += new System.EventHandler(this.Searchnonfreeplayers_Load);
+			this.Text = "Sign player";
+			this.Load += new System.EventHandler(this.Signplayer_Load);
 			this.ResumeLayout(false);
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SearchNonfreePlayersForm_FormClosed);
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignPlayer_FormClosed);
 
 
 		}

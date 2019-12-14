@@ -71,7 +71,10 @@ namespace Football_Scouting_System
 		public static string GetPlayerclub = "Getplayerclubid";
 		public static string UpdatePlayerStatus = "updatestatus";
 		public static string SetPlayerClub = "SetPlayerClub";
-		
+		public static string GetAllfreePlayers = "GetAllfreePlayers";
+		public static string GetAllnonfreePlayers = "GetAllnonfreePlayers";
+
+
 
 		//news
 		public static string InsertNews = "insertnews";

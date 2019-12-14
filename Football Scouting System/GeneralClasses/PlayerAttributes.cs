@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-
+using System.Windows.Forms;
 namespace Football_Scouting_System.GeneralClasses
 {
     public class PlayerAttributes
@@ -30,7 +30,7 @@ namespace Football_Scouting_System.GeneralClasses
             {
                 Attributes[i] =Convert.ToInt32(PlayerAttrib[i+1]); 
             }
-                }catch { System.Windows.Forms.MessageBox.Show("No attributes available for selected player");}
+                }catch { System.Windows.Forms.MessageBox.Show("There are missing attributes!");}
 
         }
     }

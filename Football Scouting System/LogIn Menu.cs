@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Football_Scouting_System
 {
@@ -22,10 +23,16 @@ namespace Football_Scouting_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void LogInBtn_Click(object sender, EventArgs e)
+			//playSimpleSound();
+		}
+		/*
+		private void playSimpleSound()
+		{
+			SoundPlayer simpleSound = ;
+			simpleSound.Play();
+		}
+		*/
+		private void LogInBtn_Click(object sender, EventArgs e)
         {
 			int ID =Convert.ToInt32(userNameTxtbox.Text);
             Login(ID);

@@ -82,6 +82,12 @@
     <Compile Include="Club\Endorsenonsignedscouts.Designer.cs">
       <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Club\PlayerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\PlayerProfile.Designer.cs">
+      <DependentUpon>PlayerProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club\Postnews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +100,17 @@
     <Compile Include="Club\Postplayerstatus.Designer.cs">
       <DependentUpon>Postplayerstatus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Searchforfreeplayers.cs">
+    <Compile Include="Club\Searchplayers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Searchforfreeplayers.Designer.cs">
-      <DependentUpon>Searchforfreeplayers.cs</DependentUpon>
+    <Compile Include="Club\Searchplayers.Designer.cs">
+      <DependentUpon>Searchplayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Searchnonfreeplayers.cs">
+    <Compile Include="Club\Signplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Searchnonfreeplayers.Designer.cs">
-      <DependentUpon>Searchnonfreeplayers.cs</DependentUpon>
+    <Compile Include="Club\Signplayer.Designer.cs">
+      <DependentUpon>Signplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Signstaff.cs">
       <SubType>Form</SubType>
@@ -298,17 +304,20 @@
     <EmbeddedResource Include="Club\Endorsenonsignedscouts.resx">
       <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Club\PlayerProfile.resx">
+      <DependentUpon>PlayerProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Club\Postnews.resx">
       <DependentUpon>Postnews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Postplayerstatus.resx">
       <DependentUpon>Postplayerstatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Searchforfreeplayers.resx">
-      <DependentUpon>Searchforfreeplayers.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Searchplayers.resx">
+      <DependentUpon>Searchplayers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Searchnonfreeplayers.resx">
-      <DependentUpon>Searchnonfreeplayers.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Signplayer.resx">
+      <DependentUpon>Signplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>
@@ -447,6 +456,8 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sounds\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

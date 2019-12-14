@@ -83,5 +83,10 @@ namespace Football_Scouting_System.Scout
         {
             updatePlayersView();
         }
-    }
+
+		private void PlayerSearchForm_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
