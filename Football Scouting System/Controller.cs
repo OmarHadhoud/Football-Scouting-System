@@ -79,13 +79,31 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
-        public int DeleteC2EOffer(int _FA_ID, int _SCID,int _PID)
+        public DataTable GetFreeScoutOffers(int _FA_ID)
         {
-            string StoredProcedureName = StoredProcedures.DeleteC2EOffer;
+            string StoredProcedureName = StoredProcedures.GetFreeScoutsOffers;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
+        public int DeleteC2EPOffer(int _FA_ID, int _SCID,int _PID)
+        {
+            string StoredProcedureName = StoredProcedures.DeleteC2EPOffer;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@FA_ID", _FA_ID);
             Parameters.Add("@SCID", _SCID);
             Parameters.Add("@PID", _PID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        public int DeleteC2ESOffer(int _FA_ID, int _SCID, int _SID)
+        {
+            string StoredProcedureName = StoredProcedures.DeleteC2ESOffer;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FA_ID", _FA_ID);
+            Parameters.Add("@SCID", _SCID);
+            Parameters.Add("@SID", _SID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
@@ -452,5 +470,13 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 
-	}
+        public int SetScoutClub(int _CID, int _SID)
+        {
+            string StoredProcedureName = StoredProcedures.SetScoutClub;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", _CID);
+            Parameters.Add("@SID", _SID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+    }
 }
