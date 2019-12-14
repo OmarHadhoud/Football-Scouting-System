@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 
 
-namespace Football_Scouting_System.Scout
+namespace Football_Scouting_System.GeneralClasses
 {
     public class Scout
     {

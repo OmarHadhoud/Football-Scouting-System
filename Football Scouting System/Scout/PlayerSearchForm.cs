@@ -60,7 +60,16 @@ namespace Football_Scouting_System.Scout
 
         private void ViewStatsBtn_Click(object sender, EventArgs e)
         {
-            label1.Text =PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+            int id =Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+            ViewPlayerStats vps = new ViewPlayerStats(this,id);
+            vps.Show();
+        }
+
+        private void ViewAttributesBtn_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+            ViewPlayerAttributes vpa = new ViewPlayerAttributes(this, id);
+            vpa.Show();
         }
 
         private void SearchBar_TextChanged(object sender, EventArgs e)

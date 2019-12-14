@@ -44,6 +44,8 @@ namespace Football_Scouting_System
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
         public static string Order_Search_Club = "Order_Search_Club";
         public static string GetScoutWithID = "GetScoutWithID";
+        public static string GetAvgAttrib = "GetAvgAttrib";
+        public static string GetPlayerStats_ID = "GetPlayerStats_ID";
 
 		public static string EndorseScout = "Endorsenonsignedscout";
 

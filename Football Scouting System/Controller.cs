@@ -190,6 +190,21 @@ namespace Football_Scouting_System
             Parameters.Add("@ID", id);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public DataTable GetAvgAttrib(int id)
+        {
+            string StoredProcedureName = StoredProcedures.GetAvgAttrib;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", id);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable GetPlayerStats_ID(int id)
+        {
+            string StoredProcedureName = StoredProcedures.GetPlayerStats_ID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ID", id);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
 
         //Staff related functions
         public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)

@@ -12,9 +12,9 @@ namespace Football_Scouting_System.Scout
 {
     public partial class Scout_profile : Form
     {
-        Scout Sc;
+        GeneralClasses.Scout Sc;
         private Form ParentForm_;
-        public Scout_profile(Form _ParentForm,Scout Sc_)
+        public Scout_profile(Form _ParentForm, GeneralClasses.Scout Sc_)
         {
             InitializeComponent();
             Sc = Sc_;

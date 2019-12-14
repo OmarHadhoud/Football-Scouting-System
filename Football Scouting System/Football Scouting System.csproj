@@ -210,6 +210,8 @@
     <Compile Include="FA\UpdateFA.Designer.cs">
       <DependentUpon>UpdateFA.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralClasses\PlayerAttributes.cs" />
+    <Compile Include="GeneralClasses\PlayerStats.cs" />
     <Compile Include="LogIn Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,7 +253,7 @@
     <Compile Include="Scout\Scout profile.Designer.cs">
       <DependentUpon>Scout profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scout\Scout.cs" />
+    <Compile Include="GeneralClasses\Scout.cs" />
     <Compile Include="Scout\ScoutHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +265,18 @@
     </Compile>
     <Compile Include="Scout\ViewClubs.Designer.cs">
       <DependentUpon>ViewClubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scout\ViewPlayerAttributes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scout\ViewPlayerAttributes.Designer.cs">
+      <DependentUpon>ViewPlayerAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scout\ViewPlayerStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scout\ViewPlayerStats.Designer.cs">
+      <DependentUpon>ViewPlayerStats.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="ValidationClass.cs" />
@@ -375,6 +389,12 @@
     <EmbeddedResource Include="Scout\ViewClubs.resx">
       <DependentUpon>ViewClubs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Scout\ViewPlayerAttributes.resx">
+      <DependentUpon>ViewPlayerAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scout\ViewPlayerStats.resx">
+      <DependentUpon>ViewPlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -427,5 +447,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

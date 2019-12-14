@@ -78,11 +78,11 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "First Name",
-            "Last Name",
-            "Age",
-            "Position",
-            "Height"});
+            "Name",
+            "Abbrevation",
+            "League name",
+            "Squad size",
+            "Average age"});
             this.comboBox1.Location = new System.Drawing.Point(510, 377);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);

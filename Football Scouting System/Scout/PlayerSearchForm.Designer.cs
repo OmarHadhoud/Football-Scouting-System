@@ -87,6 +87,7 @@
             this.ViewAttributesBtn.TabIndex = 3;
             this.ViewAttributesBtn.Text = "View attributes";
             this.ViewAttributesBtn.UseVisualStyleBackColor = false;
+            this.ViewAttributesBtn.Click += new System.EventHandler(this.ViewAttributesBtn_Click);
             // 
             // RateBtn
             // 

@@ -16,14 +16,14 @@ namespace Football_Scouting_System.Scout
         private Form ParentForm_;
         Controller controllerobj;
         private int ID;
-        Scout Sc;
+        GeneralClasses.Scout Sc;
         public ScoutHomeScreen(Form _ParentForm, int ID_)
         {
             InitializeComponent();
             controllerobj = new Controller();
             ParentForm_ = _ParentForm;
             ID = ID_;
-            Sc = new Scout(ID);
+            Sc = new GeneralClasses.Scout(ID);
         }
 
         private void ScoutHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
