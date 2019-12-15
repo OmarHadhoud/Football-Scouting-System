@@ -12,10 +12,10 @@ namespace Football_Scouting_System.FA
 {
     public partial class AddAgentForm : Form
     {
-        AddStaffForm ParentForm_;
+        Form ParentForm_;
         Controller controllerobj;
 
-        public AddAgentForm(AddStaffForm _ParentForm)
+        public AddAgentForm(Form _ParentForm)
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
