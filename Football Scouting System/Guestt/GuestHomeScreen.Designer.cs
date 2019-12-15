@@ -136,6 +136,7 @@
             this.Name = "GuestHomeScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestHomeScreen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GuestHomeScreen_FormClosed);
             this.ResumeLayout(false);
 
         }

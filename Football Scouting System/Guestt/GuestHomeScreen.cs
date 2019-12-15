@@ -12,9 +12,11 @@ namespace Football_Scouting_System.Guestt
 {
     public partial class GuestHomeScreen : Form
     {
-        public GuestHomeScreen()
+        Form ParentForm_;
+        public GuestHomeScreen(Form _ParentForm_)
         {
             InitializeComponent();
+            ParentForm_ = _ParentForm_;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,7 +36,9 @@ namespace Football_Scouting_System.Guestt
 
         private void scoutsBtn_Click(object sender, EventArgs e)
         {
-
+            ViewScoutGuestView vsgv = new ViewScoutGuestView(this);
+            this.Hide();
+            vsgv.Show();
         }
 
         private void articlesBtn_Click(object sender, EventArgs e)
@@ -60,6 +64,11 @@ namespace Football_Scouting_System.Guestt
         private void exitBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GuestHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ParentForm_.Show();
         }
     }
 }
