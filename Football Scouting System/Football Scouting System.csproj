@@ -218,6 +218,12 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
+    <Compile Include="Guestt\GuestHomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestt\GuestHomeScreen.Designer.cs">
+      <DependentUpon>GuestHomeScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FA\UpdateFA.resx">
       <DependentUpon>UpdateFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\GuestHomeScreen.resx">
+      <DependentUpon>GuestHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn Menu.resx">
       <DependentUpon>LogIn Menu.cs</DependentUpon>
