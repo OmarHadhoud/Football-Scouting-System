@@ -15,13 +15,15 @@ namespace Football_Scouting_System.Scout
         Form ParentForm_;
         Controller controllerobj;
         DataTable dt;
-        public PlayerSearchForm(Form _ParentForm)
+        int SID;
+        public PlayerSearchForm(Form _ParentForm, int _SID)
         {
             InitializeComponent();
             controllerobj = new Controller();
             ParentForm_ = _ParentForm;
             comboBox1.SelectedIndex = 0;
             updatePlayersView();
+            SID = _SID;
         }
 
         private void PlayerSearchForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -88,5 +90,36 @@ namespace Football_Scouting_System.Scout
 		{
 
 		}
-	}
+
+        private void FavoriteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                ScoutHomeScreen f = (ScoutHomeScreen)ParentForm_; //Casting the parent form
+                if (!f.favs.Contains(id)) {
+                    f.favs.Add(id);
+                    MessageBox.Show("Player added to favorites");
+                }
+                else
+                {
+                    f.favs.Remove(id);
+                    MessageBox.Show("Player removed from favorites");
+                }
+
+            }
+            catch { MessageBox.Show("Please select a valid player !"); }
+        }
+
+        private void RateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(PlayerDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                SuggestRatingForm srf = new SuggestRatingForm(SID,id);
+                srf.Show();
+            }
+            catch { MessageBox.Show("Please select a valid player !"); }
+        }
+    }
 }

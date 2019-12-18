@@ -237,6 +237,28 @@ namespace Football_Scouting_System
             Parameters.Add("@ID", id);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public int AddPlayerRating(int PlayerID,int ScoutID,int Pace,int Acceleration,int Strength,int Jumping,int Shooting,int Passing,int Dribbling	,int Positionning,int otb,int gkh,int gkp ,int gkd)
+        {
+            string StoredProcedureName = StoredProcedures.AddPlayerRating;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PlayerID", PlayerID		);
+            Parameters.Add("@ScoutID", ScoutID		);
+            Parameters.Add("@Pace", Pace			);
+            Parameters.Add("@Acceleration", Acceleration	);
+            Parameters.Add("@Strength", Strength		);
+            Parameters.Add("@Jumping", Jumping		);
+            Parameters.Add("@Shooting", Shooting		);
+            Parameters.Add("@Passing", Passing		);
+            Parameters.Add("@Dribbling", Dribbling	);
+            Parameters.Add("@Positionning", Positionning	);
+            Parameters.Add("@otb", otb			);
+            Parameters.Add("@gkh", gkh			);
+            Parameters.Add("@gkp", gkp			);
+            Parameters.Add("@gkd", gkd          );
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+
+        }
+        
 
 
         //Staff related functions
