@@ -45,7 +45,9 @@ namespace Football_Scouting_System.Guestt
 
         private void articlesBtn_Click(object sender, EventArgs e)
         {
-
+            ViewArticlesGuest vag = new ViewArticlesGuest(this);
+            this.Hide();
+            vag.Show();
         }
 
         private void leaguesBtn_Click(object sender, EventArgs e)

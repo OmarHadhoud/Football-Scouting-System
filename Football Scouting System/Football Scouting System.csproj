@@ -237,6 +237,12 @@
     <Compile Include="Guestt\GuestHomeScreen.Designer.cs">
       <DependentUpon>GuestHomeScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guestt\ViewArticlesGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestt\ViewArticlesGuest.Designer.cs">
+      <DependentUpon>ViewArticlesGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guestt\ViewScoutGuestView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\GuestHomeScreen.resx">
       <DependentUpon>GuestHomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewArticlesGuest.resx">
+      <DependentUpon>ViewArticlesGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewScoutGuestView.resx">
       <DependentUpon>ViewScoutGuestView.cs</DependentUpon>

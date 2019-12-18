@@ -44,6 +44,9 @@ namespace Football_Scouting_System
         public static string DeleteAgent = "DeleteAgent";
         public static string DeleteCoach = "DeleteCoach";
         public static string DeleteManager = "DeleteManager";
+        public static string GetAllJournalists = "GetAllJournalists";
+        public static string GetIndpJournalists = "GetIndpJournalists";
+        public static string GetArticlesBy = "GetArticlesBy";
 
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";

@@ -337,6 +337,14 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
 
+        public DataTable GetArticlesBy(int _JID)
+        {
+            string StoredProcedureName = StoredProcedures.GetArticlesBy;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@JID", _JID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
         public DataTable GetManagers()
         {
             string StoredProcedureName = StoredProcedures.GetManagers;
@@ -347,6 +355,20 @@ namespace Football_Scouting_System
         public DataTable GetCoaches()
         {
             string StoredProcedureName = StoredProcedures.GetCoaches;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetIndpJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetIndpJournalists;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetAllJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetAllJournalists;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
