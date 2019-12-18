@@ -24,9 +24,12 @@ namespace Football_Scouting_System
         //Club related procedures
         public static string InsertClub = "InsertClub";
         public static string GetClubs = "GetClubs";
+        public static string GetAllClubs = "GetAllClubs";
         public static string GetPlayers = "GetPlayers";
         public static string DeletePlayer = "DeletePlayer";
         public static string UpdateClubLeague = "UpdateClubLeague";
+        public static string GetClubNews = "GetClubNews";
+        
 
         //Staff related
         public static string AddManager = "AddManager";

@@ -26,7 +26,9 @@ namespace Football_Scouting_System.Guestt
 
         private void clbNewsBtn_Click(object sender, EventArgs e)
         {
-
+            GuestClubNews gcn = new GuestClubNews(this);
+            this.Hide();
+            gcn.Show();
         }
 
         private void clubsBtn_Click(object sender, EventArgs e)

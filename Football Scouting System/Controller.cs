@@ -156,11 +156,26 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        public DataTable GetAllClubs()
+        {
+            string StoredProcedureName = StoredProcedures.GetAllClubs;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
         public DataTable GetPlayers()
         {
             string StoredProcedureName = StoredProcedures.GetPlayers;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetClubNews(int _CID)
+        {
+            string StoredProcedureName = StoredProcedures.GetClubNews;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@cid", _CID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
         public int UpdateClubLeague(int _CID, int _FA_ID, string _LeagueName)
