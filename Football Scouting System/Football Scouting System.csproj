@@ -320,6 +320,12 @@
     <Compile Include="Scout\PlayerSearchForm.Designer.cs">
       <DependentUpon>PlayerSearchForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scout\RequestSigningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scout\RequestSigningForm.Designer.cs">
+      <DependentUpon>RequestSigningForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scout\Scout profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +498,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\PlayerSearchForm.resx">
       <DependentUpon>PlayerSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scout\RequestSigningForm.resx">
+      <DependentUpon>RequestSigningForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\Scout profile.resx">
       <DependentUpon>Scout profile.cs</DependentUpon>
