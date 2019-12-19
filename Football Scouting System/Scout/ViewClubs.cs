@@ -75,6 +75,7 @@ namespace Football_Scouting_System.Scout
                 string name = ClubDataGridView.SelectedRows[0].Cells[1].Value.ToString();
                 RequestSigningForm RSF = new RequestSigningForm(this, (ScoutHomeScreen)ParentForm_,id,name);
                 RSF.Show();
+                this.Hide();
             }
             catch
             {

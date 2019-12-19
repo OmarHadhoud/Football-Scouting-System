@@ -393,12 +393,35 @@ namespace Football_Scouting_System
             Parameters.Add("@SID", ScoutID);
             return Convert.ToBoolean(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
         }
-
-
-
-            //Staff related functions
-            public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+        public DataTable GetPlayerName_ID(int id)
         {
+            string StoredProcedureName = StoredProcedures.GetPlayerName_ID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", id);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public int GetPlayerClub(int PlayerID)
+        {
+            string StoredProcedureName = StoredProcedures.GetPlayerClub;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PlayerID);
+            return Convert.ToInt32(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
+        public int ScoutReqSigningC2C(int PID, int ScoutID, int CIDSend, int CIDRecive, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqSigningC2C;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID1", CIDSend);
+            Parameters.Add("@CID2",CIDRecive );
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@Fee", Fee);
+            Parameters.Add("@Sid", ScoutID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+        //Staff related functions
+        public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+         {
 
             string StoredProcedureName = StoredProcedures.AddManager;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -415,7 +438,7 @@ namespace Football_Scouting_System
             else
                 Parameters.Add("@AgentID", _AgentID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-        }
+         }
 
         public int AddCoach(int _CID, string _Name, DateTime _Bdate, int _ClubID, int _LicenseNumber)
         {

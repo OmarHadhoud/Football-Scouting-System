@@ -46,6 +46,8 @@ namespace Football_Scouting_System
 
 		//Staff related
         public static string GetClubNews = "GetClubNews";
+        public static string AddManager = "AddManager";
+
         
 
         //Staff related
@@ -73,6 +75,9 @@ namespace Football_Scouting_System
         public static string AddPlayerRating = "AddPlayerRating";
         public static string UpsertPlayerAttributes = "UpsertPlayerAttributes";
         public static string HasAttributes = "HasAttributes";
+        public static string GetPlayerName_ID = "GetPlayerName_ID";
+        public static string ScoutReqSigningC2C = "ScoutReqSigningC2C";
+        public static string GetPlayerClub = "GetPlayerClub";
 
 
 		public static string EndorseScout = "Endorsenonsignedscout";

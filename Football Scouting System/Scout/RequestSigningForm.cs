@@ -17,23 +17,27 @@ namespace Football_Scouting_System.Scout
         Form parentForm_;
         int CID;
         string cName;
-        public RequestSigningForm(Form _parentForm, ScoutHomeScreen _homeScreen,int _CID,string _cName)
+        public RequestSigningForm(Form _parentForm, ScoutHomeScreen _homeScreen, int _CID, string _cName)
         {
             InitializeComponent();
             controllerobj = new Controller();
             parentForm_ = _parentForm;
             homeScreen = _homeScreen;
             CID = _CID;
-            cName = _cName; 
+            cName = _cName;
         }
 
         private void RequestSigningForm_Load(object sender, EventArgs e)
         {
-            //DataTable dt = controllerobj.SelectAllDep();
-            //comboBox1.DataSource = dt;
-            //comboBox1.ite
-            //comboBox1.DisplayMember = "Dname";
-            //comboBox1.ValueMember = "Dnumber";
+            ClubLbl.Text = cName;
+            foreach (int id in homeScreen.favs)
+            {
+                DataTable dt = controllerobj.GetPlayerName_ID(id);
+                string name = dt.Rows[0][0].ToString();
+                name += ' ';
+                name += dt.Rows[0][1].ToString();
+                comboBox1.Items.Add(name);
+            }
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -44,6 +48,52 @@ namespace Football_Scouting_System.Scout
         private void RequestSigningForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             parentForm_.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int PID = comboBox1.SelectedIndex;
+            if (PID > -1)
+            {
+                PID = homeScreen.favs[PID];
+                int CID2 = controllerobj.GetPlayerClub(PID);
+                if (CID == CID2)
+                {
+                    MessageBox.Show("Player is already in that club");
+                }
+                else
+                {
+                    if (CID2 > 0)
+                    {
+                        try
+                        {
+                                int p = controllerobj.ScoutReqSigningC2C(PID, homeScreen.SID, CID, CID2, Convert.ToInt32(numericUpDown1.Value));
+
+                            if (p == 0)
+                            {
+                                MessageBox.Show("Error");
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Done!");
+                            }
+                        }
+                        catch {
+                            MessageBox.Show("Already submitted!"); //could upsert instead
+                        };
+                    }
+                    else
+                    {
+                        //should add to C2E instead
+                        MessageBox.Show("Player has no club, C2E query is to be done soon :)");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select a valid player (from favorites)");
+            }
         }
     }
 }

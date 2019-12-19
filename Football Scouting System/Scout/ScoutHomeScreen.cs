@@ -15,7 +15,7 @@ namespace Football_Scouting_System.Scout
     {
         private Form ParentForm_;
         Controller controllerobj;
-        private int SID;
+        public int SID;
         GeneralClasses.Scout Sc;
         public List<int> favs;
         public ScoutHomeScreen(Form _ParentForm, int _SID)
