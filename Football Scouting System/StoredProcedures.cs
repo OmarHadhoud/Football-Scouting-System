@@ -50,6 +50,7 @@ namespace Football_Scouting_System
 
         //Staff related
         public static string AddScout = "AddScout";
+        public static string AddManager = "AddManager";
         public static string AddJournalist = "AddJournalist";
         public static string AddAgent = "AddAgent";
         public static string AddCoach = "AddCoach";
