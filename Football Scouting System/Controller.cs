@@ -256,13 +256,40 @@ namespace Football_Scouting_System
             Parameters.Add("@gkp", gkp			);
             Parameters.Add("@gkd", gkd          );
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-
         }
-        
+        public int UpsertPlayerAttributes(int PlayerID, int ScoutID, int Pace, int Acceleration, int Strength, int Jumping, int Shooting, int Passing, int Dribbling, int Positionning, int otb, int gkh, int gkp, int gkd)
+        {
+            string StoredProcedureName = StoredProcedures.UpsertPlayerAttributes;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PlayerID", PlayerID);
+            Parameters.Add("@ScoutID", ScoutID);
+            Parameters.Add("@Pace", Pace);
+            Parameters.Add("@Acceleration", Acceleration);
+            Parameters.Add("@Strength", Strength);
+            Parameters.Add("@Jumping", Jumping);
+            Parameters.Add("@Shooting", Shooting);
+            Parameters.Add("@Passing", Passing);
+            Parameters.Add("@Dribbling", Dribbling);
+            Parameters.Add("@Positionning", Positionning);
+            Parameters.Add("@otb", otb);
+            Parameters.Add("@gkh", gkh);
+            Parameters.Add("@gkp", gkp);
+            Parameters.Add("@gkd", gkd);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public bool HasAttributes(int PlayerID, int ScoutID)
+        {
+            string StoredProcedureName = StoredProcedures.HasAttributes;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PlayerID);
+            Parameters.Add("@SID", ScoutID);
+            return Convert.ToBoolean(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
 
 
-        //Staff related functions
-        public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+
+            //Staff related functions
+            public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
         {
 
             string StoredProcedureName = StoredProcedures.AddManager;

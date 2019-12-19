@@ -31,18 +31,37 @@ namespace Football_Scouting_System.Scout
             }
             else
             {
+
                 try
                 {
-                    controller.AddPlayerRating(PID, SID, Convert.ToInt32(PaceNUM.Value), Convert.ToInt32(AccNUM.Value), Convert.ToInt32(StrengthNUM.Value), Convert.ToInt32(JumpingNUM.Value), Convert.ToInt32(ShootingNUM.Value), Convert.ToInt32(PassingNUM.Value), Convert.ToInt32(DribblingNUM.Value), Convert.ToInt32(PosNUM.Value), Convert.ToInt32(OTBNUM.Value), Convert.ToInt32(GKHNUM.Value), Convert.ToInt32(GKPNUM.Value), Convert.ToInt32(GKDNUM.Value));
-                    MessageBox.Show("Added successfully");
+                    bool found = controller.HasAttributes(PID, SID);
+                    controller.UpsertPlayerAttributes(PID, SID, Convert.ToInt32(PaceNUM.Value), Convert.ToInt32(AccNUM.Value), Convert.ToInt32(StrengthNUM.Value), Convert.ToInt32(JumpingNUM.Value), Convert.ToInt32(ShootingNUM.Value), Convert.ToInt32(PassingNUM.Value), Convert.ToInt32(DribblingNUM.Value), Convert.ToInt32(PosNUM.Value), Convert.ToInt32(OTBNUM.Value), Convert.ToInt32(GKHNUM.Value), Convert.ToInt32(GKPNUM.Value), Convert.ToInt32(GKDNUM.Value));
+                    if (found)
+                    {
+                        MessageBox.Show("Updated existing attributes");
+                        button1.Text = "Update";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inserted new attributes");
+                    }
                 }
                 catch
                 {
 
-                    MessageBox.Show("Already submitted"); //needes to be edited to allow changes /resubbmission 
+                    MessageBox.Show("Error adding player attributes please check your values"); //needes to be edited to allow changes /resubbmission 
                 }
+
                 
 
+            }
+        }
+
+        private void SuggestRatingForm_Load(object sender, EventArgs e)
+        {
+            if (controller.HasAttributes(PID, SID))
+            {
+                button1.Text = "Update";
             }
         }
     }

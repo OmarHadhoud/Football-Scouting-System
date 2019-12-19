@@ -302,6 +302,7 @@
             this.Controls.Add(this.PaceNUM);
             this.Name = "SuggestRatingForm";
             this.Text = "Suggest rating";
+            this.Load += new System.EventHandler(this.SuggestRatingForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PaceNUM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PassingNUM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShootingNUM)).EndInit();
