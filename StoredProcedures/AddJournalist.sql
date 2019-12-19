@@ -23,7 +23,7 @@ CREATE PROCEDURE AddJournalist
 	@JID	int	,
 	@Name	varchar(50)	,
 	@Bdate	varchar(50)	=null,
-	@Password	varchar(50)	
+	@Password	varchar(66)	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from

@@ -811,5 +811,43 @@ namespace Football_Scouting_System
             Parameters.Add("@SID", _SID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+
+        //Login functions
+        public int LogInFA(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInFA;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInScout(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInScout;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInClub(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInClub;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInJournalist(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInJournalist;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
     }
 }
