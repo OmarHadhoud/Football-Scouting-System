@@ -56,7 +56,7 @@ namespace Football_Scouting_System
             }
             else if (userNameTxtbox.Text == "2")
             {
-                Club.ClubHomeScreen C = new Club.ClubHomeScreen(this, ID);
+                Club.ClubHomeScreen C = new Club.ClubHomeScreen(this, 101);
                 C.Show();
                 this.Hide();
             }

@@ -67,7 +67,7 @@ namespace Football_Scouting_System.Guestt
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void GuestHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
