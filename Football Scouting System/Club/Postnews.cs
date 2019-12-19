@@ -54,7 +54,7 @@ namespace Football_Scouting_System.Club
 			}
 			catch (System.Exception ex)
 			{
-				MessageBox.Show("Incorrect data!");
+				MessageBox.Show(ex.Message);
 			}
 		}
 		private int getID()
@@ -82,17 +82,12 @@ namespace Football_Scouting_System.Club
 		}
 		private int Getpostno() //to be modified with auto-generaton for ids
 		{
-			try
-			{
-				int id = Convert.ToInt32(postnotext.Text);
-				if (id < 0 || id >= 2000)
-					throw new System.Exception("Please enter the no between 100 and 2000!");
-				return id;
-			}
-			catch
-			{
-				throw new System.Exception("Please make sure you entered numbers only in post number!");
-			}
+			return Controllerobj.GetCountOfnews();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

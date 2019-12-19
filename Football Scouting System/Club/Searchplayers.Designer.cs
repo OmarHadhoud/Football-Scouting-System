@@ -39,6 +39,7 @@
 			this.statbutton = new System.Windows.Forms.Button();
 			this.attributesbutton = new System.Windows.Forms.Button();
 			this.signingbutton = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.playerdataGridView)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
@@ -49,11 +50,12 @@
 			this.playerdataGridView.AllowUserToDeleteRows = false;
 			this.playerdataGridView.AllowUserToResizeColumns = false;
 			this.playerdataGridView.AllowUserToResizeRows = false;
+			this.playerdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.playerdataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.playerdataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.playerdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.playerdataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-			this.playerdataGridView.Location = new System.Drawing.Point(12, 113);
+			this.playerdataGridView.Location = new System.Drawing.Point(106, 120);
 			this.playerdataGridView.Name = "playerdataGridView";
 			this.playerdataGridView.RowTemplate.Height = 26;
 			this.playerdataGridView.Size = new System.Drawing.Size(545, 244);
@@ -64,7 +66,7 @@
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.panel1.Controls.Add(this.nonfreeButton);
 			this.panel1.Controls.Add(this.freeButton);
-			this.panel1.Location = new System.Drawing.Point(12, 12);
+			this.panel1.Location = new System.Drawing.Point(106, 19);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(326, 30);
 			this.panel1.TabIndex = 1;
@@ -79,6 +81,7 @@
 			this.nonfreeButton.TabStop = true;
 			this.nonfreeButton.Text = "Non-free Players";
 			this.nonfreeButton.UseVisualStyleBackColor = true;
+			this.nonfreeButton.CheckedChanged += new System.EventHandler(this.nonfreeButton_CheckedChanged);
 			// 
 			// freeButton
 			// 
@@ -90,11 +93,12 @@
 			this.freeButton.TabStop = true;
 			this.freeButton.Text = "Free Players";
 			this.freeButton.UseVisualStyleBackColor = true;
+			this.freeButton.CheckedChanged += new System.EventHandler(this.freeButton_CheckedChanged);
 			// 
 			// viewallbutton
 			// 
 			this.viewallbutton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.viewallbutton.Location = new System.Drawing.Point(344, 12);
+			this.viewallbutton.Location = new System.Drawing.Point(438, 19);
 			this.viewallbutton.Name = "viewallbutton";
 			this.viewallbutton.Size = new System.Drawing.Size(213, 30);
 			this.viewallbutton.TabIndex = 2;
@@ -104,7 +108,7 @@
 			// 
 			// Namebox
 			// 
-			this.Namebox.Location = new System.Drawing.Point(12, 83);
+			this.Namebox.Location = new System.Drawing.Point(106, 90);
 			this.Namebox.Name = "Namebox";
 			this.Namebox.Size = new System.Drawing.Size(325, 24);
 			this.Namebox.TabIndex = 3;
@@ -112,7 +116,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(14, 63);
+			this.label1.Location = new System.Drawing.Point(108, 70);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(174, 17);
 			this.label1.TabIndex = 4;
@@ -120,16 +124,17 @@
 			// 
 			// searchbutton
 			// 
-			this.searchbutton.Location = new System.Drawing.Point(344, 77);
+			this.searchbutton.Location = new System.Drawing.Point(438, 84);
 			this.searchbutton.Name = "searchbutton";
 			this.searchbutton.Size = new System.Drawing.Size(213, 30);
 			this.searchbutton.TabIndex = 5;
 			this.searchbutton.Text = "Search";
 			this.searchbutton.UseVisualStyleBackColor = true;
+			this.searchbutton.Click += new System.EventHandler(this.searchbutton_Click);
 			// 
 			// statbutton
 			// 
-			this.statbutton.Location = new System.Drawing.Point(12, 366);
+			this.statbutton.Location = new System.Drawing.Point(106, 373);
 			this.statbutton.Name = "statbutton";
 			this.statbutton.Size = new System.Drawing.Size(138, 47);
 			this.statbutton.TabIndex = 6;
@@ -139,7 +144,7 @@
 			// 
 			// attributesbutton
 			// 
-			this.attributesbutton.Location = new System.Drawing.Point(156, 366);
+			this.attributesbutton.Location = new System.Drawing.Point(250, 373);
 			this.attributesbutton.Name = "attributesbutton";
 			this.attributesbutton.Size = new System.Drawing.Size(138, 47);
 			this.attributesbutton.TabIndex = 7;
@@ -149,7 +154,7 @@
 			// 
 			// signingbutton
 			// 
-			this.signingbutton.Location = new System.Drawing.Point(12, 419);
+			this.signingbutton.Location = new System.Drawing.Point(106, 426);
 			this.signingbutton.Name = "signingbutton";
 			this.signingbutton.Size = new System.Drawing.Size(282, 47);
 			this.signingbutton.TabIndex = 8;
@@ -157,12 +162,24 @@
 			this.signingbutton.UseVisualStyleBackColor = true;
 			this.signingbutton.Click += new System.EventHandler(this.signingbutton_Click);
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.PaleGoldenrod;
+			this.button1.Location = new System.Drawing.Point(515, 373);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(136, 100);
+			this.button1.TabIndex = 9;
+			this.button1.Text = "<-Back";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// Searchplayers
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LemonChiffon;
-			this.ClientSize = new System.Drawing.Size(572, 490);
+			this.ClientSize = new System.Drawing.Size(762, 493);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.signingbutton);
 			this.Controls.Add(this.attributesbutton);
 			this.Controls.Add(this.statbutton);
@@ -200,5 +217,6 @@
 		private System.Windows.Forms.Button statbutton;
 		private System.Windows.Forms.Button attributesbutton;
 		private System.Windows.Forms.Button signingbutton;
+		private System.Windows.Forms.Button button1;
 	}
 }

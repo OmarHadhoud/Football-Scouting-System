@@ -182,8 +182,116 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-        //Scout related functions
-        public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
+		public int AddOffer(int _clubid,int _efaid,int _playerid,DateTime _date,int _fee,int _suggest)
+		{
+
+			string StoredProcedureName = StoredProcedures.Approachfreeplayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@clubid", _clubid);
+			Parameters.Add("@efaid", _efaid);
+			Parameters.Add("@player", _playerid);
+			Parameters.Add("@feein", _fee);
+			Parameters.Add("@datein", _date);
+			Parameters.Add("@suggest", _suggest);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int AddnonfreeOffer(int _clubid, int _recid, int _playerid, DateTime _date, int _fee, int _suggest)
+		{
+
+			string StoredProcedureName = StoredProcedures.Approachnonfreeplayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@clubid", _clubid);
+			Parameters.Add("@recid", _recid);
+			Parameters.Add("@player", _playerid);
+			Parameters.Add("@feein", _fee);
+			Parameters.Add("@datein", _date);
+			Parameters.Add("@suggest", _suggest);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int Getclubid(int _playerid)
+		{
+			string StoredProcedureName = StoredProcedures.Getclubidplayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@playerid", _playerid);
+			return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+
+		}
+
+		public int Getefa(int _clubid)
+		{
+			string StoredProcedureName = StoredProcedures.GetEfa;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@clubid", _clubid);
+			return (int)dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+
+		}
+
+		public DataTable GetactualOffers(int _club)
+		{
+			string StoredProcedureName = StoredProcedures.GetActualOffers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@club", _club);
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+
+		public DataTable GetsuggestedfreeOffers(int _club)
+		{
+			string StoredProcedureName = StoredProcedures.GetSuggestedfreeOffers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@club", _club);
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+		public DataTable GetsuggestednonfreeOffers(int _club)
+		{
+			string StoredProcedureName = StoredProcedures.GetSuggestednonfreeOffers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@club", _club);
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+		public int DeleteC2COffer(int _REC, int _SCID, int _PID)
+		{
+			string StoredProcedureName = StoredProcedures.DeleteC2COffer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@REC", _REC);
+			Parameters.Add("@SCID", _SCID);
+			Parameters.Add("@PID", _PID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int DeleteC2EOffer(int _FA_ID, int _SCID, int _PID)
+		{
+			string StoredProcedureName = StoredProcedures.DeleteC2EOffer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@FA_ID", _FA_ID);
+			Parameters.Add("@SCID", _SCID);
+			Parameters.Add("@PID", _PID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int approvesuggestion(int _FA_ID, int _SCID, int _PID)
+		{
+			string StoredProcedureName = StoredProcedures.approveC2EOffer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@FA_ID", _FA_ID);
+			Parameters.Add("@SCID", _SCID);
+			Parameters.Add("@PID", _PID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int approvenonfreesuggestion(int _REC, int _SCID, int _PID)
+		{
+			string StoredProcedureName = StoredProcedures.approveC2COffer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@REC", _REC);
+			Parameters.Add("@SCID", _SCID);
+			Parameters.Add("@PID", _PID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		//Scout related functions
+		public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
         {
             string StoredProcedureName = StoredProcedures.Order_search_PlayerForScouts;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -419,6 +527,44 @@ namespace Football_Scouting_System
 			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
 		}
 
+		public int GetCountOfnews()
+		{
+			string StoredProcedureName = StoredProcedures.GetCountOFnews;
+			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+		}
+
+		public int GetCountOfarticles()
+		{
+			string StoredProcedureName = StoredProcedures.GetCountOFarticless;
+			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+		}
+
+
+		//Journalist
+
+
+		public int insertarticle(int _no, int _id, DateTime _foundationdate, string _title, string _text)
+		{
+			string StoredProcedureName = StoredProcedures.InsertArticless;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@articlesno", _no);
+			Parameters.Add("@id", _id);
+			Parameters.Add("@date", _foundationdate);
+			Parameters.Add("@tit", _title);
+			Parameters.Add("@text", _text);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+		public int journalistrequest(int _JID,int _CID)
+		{
+			string StoredProcedureName = StoredProcedures.Journalistrequest;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@Journalist", _JID);
+			Parameters.Add("@club", _CID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
+
 		//News
 
 
@@ -515,10 +661,26 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
 		}
 
+		public DataTable GetaFreePlayer(string name)
+		{
+			string StoredProcedureName = StoredProcedures.GetafreePlayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@inputN", name);
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+
 		public DataTable GetAllNonFreePlayers()
 		{
 			string StoredProcedureName = StoredProcedures.GetAllnonfreePlayers;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+		}
+
+		public DataTable GetanonFreePlayer(string name)
+		{
+			string StoredProcedureName = StoredProcedures.GetanonfreePlayer;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@inputN", name);
 			return dbMan.ExecuteReader(StoredProcedureName, Parameters);
 		}
 

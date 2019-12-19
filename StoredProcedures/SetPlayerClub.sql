@@ -23,6 +23,6 @@ CREATE PROCEDURE SetPlayerClub
 	@CID int
 AS
 BEGIN
-	update Player set ClubID = @CID where PID = @PID
+	update Player set ClubID = @CID,YouthClubID =null where PID = @PID
 END
 GO

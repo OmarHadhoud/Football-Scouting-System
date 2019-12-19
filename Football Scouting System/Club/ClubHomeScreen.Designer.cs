@@ -40,9 +40,9 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(44, 43);
+			this.button1.Location = new System.Drawing.Point(126, 17);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(170, 60);
+			this.button1.Size = new System.Drawing.Size(241, 110);
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Add Players";
 			this.button1.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(44, 175);
+			this.button3.Location = new System.Drawing.Point(373, 249);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(170, 60);
+			this.button3.Size = new System.Drawing.Size(241, 110);
 			this.button3.TabIndex = 2;
 			this.button3.Text = "Sign Staff\r\n(Coach/Scout/Agent)\r\n";
 			this.button3.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
 			// 
 			// Searchnonfree
 			// 
-			this.Searchnonfree.Location = new System.Drawing.Point(220, 43);
+			this.Searchnonfree.Location = new System.Drawing.Point(373, 17);
 			this.Searchnonfree.Name = "Searchnonfree";
-			this.Searchnonfree.Size = new System.Drawing.Size(170, 60);
+			this.Searchnonfree.Size = new System.Drawing.Size(241, 110);
 			this.Searchnonfree.TabIndex = 3;
 			this.Searchnonfree.Text = "Search for players";
 			this.Searchnonfree.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
 			// 
 			// Postbutton
 			// 
-			this.Postbutton.Location = new System.Drawing.Point(44, 109);
+			this.Postbutton.Location = new System.Drawing.Point(373, 133);
 			this.Postbutton.Name = "Postbutton";
-			this.Postbutton.Size = new System.Drawing.Size(170, 60);
+			this.Postbutton.Size = new System.Drawing.Size(241, 110);
 			this.Postbutton.TabIndex = 4;
 			this.Postbutton.Text = "Post official news";
 			this.Postbutton.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
 			// 
 			// playerstatusbutt
 			// 
-			this.playerstatusbutt.Location = new System.Drawing.Point(220, 109);
+			this.playerstatusbutt.Location = new System.Drawing.Point(126, 133);
 			this.playerstatusbutt.Name = "playerstatusbutt";
-			this.playerstatusbutt.Size = new System.Drawing.Size(170, 60);
+			this.playerstatusbutt.Size = new System.Drawing.Size(241, 110);
 			this.playerstatusbutt.TabIndex = 5;
 			this.playerstatusbutt.Text = "Post player status";
 			this.playerstatusbutt.UseVisualStyleBackColor = true;
@@ -90,19 +90,19 @@
 			// 
 			// Transfersbutton
 			// 
-			this.Transfersbutton.Location = new System.Drawing.Point(220, 175);
+			this.Transfersbutton.Location = new System.Drawing.Point(126, 249);
 			this.Transfersbutton.Name = "Transfersbutton";
-			this.Transfersbutton.Size = new System.Drawing.Size(170, 60);
+			this.Transfersbutton.Size = new System.Drawing.Size(241, 110);
 			this.Transfersbutton.TabIndex = 6;
-			this.Transfersbutton.Text = "Transfers approached by other clubs";
+			this.Transfersbutton.Text = "Received offers";
 			this.Transfersbutton.UseVisualStyleBackColor = true;
 			this.Transfersbutton.Click += new System.EventHandler(this.Transfersbutton_Click);
 			// 
 			// button8
 			// 
-			this.button8.Location = new System.Drawing.Point(44, 241);
+			this.button8.Location = new System.Drawing.Point(126, 365);
 			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(170, 60);
+			this.button8.Size = new System.Drawing.Size(241, 110);
 			this.button8.TabIndex = 7;
 			this.button8.Text = "Endorse non-signed scouts";
 			this.button8.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
 			// LogoutButt
 			// 
 			this.LogoutButt.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.LogoutButt.Location = new System.Drawing.Point(220, 241);
+			this.LogoutButt.Location = new System.Drawing.Point(444, 415);
 			this.LogoutButt.Name = "LogoutButt";
 			this.LogoutButt.Size = new System.Drawing.Size(170, 60);
 			this.LogoutButt.TabIndex = 10;
@@ -124,7 +124,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGreen;
-			this.ClientSize = new System.Drawing.Size(444, 322);
+			this.ClientSize = new System.Drawing.Size(762, 493);
 			this.Controls.Add(this.LogoutButt);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.Transfersbutton);

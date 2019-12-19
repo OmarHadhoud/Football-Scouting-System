@@ -267,5 +267,10 @@ namespace Football_Scouting_System.Club
 		{
 
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }

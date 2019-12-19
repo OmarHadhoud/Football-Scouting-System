@@ -27,9 +27,24 @@ namespace Football_Scouting_System
         public static string GetPlayers = "GetPlayers";
         public static string DeletePlayer = "DeletePlayer";
         public static string UpdateClubLeague = "UpdateClubLeague";
+		public static string Approachfreeplayer = "Approachfreeplayer";
+		public static string Approachnonfreeplayer = "Approachnonfreeplayer";
+		public static string GetEfa = "GetEfa";
+		public static string Getclubidplayer = "Getclubidplayer";
+		public static string GetActualOffers = "getactualplayersoffer";
+		public static string GetSuggestedfreeOffers = "getsuggestedfreeplayersoffer";
+		public static string GetSuggestednonfreeOffers = "getsuggestednonfreeplayersoffer";
+		public static string DeleteC2COffer = "DeleteC2COffer";
+		public static string DeleteC2EOffer = "DeleteC2EOffer";
+		public static string approveC2EOffer = "approveC2EOffer";
+		public static string approveC2COffer = "approveC2COffer";
 
-        //Staff related
-        public static string AddManager = "AddManager";
+
+
+
+
+		//Staff related
+		public static string AddManager = "AddManager";
         public static string AddScout = "AddScout";
         public static string AddJournalist = "AddJournalist";
         public static string AddAgent = "AddAgent";
@@ -61,6 +76,8 @@ namespace Football_Scouting_System
         public static string GetCountOfManagers = "GetCountOfManagers";
         public static string GetCountOfLicenseNumbers = "GetCountOfLicenseNumbers";
 		public static string GetCountOfprofplayers = "GetCountOfProfPlayers";
+		public static string GetCountOFnews = "GetCountOFnews";
+		public static string GetCountOFarticless = "GetCountOFarticles";
 
 
 
@@ -73,6 +90,16 @@ namespace Football_Scouting_System
 		public static string SetPlayerClub = "SetPlayerClub";
 		public static string GetAllfreePlayers = "GetAllfreePlayers";
 		public static string GetAllnonfreePlayers = "GetAllnonfreePlayers";
+		public static string GetafreePlayer = "GetafreePlayerproc";
+		public static string GetanonfreePlayer = "GetanonfreePlayerproc";
+
+		//Journalist
+		public static string InsertArticless = "insertarticles";
+		public static string Journalistrequest = "addjournalisttoclub";
+
+		
+
+
 
 
 

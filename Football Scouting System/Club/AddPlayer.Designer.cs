@@ -57,6 +57,8 @@
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.choice = new System.Windows.Forms.Panel();
+			this.label14 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
 			this.choice.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -65,7 +67,7 @@
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label1.Location = new System.Drawing.Point(21, 26);
+			this.label1.Location = new System.Drawing.Point(140, 78);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(78, 19);
 			this.label1.TabIndex = 0;
@@ -76,7 +78,7 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label2.Location = new System.Drawing.Point(21, 69);
+			this.label2.Location = new System.Drawing.Point(140, 121);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(52, 19);
 			this.label2.TabIndex = 1;
@@ -87,7 +89,7 @@
 			this.label3.AutoSize = true;
 			this.label3.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label3.Location = new System.Drawing.Point(21, 114);
+			this.label3.Location = new System.Drawing.Point(140, 166);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(40, 19);
 			this.label3.TabIndex = 2;
@@ -98,7 +100,7 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label4.Location = new System.Drawing.Point(21, 160);
+			this.label4.Location = new System.Drawing.Point(140, 212);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(70, 19);
 			this.label4.TabIndex = 3;
@@ -109,7 +111,7 @@
 			this.label6.AutoSize = true;
 			this.label6.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label6.Location = new System.Drawing.Point(21, 256);
+			this.label6.Location = new System.Drawing.Point(140, 308);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(78, 19);
 			this.label6.TabIndex = 5;
@@ -120,7 +122,7 @@
 			this.label7.AutoSize = true;
 			this.label7.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label7.Location = new System.Drawing.Point(21, 303);
+			this.label7.Location = new System.Drawing.Point(140, 355);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(54, 19);
 			this.label7.TabIndex = 6;
@@ -128,35 +130,35 @@
 			// 
 			// heighttext
 			// 
-			this.heighttext.Location = new System.Drawing.Point(105, 303);
+			this.heighttext.Location = new System.Drawing.Point(224, 355);
 			this.heighttext.Name = "heighttext";
 			this.heighttext.Size = new System.Drawing.Size(100, 24);
 			this.heighttext.TabIndex = 7;
 			// 
 			// nationalitytext
 			// 
-			this.nationalitytext.Location = new System.Drawing.Point(105, 256);
+			this.nationalitytext.Location = new System.Drawing.Point(224, 308);
 			this.nationalitytext.Name = "nationalitytext";
 			this.nationalitytext.Size = new System.Drawing.Size(100, 24);
 			this.nationalitytext.TabIndex = 8;
 			// 
 			// lastnametext
 			// 
-			this.lastnametext.Location = new System.Drawing.Point(105, 114);
+			this.lastnametext.Location = new System.Drawing.Point(224, 166);
 			this.lastnametext.Name = "lastnametext";
 			this.lastnametext.Size = new System.Drawing.Size(100, 24);
 			this.lastnametext.TabIndex = 11;
 			// 
 			// middlenametext
 			// 
-			this.middlenametext.Location = new System.Drawing.Point(105, 69);
+			this.middlenametext.Location = new System.Drawing.Point(224, 121);
 			this.middlenametext.Name = "middlenametext";
 			this.middlenametext.Size = new System.Drawing.Size(100, 24);
 			this.middlenametext.TabIndex = 12;
 			// 
 			// fnametext
 			// 
-			this.fnametext.Location = new System.Drawing.Point(105, 26);
+			this.fnametext.Location = new System.Drawing.Point(224, 78);
 			this.fnametext.Name = "fnametext";
 			this.fnametext.Size = new System.Drawing.Size(100, 24);
 			this.fnametext.TabIndex = 13;
@@ -167,7 +169,7 @@
 			this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.button1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(258, 303);
+			this.button1.Location = new System.Drawing.Point(377, 355);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(217, 69);
 			this.button1.TabIndex = 14;
@@ -180,7 +182,7 @@
 			this.label8.AutoSize = true;
 			this.label8.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label8.Location = new System.Drawing.Point(21, 348);
+			this.label8.Location = new System.Drawing.Point(140, 400);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(54, 19);
 			this.label8.TabIndex = 15;
@@ -191,7 +193,7 @@
 			this.label9.AutoSize = true;
 			this.label9.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label9.Location = new System.Drawing.Point(21, 208);
+			this.label9.Location = new System.Drawing.Point(140, 260);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(74, 19);
 			this.label9.TabIndex = 16;
@@ -199,35 +201,35 @@
 			// 
 			// statustext
 			// 
-			this.statustext.Location = new System.Drawing.Point(105, 348);
+			this.statustext.Location = new System.Drawing.Point(224, 400);
 			this.statustext.Name = "statustext";
 			this.statustext.Size = new System.Drawing.Size(100, 24);
 			this.statustext.TabIndex = 17;
 			// 
 			// birthplacetext
 			// 
-			this.birthplacetext.Location = new System.Drawing.Point(105, 208);
+			this.birthplacetext.Location = new System.Drawing.Point(224, 260);
 			this.birthplacetext.Name = "birthplacetext";
 			this.birthplacetext.Size = new System.Drawing.Size(100, 24);
 			this.birthplacetext.TabIndex = 18;
 			// 
 			// ratingtext
 			// 
-			this.ratingtext.Location = new System.Drawing.Point(375, 26);
+			this.ratingtext.Location = new System.Drawing.Point(494, 78);
 			this.ratingtext.Name = "ratingtext";
 			this.ratingtext.Size = new System.Drawing.Size(100, 24);
 			this.ratingtext.TabIndex = 19;
 			// 
 			// gamesplayedtext
 			// 
-			this.gamesplayedtext.Location = new System.Drawing.Point(375, 69);
+			this.gamesplayedtext.Location = new System.Drawing.Point(494, 121);
 			this.gamesplayedtext.Name = "gamesplayedtext";
 			this.gamesplayedtext.Size = new System.Drawing.Size(100, 24);
 			this.gamesplayedtext.TabIndex = 20;
 			// 
 			// minutesplayedtext
 			// 
-			this.minutesplayedtext.Location = new System.Drawing.Point(375, 112);
+			this.minutesplayedtext.Location = new System.Drawing.Point(494, 164);
 			this.minutesplayedtext.Name = "minutesplayedtext";
 			this.minutesplayedtext.Size = new System.Drawing.Size(100, 24);
 			this.minutesplayedtext.TabIndex = 21;
@@ -237,7 +239,7 @@
 			this.label10.AutoSize = true;
 			this.label10.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label10.Location = new System.Drawing.Point(258, 69);
+			this.label10.Location = new System.Drawing.Point(377, 121);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(100, 19);
 			this.label10.TabIndex = 22;
@@ -248,7 +250,7 @@
 			this.label11.AutoSize = true;
 			this.label11.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label11.Location = new System.Drawing.Point(258, 112);
+			this.label11.Location = new System.Drawing.Point(377, 164);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(105, 19);
 			this.label11.TabIndex = 23;
@@ -259,7 +261,7 @@
 			this.label12.AutoSize = true;
 			this.label12.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label12.Location = new System.Drawing.Point(258, 26);
+			this.label12.Location = new System.Drawing.Point(377, 78);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(54, 19);
 			this.label12.TabIndex = 24;
@@ -270,7 +272,7 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label5.Location = new System.Drawing.Point(325, 160);
+			this.label5.Location = new System.Drawing.Point(444, 212);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(38, 19);
 			this.label5.TabIndex = 25;
@@ -279,14 +281,14 @@
 			// 
 			// IDtext
 			// 
-			this.IDtext.Location = new System.Drawing.Point(375, 157);
+			this.IDtext.Location = new System.Drawing.Point(494, 209);
 			this.IDtext.Name = "IDtext";
 			this.IDtext.Size = new System.Drawing.Size(100, 24);
 			this.IDtext.TabIndex = 26;
 			// 
 			// dateTimePicker1
 			// 
-			this.dateTimePicker1.Location = new System.Drawing.Point(105, 160);
+			this.dateTimePicker1.Location = new System.Drawing.Point(224, 212);
 			this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
 			this.dateTimePicker1.MinDate = new System.DateTime(1960, 12, 31, 0, 0, 0, 0);
 			this.dateTimePicker1.Name = "dateTimePicker1";
@@ -298,7 +300,7 @@
 			this.label13.AutoSize = true;
 			this.label13.BackColor = System.Drawing.Color.DeepSkyBlue;
 			this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.label13.Location = new System.Drawing.Point(227, 208);
+			this.label13.Location = new System.Drawing.Point(346, 260);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(248, 19);
 			this.label13.TabIndex = 28;
@@ -331,17 +333,43 @@
 			this.choice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.choice.Controls.Add(this.radioButton1);
 			this.choice.Controls.Add(this.radioButton2);
-			this.choice.Location = new System.Drawing.Point(258, 230);
+			this.choice.Location = new System.Drawing.Point(377, 282);
 			this.choice.Name = "choice";
 			this.choice.Size = new System.Drawing.Size(217, 67);
 			this.choice.TabIndex = 31;
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.BackColor = System.Drawing.Color.DeepSkyBlue;
+			this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label14.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label14.Location = new System.Drawing.Point(12, 9);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(352, 36);
+			this.label14.TabIndex = 32;
+			this.label14.Text = "Please enter player details:";
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+			this.button2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.Location = new System.Drawing.Point(494, 430);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(100, 51);
+			this.button2.TabIndex = 33;
+			this.button2.Text = "Back";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// AddPlayer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.SkyBlue;
-			this.ClientSize = new System.Drawing.Size(490, 396);
+			this.ClientSize = new System.Drawing.Size(762, 493);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.label14);
 			this.Controls.Add(this.choice);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.dateTimePicker1);
@@ -414,5 +442,7 @@
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.RadioButton radioButton2;
 		private System.Windows.Forms.Panel choice;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Button button2;
 	}
 }

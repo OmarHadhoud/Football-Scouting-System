@@ -14,11 +14,15 @@ namespace Football_Scouting_System.Club
 	{
 		private Form ParentForm_;
 		int clubID;
+		int efa;
+		Controller controllerobj;
 		public ClubHomeScreen(Form _ParentForm,int id)
 		{
 			InitializeComponent();
 			ParentForm_ = _ParentForm;
 			clubID = id;
+			controllerobj = new Controller();
+			getclubefa();
 			
 		}
 		private void ClubHomeScreen_FormClosed(object sender, FormClosedEventArgs e)
@@ -28,6 +32,12 @@ namespace Football_Scouting_System.Club
 		private void ClubHomeScreen_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void getclubefa()
+		{
+			int efaid = controllerobj.Getefa(clubID);
+			efa = efaid;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -48,7 +58,7 @@ namespace Football_Scouting_System.Club
 
 		private void Searchnonfree_Click(object sender, EventArgs e)
 		{
-			Searchplayers S = new Searchplayers(this);
+			Searchplayers S = new Searchplayers(this, efa, clubID);
 			this.Hide();
 			S.Show();
 		}
@@ -70,7 +80,7 @@ namespace Football_Scouting_System.Club
 
 		private void Transfersbutton_Click(object sender, EventArgs e)
 		{
-			Approchedtransfersotherclubs A = new Approchedtransfersotherclubs(this);
+			Recievedoffers A = new Recievedoffers(this,efa,clubID);
 			this.Hide();
 			A.Show();
 		}

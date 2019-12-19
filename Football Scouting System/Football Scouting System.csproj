@@ -52,11 +52,11 @@
     <Compile Include="Club\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Approchedtransfersotherclubs.cs">
+    <Compile Include="Club\Recievedoffers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Approchedtransfersotherclubs.Designer.cs">
-      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
+    <Compile Include="Club\Recievedoffers.Designer.cs">
+      <DependentUpon>Recievedoffers.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Checkleaguestatus.cs">
       <SubType>Form</SubType>
@@ -106,11 +106,17 @@
     <Compile Include="Club\Searchplayers.Designer.cs">
       <DependentUpon>Searchplayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Signplayer.cs">
+    <Compile Include="Club\Signfreeplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Signplayer.Designer.cs">
-      <DependentUpon>Signplayer.cs</DependentUpon>
+    <Compile Include="Club\Signfreeplayer.Designer.cs">
+      <DependentUpon>Signfreeplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\Signnonfreeplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\Signnonfreeplayer.Designer.cs">
+      <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Signstaff.cs">
       <SubType>Form</SubType>
@@ -218,6 +224,30 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
+    <Compile Include="Journalist\Journalist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\Journalist.Designer.cs">
+      <DependentUpon>Journalist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journalist\postarticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\postarticle.Designer.cs">
+      <DependentUpon>postarticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journalist\requestjob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\requestjob.Designer.cs">
+      <DependentUpon>requestjob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journalist\viewplayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\viewplayers.Designer.cs">
+      <DependentUpon>viewplayers.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,8 +319,8 @@
     <EmbeddedResource Include="Club\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Approchedtransfersotherclubs.resx">
-      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Recievedoffers.resx">
+      <DependentUpon>Recievedoffers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Checkleaguestatus.resx">
       <DependentUpon>Checkleaguestatus.cs</DependentUpon>
@@ -316,8 +346,11 @@
     <EmbeddedResource Include="Club\Searchplayers.resx">
       <DependentUpon>Searchplayers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Signplayer.resx">
-      <DependentUpon>Signplayer.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Signfreeplayer.resx">
+      <DependentUpon>Signfreeplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\Signnonfreeplayer.resx">
+      <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>
@@ -369,6 +402,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FA\UpdateFA.resx">
       <DependentUpon>UpdateFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\Journalist.resx">
+      <DependentUpon>Journalist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\postarticle.resx">
+      <DependentUpon>postarticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\requestjob.resx">
+      <DependentUpon>requestjob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\viewplayers.resx">
+      <DependentUpon>viewplayers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn Menu.resx">
       <DependentUpon>LogIn Menu.cs</DependentUpon>

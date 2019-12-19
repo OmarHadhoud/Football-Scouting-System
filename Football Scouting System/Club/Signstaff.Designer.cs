@@ -34,16 +34,16 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.DarkGoldenrod;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "Signstaff";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Sign staff";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignstaffForm_FormClosed);
 			this.Load += new System.EventHandler(this.Signstaff_Load);
 			this.ResumeLayout(false);
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignstaffForm_FormClosed);
-
 
 		}
 

@@ -70,6 +70,12 @@ namespace Football_Scouting_System
                 }
                 catch (Exception) { }
             }
-        }
+			else if (userNameTxtbox.Text == "6")
+			{
+				Journalist.Journalist J = new Journalist.Journalist(this,ID);
+				J.Show();
+				this.Hide();
+			}
+		}
     }
 }
