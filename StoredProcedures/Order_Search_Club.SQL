@@ -23,7 +23,8 @@ BEGIN
 
 	SET @orderby = ISNULL(@orderby,0)
     -- Insert statements for procedure here
-	select [Name]
+	select select c.CID
+      ,[Name]
       ,[Abbreviation]
       ,[LeagueName]
 	  ,ISNULL([Squad],0) as Squad
