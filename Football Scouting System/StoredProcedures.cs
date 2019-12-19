@@ -45,7 +45,6 @@ namespace Football_Scouting_System
 
 
 		//Staff related
-		public static string AddManager = "AddManager";
         public static string GetClubNews = "GetClubNews";
         
 
