@@ -98,6 +98,7 @@
             this.RequestSigningBtn.TabIndex = 18;
             this.RequestSigningBtn.Text = "Request Signing";
             this.RequestSigningBtn.UseVisualStyleBackColor = false;
+            this.RequestSigningBtn.Click += new System.EventHandler(this.RequestSigningBtn_Click);
             // 
             // ViewDetailsBtn
             // 
@@ -118,6 +119,7 @@
             this.RequestWorkingBtn.TabIndex = 16;
             this.RequestWorkingBtn.Text = "Request Working";
             this.RequestWorkingBtn.UseVisualStyleBackColor = false;
+            this.RequestWorkingBtn.Click += new System.EventHandler(this.RequestWorkingBtn_Click);
             // 
             // ClubDataGridView
             // 
