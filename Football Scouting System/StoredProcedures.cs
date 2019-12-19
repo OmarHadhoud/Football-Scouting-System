@@ -121,6 +121,12 @@ namespace Football_Scouting_System
         //scout
         public static string SetScoutClub = "SetScoutClub";
 
+        //LogInRelated
+        public static string LogInFA= "LogInFA";
+        public static string LogInClub = "LogInClub";
+        public static string LogInScout = "LogInScout";
+        public static string LogInJournalist = "LogInJournalist";
+
 
 
     }
