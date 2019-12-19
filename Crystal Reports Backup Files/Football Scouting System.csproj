@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -59,11 +59,11 @@
     <Compile Include="Club\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Recievedoffers.cs">
+    <Compile Include="Club\Approchedtransfersotherclubs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Recievedoffers.Designer.cs">
-      <DependentUpon>Recievedoffers.cs</DependentUpon>
+    <Compile Include="Club\Approchedtransfersotherclubs.Designer.cs">
+      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Checkleaguestatus.cs">
       <SubType>Form</SubType>
@@ -113,17 +113,11 @@
     <Compile Include="Club\Searchplayers.Designer.cs">
       <DependentUpon>Searchplayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Signfreeplayer.cs">
+    <Compile Include="Club\Signplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Signfreeplayer.Designer.cs">
-      <DependentUpon>Signfreeplayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Club\Signnonfreeplayer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Club\Signnonfreeplayer.Designer.cs">
-      <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
+    <Compile Include="Club\Signplayer.Designer.cs">
+      <DependentUpon>Signplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Signstaff.cs">
       <SubType>Form</SubType>
@@ -231,30 +225,6 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
-    <Compile Include="Journalist\Journalist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Journalist\Journalist.Designer.cs">
-      <DependentUpon>Journalist.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Journalist\postarticle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Journalist\postarticle.Designer.cs">
-      <DependentUpon>postarticle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Journalist\requestjob.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Journalist\requestjob.Designer.cs">
-      <DependentUpon>requestjob.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Journalist\viewplayers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Journalist\viewplayers.Designer.cs">
-      <DependentUpon>viewplayers.cs</DependentUpon>
-    </Compile>
     <Compile Include="Guestt\GuestClubNews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,12 +303,6 @@
     <Compile Include="Scout\ScoutHomeScreen.Designer.cs">
       <DependentUpon>ScoutHomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scout\SuggestRatingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Scout\SuggestRatingForm.Designer.cs">
-      <DependentUpon>SuggestRatingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Scout\ViewClubs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,8 +326,8 @@
     <EmbeddedResource Include="Club\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Recievedoffers.resx">
-      <DependentUpon>Recievedoffers.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Approchedtransfersotherclubs.resx">
+      <DependentUpon>Approchedtransfersotherclubs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Checkleaguestatus.resx">
       <DependentUpon>Checkleaguestatus.cs</DependentUpon>
@@ -389,11 +353,8 @@
     <EmbeddedResource Include="Club\Searchplayers.resx">
       <DependentUpon>Searchplayers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Signfreeplayer.resx">
-      <DependentUpon>Signfreeplayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Club\Signnonfreeplayer.resx">
-      <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Signplayer.resx">
+      <DependentUpon>Signplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>
@@ -446,18 +407,6 @@
     <EmbeddedResource Include="FA\UpdateFA.resx">
       <DependentUpon>UpdateFA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Journalist\Journalist.resx">
-      <DependentUpon>Journalist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Journalist\postarticle.resx">
-      <DependentUpon>postarticle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Journalist\requestjob.resx">
-      <DependentUpon>requestjob.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Journalist\viewplayers.resx">
-      <DependentUpon>viewplayers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Guestt\GuestClubNews.resx">
       <DependentUpon>GuestClubNews.cs</DependentUpon>
     </EmbeddedResource>
@@ -498,9 +447,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\ScoutHomeScreen.resx">
       <DependentUpon>ScoutHomeScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Scout\SuggestRatingForm.resx">
-      <DependentUpon>SuggestRatingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\ViewClubs.resx">
       <DependentUpon>ViewClubs.cs</DependentUpon>

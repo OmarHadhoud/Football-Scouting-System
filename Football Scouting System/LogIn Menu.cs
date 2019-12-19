@@ -76,6 +76,13 @@ namespace Football_Scouting_System
 				J.Show();
 				this.Hide();
 			}
-		}
+		
+            else
+            {
+                Guestt.GuestHomeScreen g = new Guestt.GuestHomeScreen(this);
+                g.Show();
+                this.Hide();
+            }
+        }
     }
 }

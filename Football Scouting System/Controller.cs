@@ -156,11 +156,26 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        public DataTable GetAllClubs()
+        {
+            string StoredProcedureName = StoredProcedures.GetAllClubs;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
         public DataTable GetPlayers()
         {
             string StoredProcedureName = StoredProcedures.GetPlayers;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetClubNews(int _CID)
+        {
+            string StoredProcedureName = StoredProcedures.GetClubNews;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@cid", _CID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
         public int UpdateClubLeague(int _CID, int _FA_ID, string _LeagueName)
@@ -330,10 +345,59 @@ namespace Football_Scouting_System
             Parameters.Add("@ID", id);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public int AddPlayerRating(int PlayerID,int ScoutID,int Pace,int Acceleration,int Strength,int Jumping,int Shooting,int Passing,int Dribbling	,int Positionning,int otb,int gkh,int gkp ,int gkd)
+        {
+            string StoredProcedureName = StoredProcedures.AddPlayerRating;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PlayerID", PlayerID		);
+            Parameters.Add("@ScoutID", ScoutID		);
+            Parameters.Add("@Pace", Pace			);
+            Parameters.Add("@Acceleration", Acceleration	);
+            Parameters.Add("@Strength", Strength		);
+            Parameters.Add("@Jumping", Jumping		);
+            Parameters.Add("@Shooting", Shooting		);
+            Parameters.Add("@Passing", Passing		);
+            Parameters.Add("@Dribbling", Dribbling	);
+            Parameters.Add("@Positionning", Positionning	);
+            Parameters.Add("@otb", otb			);
+            Parameters.Add("@gkh", gkh			);
+            Parameters.Add("@gkp", gkp			);
+            Parameters.Add("@gkd", gkd          );
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int UpsertPlayerAttributes(int PlayerID, int ScoutID, int Pace, int Acceleration, int Strength, int Jumping, int Shooting, int Passing, int Dribbling, int Positionning, int otb, int gkh, int gkp, int gkd)
+        {
+            string StoredProcedureName = StoredProcedures.UpsertPlayerAttributes;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PlayerID", PlayerID);
+            Parameters.Add("@ScoutID", ScoutID);
+            Parameters.Add("@Pace", Pace);
+            Parameters.Add("@Acceleration", Acceleration);
+            Parameters.Add("@Strength", Strength);
+            Parameters.Add("@Jumping", Jumping);
+            Parameters.Add("@Shooting", Shooting);
+            Parameters.Add("@Passing", Passing);
+            Parameters.Add("@Dribbling", Dribbling);
+            Parameters.Add("@Positionning", Positionning);
+            Parameters.Add("@otb", otb);
+            Parameters.Add("@gkh", gkh);
+            Parameters.Add("@gkp", gkp);
+            Parameters.Add("@gkd", gkd);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public bool HasAttributes(int PlayerID, int ScoutID)
+        {
+            string StoredProcedureName = StoredProcedures.HasAttributes;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PlayerID);
+            Parameters.Add("@SID", ScoutID);
+            return Convert.ToBoolean(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
 
 
-        //Staff related functions
-        public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+
+            //Staff related functions
+            public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
         {
 
             string StoredProcedureName = StoredProcedures.AddManager;
@@ -430,6 +494,14 @@ namespace Football_Scouting_System
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
 
+        public DataTable GetArticlesBy(int _JID)
+        {
+            string StoredProcedureName = StoredProcedures.GetArticlesBy;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@JID", _JID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
         public DataTable GetManagers()
         {
             string StoredProcedureName = StoredProcedures.GetManagers;
@@ -440,6 +512,20 @@ namespace Football_Scouting_System
         public DataTable GetCoaches()
         {
             string StoredProcedureName = StoredProcedures.GetCoaches;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetIndpJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetIndpJournalists;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+
+        public DataTable GetAllJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetAllJournalists;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }

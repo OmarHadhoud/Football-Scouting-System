@@ -14,7 +14,6 @@ namespace Football_Scouting_System.FA
     {
         AddStaffForm ParentForm_;
         Controller controllerobj;
-        DataTable Clubs;
 
         public AddJournalistForm(AddStaffForm _ParentForm)
         {

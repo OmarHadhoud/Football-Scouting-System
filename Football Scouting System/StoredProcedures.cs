@@ -24,6 +24,7 @@ namespace Football_Scouting_System
         //Club related procedures
         public static string InsertClub = "InsertClub";
         public static string GetClubs = "GetClubs";
+        public static string GetAllClubs = "GetAllClubs";
         public static string GetPlayers = "GetPlayers";
         public static string DeletePlayer = "DeletePlayer";
         public static string UpdateClubLeague = "UpdateClubLeague";
@@ -45,6 +46,11 @@ namespace Football_Scouting_System
 
 		//Staff related
 		public static string AddManager = "AddManager";
+        public static string GetClubNews = "GetClubNews";
+        
+
+        //Staff related
+        public static string AddManager = "AddManager";
         public static string AddScout = "AddScout";
         public static string AddJournalist = "AddJournalist";
         public static string AddAgent = "AddAgent";
@@ -56,6 +62,9 @@ namespace Football_Scouting_System
         public static string DeleteAgent = "DeleteAgent";
         public static string DeleteCoach = "DeleteCoach";
         public static string DeleteManager = "DeleteManager";
+        public static string GetAllJournalists = "GetAllJournalists";
+        public static string GetIndpJournalists = "GetIndpJournalists";
+        public static string GetArticlesBy = "GetArticlesBy";
 
         //Scout related procedures
         public static string Order_search_PlayerForScouts = "Order_search_PlayerForScouts";
@@ -63,6 +72,10 @@ namespace Football_Scouting_System
         public static string GetScoutWithID = "GetScoutWithID";
         public static string GetAvgAttrib = "GetAvgAttrib";
         public static string GetPlayerStats_ID = "GetPlayerStats_ID";
+        public static string AddPlayerRating = "AddPlayerRating";
+        public static string UpsertPlayerAttributes = "UpsertPlayerAttributes";
+        public static string HasAttributes = "HasAttributes";
+
 
 		public static string EndorseScout = "Endorsenonsignedscout";
 

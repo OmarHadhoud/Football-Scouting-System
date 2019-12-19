@@ -15,17 +15,19 @@ namespace Football_Scouting_System.Scout
     {
         private Form ParentForm_;
         Controller controllerobj;
-        private int ID;
+        private int SID;
         GeneralClasses.Scout Sc;
-        public ScoutHomeScreen(Form _ParentForm, int ID_)
+        public List<int> favs;
+        public ScoutHomeScreen(Form _ParentForm, int _SID)
         {
             InitializeComponent();
             controllerobj = new Controller();
             ParentForm_ = _ParentForm;
-            ID = ID_;
+            SID = _SID;
+            favs = new List<int>();
             try
             {
-                Sc = new GeneralClasses.Scout(ID);
+                Sc = new GeneralClasses.Scout(SID);
             }
             catch(Exception ex)
             {
@@ -40,7 +42,7 @@ namespace Football_Scouting_System.Scout
 
         private void PlayerSearchBtn_Click(object sender, EventArgs e)
         {
-            PlayerSearchForm psf = new PlayerSearchForm(this);
+            PlayerSearchForm psf = new PlayerSearchForm(this,SID);
             this.Hide();
             psf.Show();
         }
@@ -94,7 +96,7 @@ namespace Football_Scouting_System.Scout
 
         private void ScoutHomeScreen_Load_1(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
