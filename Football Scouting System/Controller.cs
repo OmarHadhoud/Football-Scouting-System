@@ -418,6 +418,17 @@ namespace Football_Scouting_System
             Parameters.Add("@Sid", ScoutID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        public int ScoutReqSigningC2E(int PID, int ScoutID, int CID, int EFAID, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqSigningC2E;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", CID);
+            Parameters.Add("@EFAID", EFAID);
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@Fee", Fee);
+            Parameters.Add("@Sid", ScoutID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
         //Staff related functions
         public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)

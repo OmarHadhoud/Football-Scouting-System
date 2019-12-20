@@ -76,17 +76,33 @@ namespace Football_Scouting_System.Scout
                             }
                             else
                             {
-                                MessageBox.Show("Done!");
+                                MessageBox.Show("C2C Request send to " + cName);
                             }
                         }
                         catch {
-                            MessageBox.Show("Already submitted!"); //could upsert instead
+                            MessageBox.Show("Offer Already Existing!"); //could upsert instead but need to check it's the same scout
                         };
                     }
                     else
                     {
                         //should add to C2E instead
-                        MessageBox.Show("Player has no club, C2E query is to be done soon :)");
+                        CID2 = controllerobj.Getefa(CID); //efa ID
+                        try
+                        {
+                            int p = controllerobj.ScoutReqSigningC2E(PID, homeScreen.SID, CID, CID2, Convert.ToInt32(numericUpDown1.Value));
+
+
+                            if (p == 0)
+                            {
+                                MessageBox.Show("Error");
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("C2E Request send to " + cName);
+                            }
+                        }
+                        catch { MessageBox.Show("Offer Already Existing!"); } //could upsert instead but need to check it's the same scout
                     }
                 }
             }
