@@ -28,7 +28,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	[PID]
+	Select [PID]
       ,[Fname]
       ,[Lname]
       ,ISNULL([Goals],0) as			[Goals]
