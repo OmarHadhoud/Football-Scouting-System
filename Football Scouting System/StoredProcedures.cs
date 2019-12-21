@@ -101,6 +101,8 @@ namespace Football_Scouting_System
 		public static string GetCountOFnews = "GetCountOFnews";
 		public static string GetCountOFarticless = "GetCountOFarticles";
 
+		public static string GetLastID = "GetLastID";
+
 
 
 		//Player related procedures

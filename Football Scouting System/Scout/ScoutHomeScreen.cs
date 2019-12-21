@@ -74,7 +74,9 @@ namespace Football_Scouting_System.Scout
 
         private void AddYouthPlayerBtn_Click(object sender, EventArgs e)
         {
-
+            AddYouthPlayer ayp = new AddYouthPlayer(this);
+            this.Hide();
+            ayp.Show();
         }
 
 		private void ScoutHomeScreen_Load(object sender, EventArgs e)

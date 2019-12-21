@@ -41,7 +41,7 @@ namespace Football_Scouting_System.Club
 					string FName = GetplayerfirstName();
 					string MName = GetplayermiddleName();
 					string LName = GetplayerlastName();
-					int ID = controllerobj.GetCountOfProfPlayers() + 1;
+					int ID = controllerobj.GetLastID() + 1;
 					int age = getplayerAge();
 					string bplace = Getplayerbirthplace();
 					string nationality = Getplayernationality();
@@ -60,7 +60,7 @@ namespace Football_Scouting_System.Club
 					string FName = GetplayerfirstName();
 					string MName = GetplayermiddleName();
 					string LName = GetplayerlastName();
-					int ID = controllerobj.GetCountOfProfPlayers() + 1;
+					int ID = controllerobj.GetLastID() + 1;
 					int age = getplayerAge();
 					string bplace = Getplayerbirthplace();
 					string nationality = Getplayernationality();

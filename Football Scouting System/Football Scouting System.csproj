@@ -56,6 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubIDName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubIDName.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Club\AddPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +316,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scouting_SystemDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Scout\AddYouthPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scout\AddYouthPlayer.Designer.cs">
+      <DependentUpon>AddYouthPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scout\ChangeScoutPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -502,6 +513,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ScoutGuest.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Scout\AddYouthPlayer.resx">
+      <DependentUpon>AddYouthPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Scout\ChangeScoutPassword.resx">
       <DependentUpon>ChangeScoutPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -532,6 +546,17 @@
     <EmbeddedResource Include="Scout\ViewPlayerStats.resx">
       <DependentUpon>ViewPlayerStats.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClubIDName.xsc">
+      <DependentUpon>ClubIDName.xsd</DependentUpon>
+    </None>
+    <None Include="ClubIDName.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubIDName.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubIDName.xss">
+      <DependentUpon>ClubIDName.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
