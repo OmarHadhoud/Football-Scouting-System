@@ -56,7 +56,9 @@ namespace Football_Scouting_System.Scout
 
         private void StadiumsBtn_Click(object sender, EventArgs e)
         {
-
+            Guestt.ViewStadiumsForm vsf = new Guestt.ViewStadiumsForm(this);
+            vsf.Show();
+            this.Hide();
         }
 
         private void ScoutsBtn_Click(object sender, EventArgs e)

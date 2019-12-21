@@ -62,7 +62,9 @@ namespace Football_Scouting_System.Guestt
 
         private void stadiumsBtn_Click(object sender, EventArgs e)
         {
-
+            ViewStadiumsForm vsf = new ViewStadiumsForm(this);
+            vsf.Show();
+            this.Hide();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

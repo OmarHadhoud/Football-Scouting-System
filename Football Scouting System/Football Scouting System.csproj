@@ -239,6 +239,18 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
+    <Compile Include="Guestt\ViewStadiums.cs">
+      <DependentUpon>ViewStadiums.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Guestt\ViewStadiumsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestt\ViewStadiumsForm.Designer.cs">
+      <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Journalist\Journalist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +483,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FA\UpdateFA.resx">
       <DependentUpon>UpdateFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewStadiums.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewStadiums.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewStadiumsForm.resx">
+      <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Journalist\Journalist.resx">
       <DependentUpon>Journalist.cs</DependentUpon>
