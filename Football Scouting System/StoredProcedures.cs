@@ -45,13 +45,14 @@ namespace Football_Scouting_System
 
 
 		//Staff related
-		public static string AddManager = "AddManager";
         public static string GetClubNews = "GetClubNews";
+
+
         
 
         //Staff related
-        //public static string AddManager = "AddManager";
         public static string AddScout = "AddScout";
+        public static string AddManager = "AddManager";
         public static string AddJournalist = "AddJournalist";
         public static string AddAgent = "AddAgent";
         public static string AddCoach = "AddCoach";
@@ -75,6 +76,15 @@ namespace Football_Scouting_System
         public static string AddPlayerRating = "AddPlayerRating";
         public static string UpsertPlayerAttributes = "UpsertPlayerAttributes";
         public static string HasAttributes = "HasAttributes";
+        public static string GetPlayerName_ID = "GetPlayerName_ID";
+        public static string ScoutReqSigningC2C = "ScoutReqSigningC2C";
+        public static string ScoutReqSigningC2E = "ScoutReqSigningC2E";
+        public static string GetPlayerClub = "GetPlayerClub";
+        public static string GetScoutClub_ID = "GetScoutClub_ID";
+        public static string ScoutReqWorkingC2E = "ScoutReqWorkingC2E";
+        public static string UpdateScoutPassword = "UpdateScoutPassword";
+        public static string GetScoutsSignings = "GetScoutsSignings";
+
 
 
 		public static string EndorseScout = "Endorsenonsignedscout";
@@ -91,6 +101,8 @@ namespace Football_Scouting_System
 		public static string GetCountOfprofplayers = "GetCountOfProfPlayers";
 		public static string GetCountOFnews = "GetCountOFnews";
 		public static string GetCountOFarticless = "GetCountOFarticles";
+
+		public static string GetLastID = "GetLastID";
 
 
 
@@ -121,6 +133,12 @@ namespace Football_Scouting_System
 
         //scout
         public static string SetScoutClub = "SetScoutClub";
+
+        //LogInRelated
+        public static string LogInFA= "LogInFA";
+        public static string LogInClub = "LogInClub";
+        public static string LogInScout = "LogInScout";
+        public static string LogInJournalist = "LogInJournalist";
 
 
 

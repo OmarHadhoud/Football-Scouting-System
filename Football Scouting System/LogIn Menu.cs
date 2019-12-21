@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
@@ -14,11 +15,13 @@ namespace Football_Scouting_System
 
 	public partial class Form1 : Form
     {
+        Controller objcontroller;
 		//public int ID;
 
 		public Form1()
         {
             InitializeComponent();
+            objcontroller = new Controller();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,48 +43,94 @@ namespace Football_Scouting_System
 
         private void GuestLogIn_Click(object sender, EventArgs e)
         {
-            Login(5);
+            Guestt.GuestHomeScreen g = new Guestt.GuestHomeScreen(this);
+            g.Show();
+            this.Hide();
         }
         private void Login(int ID)
         {
-            //TODO: The function should be implemented, now for testing purposes
-            // just enter 1 in username to sign in as FA, 2 to sign in as club, 3 to sign in as scout, 4 to sign in as Journalist, 5 to sign in as guest
-            if (userNameTxtbox.Text == "1")
+            string hashedPass = Football_Scouting_System.Form1.ComputeSha256Hash(passTxtBox.Text);
+            string id = userNameTxtbox.Text;
+            //Check FAs
+            if(objcontroller.LogInFA(ID,hashedPass)==1)
             {
-                //NOTE : As FAHomeScreen is in another folder, it must be accessed by typing "FolderName"."FormName" 
-                //As it treats it as if it was in another namespace.
-                FA.FAHomeScreen f = new FA.FAHomeScreen(this);
-                f.Show();
-                this.Hide();
-            }
-            else if (userNameTxtbox.Text == "2")
-            {
-                Club.ClubHomeScreen C = new Club.ClubHomeScreen(this, ID);
-                C.Show();
-                this.Hide();
-            }
-            else if (userNameTxtbox.Text == "3")
-            {
-                Scout.ScoutHomeScreen s = new Scout.ScoutHomeScreen(this,ID);
                 try
                 {
+                    FA.FAHomeScreen f = new FA.FAHomeScreen(this,ID);
+                    f.Show();
+                    this.Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("An unexpected error has occured");
+                }
+                
+            }
+            //Check Clubs
+            else if(objcontroller.LogInClub(ID, hashedPass) == 1)
+            {
+                try
+                {
+                    Club.ClubHomeScreen C = new Club.ClubHomeScreen(this, ID);
+                    C.Show();
+                    this.Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("An unexpected error has occured");
+                }
+            }
+            //Check Scouts
+            else if (objcontroller.LogInScout(ID, hashedPass) == 1)
+            {
+                try
+                {
+                    Scout.ScoutHomeScreen s = new Scout.ScoutHomeScreen(this, ID);
                     s.Show();
                     this.Hide();
                 }
-                catch (Exception) { }
+                catch 
+                {
+                    MessageBox.Show("An unexpected error has occured");
+
+                }
             }
-			else if (userNameTxtbox.Text == "6")
-			{
-				Journalist.Journalist J = new Journalist.Journalist(this,ID);
-				J.Show();
-				this.Hide();
-			}
-		
+            //Check journalist
+            else if (objcontroller.LogInJournalist(ID, hashedPass) == 1)
+            {
+                try
+                {
+                    Journalist.Journalist j = new Journalist.Journalist(this, ID);
+                    j.Show();
+                    this.Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("An unexpected error has occured");
+
+                }
+            }
+            //else invalid
             else
             {
-                Guestt.GuestHomeScreen g = new Guestt.GuestHomeScreen(this);
-                g.Show();
-                this.Hide();
+                MessageBox.Show("Invalid ID or Password! Please re-enter a valid one or enter as guest!");
+            }
+        }
+        public static string ComputeSha256Hash(string rawData)
+        {
+            // Create a SHA256   
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // ComputeHash - returns byte array  
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+                // Convert byte array to a string   
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
             }
         }
     }

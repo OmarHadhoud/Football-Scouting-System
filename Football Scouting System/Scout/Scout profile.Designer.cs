@@ -39,6 +39,7 @@
             this.ClubLbl = new System.Windows.Forms.Label();
             this.LicenseNoLbl = new System.Windows.Forms.Label();
             this.logOutBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -152,12 +153,24 @@
             this.logOutBtn.UseVisualStyleBackColor = false;
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.OldLace;
+            this.button1.Location = new System.Drawing.Point(30, 280);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 22);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Update password";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Scout_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(411, 316);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.LicenseNoLbl);
             this.Controls.Add(this.ClubLbl);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.Label ClubLbl;
         private System.Windows.Forms.Label LicenseNoLbl;
         private System.Windows.Forms.Button logOutBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

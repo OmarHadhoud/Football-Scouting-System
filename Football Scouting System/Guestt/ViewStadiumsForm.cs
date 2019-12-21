@@ -8,23 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Football_Scouting_System.Scout
+namespace Football_Scouting_System.Guestt
 {
-    public partial class NewsForm : Form
+    public partial class ViewStadiumsForm : Form
     {
-        private Form ParentForm_;
-        public NewsForm(Form _ParentForm)
+        Form ParentForm_;
+        public ViewStadiumsForm(Form _ParentForm)
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
         }
 
-        private void logOutBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void NewsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void ViewStadiumsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             ParentForm_.Show();
         }

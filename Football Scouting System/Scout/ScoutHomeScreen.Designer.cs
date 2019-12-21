@@ -125,7 +125,7 @@
             this.NewsBtn.Name = "NewsBtn";
             this.NewsBtn.Size = new System.Drawing.Size(118, 67);
             this.NewsBtn.TabIndex = 9;
-            this.NewsBtn.Text = "News and Notifications";
+            this.NewsBtn.Text = "Signing notifications";
             this.NewsBtn.UseVisualStyleBackColor = false;
             this.NewsBtn.Click += new System.EventHandler(this.NewsBtn_Click);
             // 

@@ -393,12 +393,78 @@ namespace Football_Scouting_System
             Parameters.Add("@SID", ScoutID);
             return Convert.ToBoolean(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
         }
-
-
-
-            //Staff related functions
-            public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+        public DataTable GetPlayerName_ID(int id)
         {
+            string StoredProcedureName = StoredProcedures.GetPlayerName_ID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", id);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public int GetPlayerClub(int PlayerID)
+        {
+            string StoredProcedureName = StoredProcedures.GetPlayerClub;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PlayerID);
+            return Convert.ToInt32(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
+        public int GetScoutClub_ID(int SID)
+        {
+            string StoredProcedureName = StoredProcedures.GetScoutClub_ID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", SID);
+            return Convert.ToInt32(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
+        public int ScoutReqSigningC2C(int PID, int ScoutID, int CIDSend, int CIDRecive, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqSigningC2C;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID1", CIDSend);
+            Parameters.Add("@CID2",CIDRecive );
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@Fee", Fee);
+            Parameters.Add("@Sid", ScoutID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int ScoutReqSigningC2E(int PID, int ScoutID, int CID, int EFAID, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqSigningC2E;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", CID);
+            Parameters.Add("@EFAID", EFAID);
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@Fee", Fee);
+            Parameters.Add("@Sid", ScoutID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int ScoutReqWorkingC2E(int ScoutID, int CID, int EFAID, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqWorkingC2E;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", CID);
+            Parameters.Add("@EFAID", EFAID);
+            Parameters.Add("@SID", ScoutID);
+            Parameters.Add("@Fee", Fee);
+
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int UpdateScoutPassword(int SID, string _Password)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateScoutPassword;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", SID);
+            Parameters.Add("@Password", _Password);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public DataTable GetScoutsSignings(int SID)
+        {
+            string StoredProcedureName = StoredProcedures.GetScoutsSignings;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", SID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //Staff related functions
+        public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
+         {
 
             string StoredProcedureName = StoredProcedures.AddManager;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -415,7 +481,7 @@ namespace Football_Scouting_System
             else
                 Parameters.Add("@AgentID", _AgentID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
-        }
+         }
 
         public int AddCoach(int _CID, string _Name, DateTime _Bdate, int _ClubID, int _LicenseNumber)
         {
@@ -625,11 +691,16 @@ namespace Football_Scouting_System
 			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
 		}
 
+        public int GetLastID()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastID;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
 
-		//Journalist
+        //Journalist
 
 
-		public int insertarticle(int _no, int _id, DateTime _foundationdate, string _title, string _text)
+        public int insertarticle(int _no, int _id, DateTime _foundationdate, string _title, string _text)
 		{
 			string StoredProcedureName = StoredProcedures.InsertArticless;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -787,6 +858,44 @@ namespace Football_Scouting_System
             Parameters.Add("@CID", _CID);
             Parameters.Add("@SID", _SID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
+
+        //Login functions
+        public int LogInFA(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInFA;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInScout(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInScout;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInClub(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInClub;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
+        }
+
+        public int LogInJournalist(int _ID, string _pass)
+        {
+            string StoredProcedureName = StoredProcedures.LogInJournalist;
+            Dictionary<string, object> Paramateres = new Dictionary<string, object>();
+            Paramateres.Add("@ID", _ID);
+            Paramateres.Add("@pass", _pass);
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, Paramateres);
         }
     }
 }

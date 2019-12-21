@@ -16,10 +16,11 @@ namespace Football_Scouting_System.FA
         int FA_ID = 1;
         private Form ParentForm_;
 
-        public FAHomeScreen(Form _ParentForm)
+        public FAHomeScreen(Form _ParentForm, int ID)
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
+            FA_ID = ID;
         }
 
         private void addLeagueBtn_Click(object sender, EventArgs e)

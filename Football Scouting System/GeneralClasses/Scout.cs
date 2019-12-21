@@ -11,13 +11,15 @@ namespace Football_Scouting_System.GeneralClasses
     public class Scout
     {
 
-        public Scout(int ID=-1)
+        public Scout(int ID_=-1)
         {
-            if (ID>-1)
+            if (ID_>-1)
             {
-                SetInitialValues(ID);
+                SetInitialValues(ID_);
+                ID = ID_;
             }
         }
+        public int ID { get; set; }
         public string Name { get; set; }
         public DateTime BirthDate { get; set; }
         public int Endorses { get; set; }

@@ -53,8 +53,8 @@ namespace Football_Scouting_System.FA
             string pass = passwordTxtBox.Text;
             if (pass.Length <= 6)
                 throw new System.Exception("The club's password must be more than 6 characters!");
-            //TODO: Should add hashing here
-            return pass;
+            string hashedPass = Football_Scouting_System.Form1.ComputeSha256Hash(pass);
+            return hashedPass;
         }
 
 

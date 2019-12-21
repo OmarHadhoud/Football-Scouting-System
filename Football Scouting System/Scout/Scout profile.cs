@@ -43,5 +43,12 @@ namespace Football_Scouting_System.Scout
                 dateTimePicker1.Visible = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChangeScoutPassword CSP = new ChangeScoutPassword(Sc.ID);
+            CSP.Show();
+        }
+        
     }
 }

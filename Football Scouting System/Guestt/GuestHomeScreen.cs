@@ -33,7 +33,9 @@ namespace Football_Scouting_System.Guestt
 
         private void clubsBtn_Click(object sender, EventArgs e)
         {
-
+            ViewClubs viewClubs = new ViewClubs(this);
+            this.Hide();
+            viewClubs.Show();
         }
 
         private void scoutsBtn_Click(object sender, EventArgs e)
@@ -57,17 +59,21 @@ namespace Football_Scouting_System.Guestt
 
         private void playersBtn_Click(object sender, EventArgs e)
         {
-
+            ViewPlayer vp = new ViewPlayer(this);
+            this.Hide();
+            vp.Show();
         }
 
         private void stadiumsBtn_Click(object sender, EventArgs e)
         {
-
+            ViewStadiumsForm vsf = new ViewStadiumsForm(this);
+            vsf.Show();
+            this.Hide();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void GuestHomeScreen_FormClosed(object sender, FormClosedEventArgs e)

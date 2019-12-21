@@ -15,7 +15,7 @@ namespace Football_Scouting_System.Scout
     {
         private Form ParentForm_;
         Controller controllerobj;
-        private int SID;
+        public int SID;
         GeneralClasses.Scout Sc;
         public List<int> favs;
         public ScoutHomeScreen(Form _ParentForm, int _SID)
@@ -49,19 +49,23 @@ namespace Football_Scouting_System.Scout
 
         private void NewsBtn_Click(object sender, EventArgs e)
         {
-            NewsForm nf = new NewsForm(this);
+            ScoutSigningsForm nf = new ScoutSigningsForm(this);
             this.Hide();
             nf.Show();
         }
 
         private void StadiumsBtn_Click(object sender, EventArgs e)
         {
-
+            Guestt.ViewStadiumsForm vsf = new Guestt.ViewStadiumsForm(this);
+            vsf.Show();
+            this.Hide();
         }
 
         private void ScoutsBtn_Click(object sender, EventArgs e)
         {
-
+            Guestt.ViewScoutGuestView vsgv = new Guestt.ViewScoutGuestView(this);
+            this.Hide();
+            vsgv.Show();
         }
 
         private void ClubsBtn_Click(object sender, EventArgs e)
@@ -74,7 +78,9 @@ namespace Football_Scouting_System.Scout
 
         private void AddYouthPlayerBtn_Click(object sender, EventArgs e)
         {
-
+            AddYouthPlayer ayp = new AddYouthPlayer(this);
+            this.Hide();
+            ayp.Show();
         }
 
 		private void ScoutHomeScreen_Load(object sender, EventArgs e)
