@@ -33,19 +33,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.RequestSigningBtn = new System.Windows.Forms.Button();
-            this.ViewDetailsBtn = new System.Windows.Forms.Button();
             this.RequestWorkingBtn = new System.Windows.Forms.Button();
             this.ClubDataGridView = new System.Windows.Forms.DataGridView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ClubDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // logOutBtn
             // 
             this.logOutBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.logOutBtn.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutBtn.Location = new System.Drawing.Point(544, 421);
+            this.logOutBtn.Location = new System.Drawing.Point(544, 436);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(87, 25);
@@ -92,7 +94,7 @@
             // RequestSigningBtn
             // 
             this.RequestSigningBtn.BackColor = System.Drawing.Color.OldLace;
-            this.RequestSigningBtn.Location = new System.Drawing.Point(12, 394);
+            this.RequestSigningBtn.Location = new System.Drawing.Point(32, 389);
             this.RequestSigningBtn.Name = "RequestSigningBtn";
             this.RequestSigningBtn.Size = new System.Drawing.Size(126, 30);
             this.RequestSigningBtn.TabIndex = 18;
@@ -100,20 +102,10 @@
             this.RequestSigningBtn.UseVisualStyleBackColor = false;
             this.RequestSigningBtn.Click += new System.EventHandler(this.RequestSigningBtn_Click);
             // 
-            // ViewDetailsBtn
-            // 
-            this.ViewDetailsBtn.BackColor = System.Drawing.Color.OldLace;
-            this.ViewDetailsBtn.Location = new System.Drawing.Point(276, 394);
-            this.ViewDetailsBtn.Name = "ViewDetailsBtn";
-            this.ViewDetailsBtn.Size = new System.Drawing.Size(126, 30);
-            this.ViewDetailsBtn.TabIndex = 17;
-            this.ViewDetailsBtn.Text = "View details";
-            this.ViewDetailsBtn.UseVisualStyleBackColor = false;
-            // 
             // RequestWorkingBtn
             // 
             this.RequestWorkingBtn.BackColor = System.Drawing.Color.OldLace;
-            this.RequestWorkingBtn.Location = new System.Drawing.Point(144, 394);
+            this.RequestWorkingBtn.Location = new System.Drawing.Point(255, 389);
             this.RequestWorkingBtn.Name = "RequestWorkingBtn";
             this.RequestWorkingBtn.Size = new System.Drawing.Size(126, 30);
             this.RequestWorkingBtn.TabIndex = 16;
@@ -157,12 +149,30 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Search :";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(285, 432);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(96, 20);
+            this.numericUpDown1.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(251, 436);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Fee:";
+            // 
             // ViewClubs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ClientSize = new System.Drawing.Size(642, 457);
+            this.ClientSize = new System.Drawing.Size(642, 472);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.logOutBtn);
@@ -170,7 +180,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.RequestSigningBtn);
-            this.Controls.Add(this.ViewDetailsBtn);
             this.Controls.Add(this.RequestWorkingBtn);
             this.Controls.Add(this.ClubDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -178,6 +187,7 @@
             this.Text = "ViewClubs";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewClubs_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ClubDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,10 +200,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button RequestSigningBtn;
-        private System.Windows.Forms.Button ViewDetailsBtn;
         private System.Windows.Forms.Button RequestWorkingBtn;
         private System.Windows.Forms.DataGridView ClubDataGridView;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label3;
     }
 }

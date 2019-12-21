@@ -407,6 +407,13 @@ namespace Football_Scouting_System
             Parameters.Add("@PID", PlayerID);
             return Convert.ToInt32(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
         }
+        public int GetScoutClub_ID(int SID)
+        {
+            string StoredProcedureName = StoredProcedures.GetScoutClub_ID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", SID);
+            return Convert.ToInt32(dbMan.ExecuteScalar(StoredProcedureName, Parameters));
+        }
         public int ScoutReqSigningC2C(int PID, int ScoutID, int CIDSend, int CIDRecive, int Fee)
         {
             string StoredProcedureName = StoredProcedures.ScoutReqSigningC2C;
@@ -427,6 +434,17 @@ namespace Football_Scouting_System
             Parameters.Add("@PID", PID);
             Parameters.Add("@Fee", Fee);
             Parameters.Add("@Sid", ScoutID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int ScoutReqWorkingC2E(int ScoutID, int CID, int EFAID, int Fee)
+        {
+            string StoredProcedureName = StoredProcedures.ScoutReqWorkingC2E;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CID", CID);
+            Parameters.Add("@EFAID", EFAID);
+            Parameters.Add("@SID", ScoutID);
+            Parameters.Add("@Fee", Fee);
+
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 

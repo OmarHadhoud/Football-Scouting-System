@@ -64,7 +64,56 @@ namespace Football_Scouting_System.Scout
 
         private void RequestWorkingBtn_Click(object sender, EventArgs e)
         {
+            int CID;
+            int sCID;
+            int SID;
+            int EfaID;
+            try
+            {
+                try {   CID = Convert.ToInt32(ClubDataGridView.SelectedRows[0].Cells[0].Value.ToString());}
+                catch
+                {
+                    MessageBox.Show("Please select a valid club");
+                    throw;
+                }
 
+                try {   SID = ((ScoutHomeScreen)ParentForm_).SID; }
+                catch
+                {
+                    MessageBox.Show("Error, Couldn't find your scout ID"); //shouldn't reach this part
+                    throw;
+                }
+
+                try {   EfaID = controllerobj.Getefa(CID);}
+                catch 
+                {
+                    MessageBox.Show("Error, couldn't find EFA ID"); //shouldn't reach this part
+                    throw;
+                }
+
+                try{    sCID = controllerobj.GetScoutClub_ID(SID); }
+                catch
+                {
+                    MessageBox.Show("Error, Couldn't retrive your current club"); //shouldn't reach this part
+                    throw;
+                }
+                if (CID == sCID)
+                {
+                    MessageBox.Show("You're already in that club");
+                }
+                else
+                {
+                    //check if submitted
+                    try { controllerobj.ScoutReqWorkingC2E(SID, CID, EfaID, Convert.ToInt32(numericUpDown1.Value)); }
+                    catch
+                    {
+                        MessageBox.Show("Offer already existing");
+                        throw;
+                    }
+                    MessageBox.Show("Offer sent");
+                }
+            }
+            catch { }
         }
 
         private void RequestSigningBtn_Click(object sender, EventArgs e)
