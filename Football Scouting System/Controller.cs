@@ -455,6 +455,7 @@ namespace Football_Scouting_System
             Parameters.Add("@Password", _Password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        
         //Staff related functions
         public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
          {
@@ -684,11 +685,16 @@ namespace Football_Scouting_System
 			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
 		}
 
+        public int GetLastID()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastID;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
 
-		//Journalist
+        //Journalist
 
 
-		public int insertarticle(int _no, int _id, DateTime _foundationdate, string _title, string _text)
+        public int insertarticle(int _no, int _id, DateTime _foundationdate, string _title, string _text)
 		{
 			string StoredProcedureName = StoredProcedures.InsertArticless;
 			Dictionary<string, object> Parameters = new Dictionary<string, object>();
