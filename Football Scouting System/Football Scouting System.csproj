@@ -311,6 +311,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scouting_SystemDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Scout\ChangeScoutPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scout\ChangeScoutPassword.Designer.cs">
+      <DependentUpon>ChangeScoutPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scout\NewsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -495,6 +501,9 @@
     <EmbeddedResource Include="Guestt\ScoutGuest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ScoutGuest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scout\ChangeScoutPassword.resx">
+      <DependentUpon>ChangeScoutPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\NewsForm.resx">
       <DependentUpon>NewsForm.cs</DependentUpon>

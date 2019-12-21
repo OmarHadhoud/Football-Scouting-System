@@ -82,6 +82,8 @@ namespace Football_Scouting_System
         public static string GetPlayerClub = "GetPlayerClub";
         public static string GetScoutClub_ID = "GetScoutClub_ID";
         public static string ScoutReqWorkingC2E = "ScoutReqWorkingC2E";
+        public static string UpdateScoutPassword = "UpdateScoutPassword";
+
 
 
 		public static string EndorseScout = "Endorsenonsignedscout";
