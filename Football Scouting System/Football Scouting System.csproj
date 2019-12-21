@@ -328,11 +328,11 @@
     <Compile Include="Scout\ChangeScoutPassword.Designer.cs">
       <DependentUpon>ChangeScoutPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Scout\NewsForm.cs">
+    <Compile Include="Scout\ScoutSigningsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Scout\NewsForm.Designer.cs">
-      <DependentUpon>NewsForm.cs</DependentUpon>
+    <Compile Include="Scout\ScoutSigningsForm.Designer.cs">
+      <DependentUpon>ScoutSigningsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Scout\PlayerSearchForm.cs">
       <SubType>Form</SubType>
@@ -519,8 +519,8 @@
     <EmbeddedResource Include="Scout\ChangeScoutPassword.resx">
       <DependentUpon>ChangeScoutPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Scout\NewsForm.resx">
-      <DependentUpon>NewsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Scout\ScoutSigningsForm.resx">
+      <DependentUpon>ScoutSigningsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scout\PlayerSearchForm.resx">
       <DependentUpon>PlayerSearchForm.cs</DependentUpon>

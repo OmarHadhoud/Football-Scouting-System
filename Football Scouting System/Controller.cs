@@ -455,7 +455,13 @@ namespace Football_Scouting_System
             Parameters.Add("@Password", _Password);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        
+        public DataTable GetScoutsSignings(int SID)
+        {
+            string StoredProcedureName = StoredProcedures.GetScoutsSignings;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SID", SID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
         //Staff related functions
         public int AddManager(int _MID, string _Name, DateTime _Bdate, string _Nationality, int _ClubID, int _AgentID)
          {

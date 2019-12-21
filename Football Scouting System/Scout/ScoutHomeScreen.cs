@@ -49,7 +49,7 @@ namespace Football_Scouting_System.Scout
 
         private void NewsBtn_Click(object sender, EventArgs e)
         {
-            NewsForm nf = new NewsForm(this);
+            ScoutSigningsForm nf = new ScoutSigningsForm(this);
             this.Hide();
             nf.Show();
         }
@@ -61,7 +61,9 @@ namespace Football_Scouting_System.Scout
 
         private void ScoutsBtn_Click(object sender, EventArgs e)
         {
-
+            Guestt.ViewScoutGuestView vsgv = new Guestt.ViewScoutGuestView(this);
+            this.Hide();
+            vsgv.Show();
         }
 
         private void ClubsBtn_Click(object sender, EventArgs e)

@@ -378,6 +378,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AddYouthPlayer";
             this.Text = "AddYouthPlayer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddYouthPlayer_FormClosed);
