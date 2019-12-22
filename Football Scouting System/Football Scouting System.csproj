@@ -67,6 +67,12 @@
     <Compile Include="Club\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Club\changeclubpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\changeclubpass.Designer.cs">
+      <DependentUpon>changeclubpass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club\Recievedoffers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,6 +281,12 @@
     <Compile Include="Guestt\ViewStadiumsForm.Designer.cs">
       <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Journalist\changejournalistpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\changejournalistpass.Designer.cs">
+      <DependentUpon>changejournalistpass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Journalist\Journalist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -424,6 +436,9 @@
     <EmbeddedResource Include="Club\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Club\changeclubpass.resx">
+      <DependentUpon>changeclubpass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Club\Recievedoffers.resx">
       <DependentUpon>Recievedoffers.cs</DependentUpon>
     </EmbeddedResource>
@@ -526,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewStadiumsForm.resx">
       <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\changejournalistpass.resx">
+      <DependentUpon>changejournalistpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Journalist\Journalist.resx">
       <DependentUpon>Journalist.cs</DependentUpon>

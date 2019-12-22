@@ -1,0 +1,122 @@
+﻿namespace Football_Scouting_System.Club
+{
+	partial class changeclubpass
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
+
+		#region Windows Form Designer generated code
+
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			this.button1 = new System.Windows.Forms.Button();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.backbutton = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(183, 96);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(190, 61);
+			this.button1.TabIndex = 5;
+			this.button1.Text = "Update Password";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(183, 66);
+			this.textBox1.MaxLength = 50;
+			this.textBox1.Name = "textBox1";
+			this.textBox1.PasswordChar = '*';
+			this.textBox1.Size = new System.Drawing.Size(190, 24);
+			this.textBox1.TabIndex = 4;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(24, 70);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(141, 22);
+			this.label1.TabIndex = 3;
+			this.label1.Text = "New Password:";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(22, 18);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(416, 36);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "Please enter the new password:";
+			this.label2.Click += new System.EventHandler(this.label2_Click);
+			// 
+			// backbutton
+			// 
+			this.backbutton.BackColor = System.Drawing.Color.OrangeRed;
+			this.backbutton.Location = new System.Drawing.Point(420, 177);
+			this.backbutton.Name = "backbutton";
+			this.backbutton.Size = new System.Drawing.Size(104, 33);
+			this.backbutton.TabIndex = 7;
+			this.backbutton.Text = "Back";
+			this.backbutton.UseVisualStyleBackColor = false;
+			this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
+			// 
+			// changeclubpass
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Coral;
+			this.ClientSize = new System.Drawing.Size(536, 222);
+			this.Controls.Add(this.backbutton);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.Name = "changeclubpass";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Change password";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.changepassForm_FormClosed);
+			this.Load += new System.EventHandler(this.changeclubpass_Load);
+			this.ResumeLayout(false);
+			this.PerformLayout();
+
+		}
+
+		#endregion
+
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button backbutton;
+	}
+}

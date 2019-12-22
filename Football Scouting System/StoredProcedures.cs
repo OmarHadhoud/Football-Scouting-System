@@ -44,7 +44,9 @@ namespace Football_Scouting_System
 		public static string Approachfreescout = "Approachfreescout";
 		
 		public static string Getfreescouts = "Getfreescouts";
+		public static string UpdateclubPassword = "UpdateclubPassword";
 
+		
 
 
 
@@ -127,8 +129,11 @@ namespace Football_Scouting_System
 		//Journalist
 		public static string InsertArticless = "insertarticles";
 		public static string Journalistrequest = "addjournalisttoclub";
+		public static string UpdatejournalistPassword = "UpdatejournalistPassword";
 
 		
+
+
 
 
 

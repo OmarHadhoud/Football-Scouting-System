@@ -36,6 +36,7 @@
 			this.Transfersbutton = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.LogoutButt = new System.Windows.Forms.Button();
+			this.passbutton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -111,13 +112,24 @@
 			// LogoutButt
 			// 
 			this.LogoutButt.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.LogoutButt.Location = new System.Drawing.Point(444, 415);
+			this.LogoutButt.Location = new System.Drawing.Point(373, 415);
 			this.LogoutButt.Name = "LogoutButt";
-			this.LogoutButt.Size = new System.Drawing.Size(170, 60);
+			this.LogoutButt.Size = new System.Drawing.Size(241, 60);
 			this.LogoutButt.TabIndex = 10;
 			this.LogoutButt.Text = "Logout";
 			this.LogoutButt.UseVisualStyleBackColor = false;
 			this.LogoutButt.Click += new System.EventHandler(this.LogoutButt_Click);
+			// 
+			// passbutton
+			// 
+			this.passbutton.BackColor = System.Drawing.Color.DarkSeaGreen;
+			this.passbutton.Location = new System.Drawing.Point(373, 365);
+			this.passbutton.Name = "passbutton";
+			this.passbutton.Size = new System.Drawing.Size(241, 44);
+			this.passbutton.TabIndex = 11;
+			this.passbutton.Text = "Change Password";
+			this.passbutton.UseVisualStyleBackColor = false;
+			this.passbutton.Click += new System.EventHandler(this.passbutton_Click);
 			// 
 			// ClubHomeScreen
 			// 
@@ -125,6 +137,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGreen;
 			this.ClientSize = new System.Drawing.Size(762, 493);
+			this.Controls.Add(this.passbutton);
 			this.Controls.Add(this.LogoutButt);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.Transfersbutton);
@@ -155,5 +168,6 @@
 		private System.Windows.Forms.Button Transfersbutton;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button LogoutButt;
+		private System.Windows.Forms.Button passbutton;
 	}
 }

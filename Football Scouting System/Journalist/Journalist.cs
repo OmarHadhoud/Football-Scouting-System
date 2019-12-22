@@ -56,5 +56,12 @@ namespace Football_Scouting_System.Journalist
 			R.Show();
 			this.Hide();
 		}
+
+		private void passbutton_Click(object sender, EventArgs e)
+		{
+			changejournalistpass C = new changejournalistpass(this,JID);
+			this.Hide();
+			C.Show();
+		}
 	}
 }

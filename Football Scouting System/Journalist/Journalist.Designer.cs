@@ -32,6 +32,7 @@
 			this.postbutton = new System.Windows.Forms.Button();
 			this.requestbutton = new System.Windows.Forms.Button();
 			this.logbutton = new System.Windows.Forms.Button();
+			this.passbutton = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// viewinfobutton
@@ -75,12 +76,24 @@
 			this.logbutton.UseVisualStyleBackColor = false;
 			this.logbutton.Click += new System.EventHandler(this.logbutton_Click);
 			// 
+			// passbutton
+			// 
+			this.passbutton.BackColor = System.Drawing.Color.LightPink;
+			this.passbutton.Location = new System.Drawing.Point(12, 426);
+			this.passbutton.Name = "passbutton";
+			this.passbutton.Size = new System.Drawing.Size(140, 55);
+			this.passbutton.TabIndex = 6;
+			this.passbutton.Text = "Change Password";
+			this.passbutton.UseVisualStyleBackColor = false;
+			this.passbutton.Click += new System.EventHandler(this.passbutton_Click);
+			// 
 			// Journalist
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Pink;
 			this.ClientSize = new System.Drawing.Size(762, 493);
+			this.Controls.Add(this.passbutton);
 			this.Controls.Add(this.logbutton);
 			this.Controls.Add(this.requestbutton);
 			this.Controls.Add(this.postbutton);
@@ -102,5 +115,6 @@
 		private System.Windows.Forms.Button postbutton;
 		private System.Windows.Forms.Button requestbutton;
 		private System.Windows.Forms.Button logbutton;
+		private System.Windows.Forms.Button passbutton;
 	}
 }

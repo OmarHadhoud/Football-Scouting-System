@@ -110,5 +110,12 @@ namespace Football_Scouting_System.Club
 		{
 			this.Close();
 		}
+
+		private void passbutton_Click(object sender, EventArgs e)
+		{
+			changeclubpass C = new changeclubpass(this,clubID);
+			this.Hide();
+			C.Show();
+		}
 	}
 }

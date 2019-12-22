@@ -90,11 +90,13 @@
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.feebox);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "signscout";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "signscout";
-			this.Load += new System.EventHandler(this.signscout_Load);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignScout_FormClosed);
-
+			this.Load += new System.EventHandler(this.signscout_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

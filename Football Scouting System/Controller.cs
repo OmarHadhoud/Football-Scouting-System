@@ -341,6 +341,15 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 
+		public int UpdateClubPassword(int _FA_ID, string _Password)
+		{
+			string StoredProcedureName = StoredProcedures.UpdateclubPassword;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@club", _FA_ID);
+			Parameters.Add("@Password", _Password);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
 		//Scout related functions
 		public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
         {
@@ -757,7 +766,14 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 
-
+		public int UpdatejournalistPassword(int _JID, string _Password)
+		{
+			string StoredProcedureName = StoredProcedures.UpdatejournalistPassword;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@journal", _JID);
+			Parameters.Add("@Password", _Password);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
 		//News
 
 

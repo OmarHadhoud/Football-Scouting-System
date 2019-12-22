@@ -50,7 +50,7 @@ namespace Football_Scouting_System
         private void Login(int ID)
         {
             string hashedPass = Football_Scouting_System.Form1.ComputeSha256Hash(passTxtBox.Text);
-            string id = userNameTxtbox.Text;
+			string id = userNameTxtbox.Text;
             //Check FAs
             if(objcontroller.LogInFA(ID,hashedPass)==1)
             {
@@ -67,7 +67,7 @@ namespace Football_Scouting_System
                 
             }
             //Check Clubs
-            else if(objcontroller.LogInClub(ID, "kkkkkkkk") == 1)
+            else if(objcontroller.LogInClub(ID, hashedPass) == 1)
             {
                 try
                 {
