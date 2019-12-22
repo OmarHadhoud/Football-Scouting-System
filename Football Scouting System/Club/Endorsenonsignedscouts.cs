@@ -42,7 +42,7 @@ namespace Football_Scouting_System.Club
 		{
 			
 				//MessageBox.Show(Convert.ToString(comboBox1.SelectedValue));
-				controllerobj.Endorsenonsigned(Convert.ToInt32(comboBox1.SelectedValue));
+				//controllerobj.Endorsenonsigned(Convert.ToInt32(comboBox1.SelectedValue));
 				if(Convert.ToString(comboBox1.SelectedValue)=="")
 				{
 					MessageBox.Show("No scouts were chosen!");

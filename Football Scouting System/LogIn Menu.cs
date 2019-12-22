@@ -37,8 +37,15 @@ namespace Football_Scouting_System
 		*/
 		private void LogInBtn_Click(object sender, EventArgs e)
         {
-			int ID =Convert.ToInt32(userNameTxtbox.Text);
-            Login(ID);
+			try
+			{
+				int ID = Convert.ToInt32(userNameTxtbox.Text);
+				Login(ID);
+			}
+			catch
+			{
+				MessageBox.Show("Please enter numbers only in username!");
+			}
         }
 
         private void GuestLogIn_Click(object sender, EventArgs e)

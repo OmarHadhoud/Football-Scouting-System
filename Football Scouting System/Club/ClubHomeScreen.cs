@@ -94,7 +94,7 @@ namespace Football_Scouting_System.Club
 
 		private void Stadiumbutt_Click(object sender, EventArgs e)
 		{
-			Editclubstadium E = new Editclubstadium(this);
+			Releaseplayer E = new Releaseplayer(this,clubID);
 			this.Hide();
 			E.Show();
 		}
@@ -116,6 +116,13 @@ namespace Football_Scouting_System.Club
 			changeclubpass C = new changeclubpass(this,clubID);
 			this.Hide();
 			C.Show();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Releaseplayer R = new Releaseplayer(this,clubID);
+			this.Hide();
+			R.Show();
 		}
 	}
 }
