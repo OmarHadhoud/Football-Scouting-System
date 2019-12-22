@@ -358,6 +358,15 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 
+		public int Deleteplayeroffers(int _REC, int _PID)
+		{
+			string StoredProcedureName = StoredProcedures.removeplayeroffers;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@REC", _REC);
+			Parameters.Add("@PID", _PID);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
 		//Scout related functions
 		public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
         {

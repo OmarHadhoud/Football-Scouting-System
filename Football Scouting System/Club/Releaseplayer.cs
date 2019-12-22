@@ -52,7 +52,9 @@ namespace Football_Scouting_System.Club
 			}
 			else
 			{
-				Controllerobj.ReleasePlayer(Convert.ToInt32(comboBox1.SelectedValue));
+				int pid = Convert.ToInt32(comboBox1.SelectedValue);
+				Controllerobj.ReleasePlayer(pid);
+				Controllerobj.Deleteplayeroffers(ParentclubID, pid);
 				MessageBox.Show("Player is released!");
 				this.Close();
 			}
