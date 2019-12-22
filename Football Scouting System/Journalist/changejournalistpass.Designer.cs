@@ -38,6 +38,7 @@
 			// backbutton
 			// 
 			this.backbutton.BackColor = System.Drawing.Color.OrangeRed;
+			this.backbutton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.backbutton.Location = new System.Drawing.Point(410, 168);
 			this.backbutton.Name = "backbutton";
 			this.backbutton.Size = new System.Drawing.Size(104, 33);
@@ -89,9 +90,11 @@
 			// 
 			// changejournalistpass
 			// 
+			this.AcceptButton = this.button1;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Coral;
+			this.CancelButton = this.backbutton;
 			this.ClientSize = new System.Drawing.Size(532, 210);
 			this.Controls.Add(this.backbutton);
 			this.Controls.Add(this.label2);

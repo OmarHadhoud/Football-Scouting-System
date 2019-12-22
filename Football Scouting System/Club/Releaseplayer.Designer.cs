@@ -68,6 +68,7 @@
 			// button1
 			// 
 			this.button1.BackColor = System.Drawing.Color.SlateBlue;
+			this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.button1.Location = new System.Drawing.Point(306, 105);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(138, 32);
@@ -78,9 +79,11 @@
 			// 
 			// Releaseplayer
 			// 
+			this.AcceptButton = this.releasebutton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.CancelButton = this.button1;
 			this.ClientSize = new System.Drawing.Size(456, 149);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.releasebutton);

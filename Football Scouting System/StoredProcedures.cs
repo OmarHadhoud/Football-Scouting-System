@@ -125,7 +125,7 @@ namespace Football_Scouting_System
         public static string GetLastIdOfLicenseNumbers = "GetLastIdOfLicenseNumbers";
         public static string GetLastIdOfprofplayers = "GetLastIdOfProfPlayers";
         public static string GetLastIdOFnews = "GetLastIdOFnews";
-        public static string GetLastIdOFarticless = "GetLastIdOFarticles";
+        public static string GetLastIdOFarticless = "GetLastIdOFarticless";
 
 
 

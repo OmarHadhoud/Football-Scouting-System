@@ -113,6 +113,7 @@
 			// LogoutButt
 			// 
 			this.LogoutButt.BackColor = System.Drawing.Color.DarkSeaGreen;
+			this.LogoutButt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.LogoutButt.Location = new System.Drawing.Point(509, 415);
 			this.LogoutButt.Name = "LogoutButt";
 			this.LogoutButt.Size = new System.Drawing.Size(241, 60);
@@ -147,6 +148,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGreen;
+			this.CancelButton = this.LogoutButt;
 			this.ClientSize = new System.Drawing.Size(762, 493);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.passbutton);

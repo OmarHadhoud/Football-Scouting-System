@@ -142,6 +142,7 @@
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.Blue;
+			this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.button2.Location = new System.Drawing.Point(620, 432);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(130, 49);
@@ -152,9 +153,11 @@
 			// 
 			// Recievedoffers
 			// 
+			this.AcceptButton = this.acceptbutton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkBlue;
+			this.CancelButton = this.button2;
 			this.ClientSize = new System.Drawing.Size(762, 493);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.rejectbutton);

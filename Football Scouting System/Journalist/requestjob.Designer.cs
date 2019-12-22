@@ -30,14 +30,14 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.scouting_SystemDataSet1 = new Football_Scouting_System.Scouting_SystemDataSet1();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.scouting_SystemDataSet1 = new Football_Scouting_System.Scouting_SystemDataSet1();
-			this.clubBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.clubTableAdapter = new Football_Scouting_System.Scouting_SystemDataSet1TableAdapters.ClubTableAdapter();
-			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// comboBox1
@@ -51,6 +51,16 @@
 			this.comboBox1.Size = new System.Drawing.Size(270, 24);
 			this.comboBox1.TabIndex = 0;
 			this.comboBox1.ValueMember = "CID";
+			// 
+			// clubBindingSource
+			// 
+			this.clubBindingSource.DataMember = "Club";
+			this.clubBindingSource.DataSource = this.scouting_SystemDataSet1;
+			// 
+			// scouting_SystemDataSet1
+			// 
+			this.scouting_SystemDataSet1.DataSetName = "Scouting_SystemDataSet1";
+			this.scouting_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// label1
 			// 
@@ -76,6 +86,7 @@
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.IndianRed;
+			this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.button2.Location = new System.Drawing.Point(327, 129);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(135, 30);
@@ -84,25 +95,17 @@
 			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// scouting_SystemDataSet1
-			// 
-			this.scouting_SystemDataSet1.DataSetName = "Scouting_SystemDataSet1";
-			this.scouting_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// clubBindingSource
-			// 
-			this.clubBindingSource.DataMember = "Club";
-			this.clubBindingSource.DataSource = this.scouting_SystemDataSet1;
-			// 
 			// clubTableAdapter
 			// 
 			this.clubTableAdapter.ClearBeforeFill = true;
 			// 
 			// requestjob
 			// 
+			this.AcceptButton = this.button1;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Firebrick;
+			this.CancelButton = this.button2;
 			this.ClientSize = new System.Drawing.Size(474, 171);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
@@ -115,8 +118,8 @@
 			this.Text = "requestjob";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.requestForm_FormClosed);
 			this.Load += new System.EventHandler(this.requestjob_Load);
-			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.clubBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

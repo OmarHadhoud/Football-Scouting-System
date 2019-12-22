@@ -89,5 +89,9 @@ namespace Football_Scouting_System.Journalist
 			
 		}
 
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
