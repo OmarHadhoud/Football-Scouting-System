@@ -26,10 +26,10 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfAgents() + 1;
+                int ID = controllerobj.GetLastIdOfAgents() + 1;
                 string name = nameTxtBox.Text;
                 DateTime Bdate = dateTimePicker1.Value;
-                int LicenseNumber = controllerobj.GetCountOfLicenseNumbers() + 1;
+                int LicenseNumber = controllerobj.GetLastIdOfLicenseNumbers() + 1;
                 controllerobj.AddLicense(LicenseNumber);
                 controllerobj.AddAgent(ID, name, Bdate, LicenseNumber);
                 MessageBox.Show("Agent added!");

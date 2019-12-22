@@ -29,7 +29,8 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOFClubs()+100+1;       
+                int ID = controllerobj.GetLastIdOfClubs()+1;
+                if (ID < 100) ID += 100;
                 if (ID >=2000)
                     throw new System.Exception("You have reached the maximum number of Clubs!");
                 string Name = GetClubName();

@@ -41,10 +41,10 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfCoaches() + 1;
+                int ID = controllerobj.GetLastIdOfCoaches() + 1;
                 string name = nameTxtBox.Text;
                 DateTime Bdate = dateTimePicker1.Value;
-                int LicenseNumber = controllerobj.GetCountOfLicenseNumbers() + 1;
+                int LicenseNumber = controllerobj.GetLastIdOfLicenseNumbers() + 1;
                 controllerobj.AddLicense(LicenseNumber);
                 int clubId = Convert.ToInt32(clbComboBox.SelectedValue);
                 if (clbComboBox.SelectedValue == null) clubId = -1;

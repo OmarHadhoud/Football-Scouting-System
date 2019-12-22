@@ -25,7 +25,8 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfJournalists() + 1;
+                int ID = controllerobj.GetLastIdOfJournalists() + 1;
+                if (ID < 7000) ID += 7000;
                 string name = nameTxtBox.Text;
                 DateTime Bdate = dateTimePicker1.Value;
                 string pass = GetPass();

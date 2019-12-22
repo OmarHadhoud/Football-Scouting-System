@@ -29,10 +29,11 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfScouts() + 1;
+                int ID = controllerobj.GetLastIdOfScouts() + 1;
+                if (ID < 2000) ID += 2000;
                 string name = nameTxtBox.Text;
                 DateTime Bdate = dateTimePicker1.Value;
-                int LicenseNumber = controllerobj.GetCountOfLicenseNumbers() + 1;
+                int LicenseNumber = controllerobj.GetLastIdOfLicenseNumbers() + 1;
                 controllerobj.AddLicense(LicenseNumber);
                 int clubId = Convert.ToInt32(clbComboBox.SelectedValue);
                 string pass = GetPass();

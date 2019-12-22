@@ -17,6 +17,7 @@ namespace Football_Scouting_System.Guestt
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
+            crystalReportViewer1.RefreshReport();
         }
 
         private void ViewStadiumsForm_FormClosed(object sender, FormClosedEventArgs e)

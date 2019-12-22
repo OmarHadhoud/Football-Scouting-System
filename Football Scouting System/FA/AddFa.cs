@@ -26,7 +26,7 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfFA()+1;
+                int ID = controllerobj.GetLastIdOfFA()+1;
                 if (ID >= 100)
                     throw new System.Exception("You have reached the maximum number of FAs!");
                 string Email = GetFAEmail();
