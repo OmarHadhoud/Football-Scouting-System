@@ -17,11 +17,17 @@ namespace Football_Scouting_System.Guestt
         {
             InitializeComponent();
             ParentForm_ = _ParentForm;
+            crystalReportViewer2.RefreshReport();
         }
 
         private void ViewStadiumsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             ParentForm_.Show();
+        }
+
+        private void ViewStadiumsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

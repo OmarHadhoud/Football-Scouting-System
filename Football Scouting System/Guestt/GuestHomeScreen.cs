@@ -54,7 +54,9 @@ namespace Football_Scouting_System.Guestt
 
         private void leaguesBtn_Click(object sender, EventArgs e)
         {
-
+            ViewLeagueForm vsgv = new ViewLeagueForm(this);
+            this.Hide();
+            vsgv.Show();
         }
 
         private void playersBtn_Click(object sender, EventArgs e)

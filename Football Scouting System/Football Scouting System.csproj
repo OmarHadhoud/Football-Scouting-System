@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -257,11 +257,23 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
+    <Compile Include="Guestt\ViewLeagues.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewLeagues.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Guestt\ViewClubs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guestt\ViewClubs.Designer.cs">
       <DependentUpon>ViewClubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guestt\ViewLeagueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestt\ViewLeagueForm.Designer.cs">
+      <DependentUpon>ViewLeagueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Guestt\ViewPlayer.cs">
       <SubType>Form</SubType>
@@ -532,8 +544,15 @@
     <EmbeddedResource Include="FA\UpdateLeagueStanding.resx">
       <DependentUpon>UpdateLeagueStanding.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewLeagues.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewLeagues.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewClubs.resx">
       <DependentUpon>ViewClubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewLeagueForm.resx">
+      <DependentUpon>ViewLeagueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewPlayer.resx">
       <DependentUpon>ViewPlayer.cs</DependentUpon>
