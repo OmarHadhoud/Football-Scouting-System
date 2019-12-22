@@ -82,7 +82,7 @@ namespace Football_Scouting_System.Club
 		}
 		private int Getpostno() //to be modified with auto-generaton for ids
 		{
-			return Controllerobj.GetCountOfnews();
+			return Controllerobj.GetLastIdOfnews();
 		}
 
 		private void button2_Click(object sender, EventArgs e)

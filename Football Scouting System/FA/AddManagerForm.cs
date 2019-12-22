@@ -30,7 +30,7 @@ namespace Football_Scouting_System.FA
         {
             try
             {
-                int ID = controllerobj.GetCountOfManagers() + 1;
+                int ID = controllerobj.GetLastIdOfManagers() + 1;
                 string name = nameTxtBox.Text;
                 string Nationality = GetManagerNationality();
                 DateTime Bdate = dateTimePicker1.Value;

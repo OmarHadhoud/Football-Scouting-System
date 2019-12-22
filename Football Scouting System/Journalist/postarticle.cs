@@ -84,7 +84,7 @@ namespace Football_Scouting_System.Journalist
 		private int Getpostno() //to be modified with auto-generaton for ids
 		{
 
-			int id = controllerobj.GetCountOfarticles() + 1;
+			int id = controllerobj.GetLastIdOfarticles() + 1;
 			return id;
 			
 		}

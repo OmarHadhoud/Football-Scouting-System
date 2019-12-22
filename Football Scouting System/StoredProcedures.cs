@@ -112,12 +112,25 @@ namespace Football_Scouting_System
 		public static string GetCountOFnews = "GetCountOFnews";
 		public static string GetCountOFarticless = "GetCountOFarticles";
 
+
+        //ID related functions
 		public static string GetLastID = "GetLastID";
+        public static string GetLastIdOfScouts = "GetLastIdOfScouts";
+        public static string GetLastIdOfJournalists = "GetLastIdOfJournalists";
+        public static string GetLastIdOfFA = "GetLastIdOfFA";
+        public static string GetLastIdOfCoaches = "GetLastIdOfCoaches";
+        public static string GetLastIdOFClubs = "GetLastIdOFClubs";
+        public static string GetLastIdOfAgents = "GetLastIdOfAgents";
+        public static string GetLastIdOfManagers = "GetLastIdOfManagers";
+        public static string GetLastIdOfLicenseNumbers = "GetLastIdOfLicenseNumbers";
+        public static string GetLastIdOfprofplayers = "GetLastIdOfProfPlayers";
+        public static string GetLastIdOFnews = "GetLastIdOFnews";
+        public static string GetLastIdOFarticless = "GetLastIdOFarticles";
 
 
 
-		//Player related procedures
-		public static string InsertPlayer = "Addplayer";
+        //Player related procedures
+        public static string InsertPlayer = "Addplayer";
 		public static string InsertYouthPlayer = "AddYouthplayer";
 
 		public static string GetPlayerclub = "Getplayerclubid";

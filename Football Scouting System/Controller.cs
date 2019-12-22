@@ -753,9 +753,77 @@ namespace Football_Scouting_System
 			return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
 		}
 
+
+        //Id functions
         public int GetLastID()
         {
             string StoredProcedureName = StoredProcedures.GetLastID;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfScouts()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfScouts;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfJournalists()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfJournalists;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfFA()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfFA;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfCoaches()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfCoaches;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfClubs()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOFClubs;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfAgents()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfAgents;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfManagers()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfManagers;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfLicenseNumbers()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfLicenseNumbers;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfProfPlayers()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOfprofplayers;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfnews()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOFnews;
+            return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
+        }
+
+        public int GetLastIdOfarticles()
+        {
+            string StoredProcedureName = StoredProcedures.GetLastIdOFarticless;
             return (int)dbMan.ExecuteScalar(StoredProcedureName, null);
         }
 
