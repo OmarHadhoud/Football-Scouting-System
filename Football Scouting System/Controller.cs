@@ -305,6 +305,34 @@ namespace Football_Scouting_System
 			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
 		}
 
+		public DataTable GetAllScouts()
+		{
+			string StoredProcedureName = StoredProcedures.GetAllscouts;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			return dbMan.ExecuteReader(StoredProcedureName, null);
+		}
+
+		public DataTable GetfreeScouts()
+		{
+			string StoredProcedureName = StoredProcedures.Getfreescouts;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			return dbMan.ExecuteReader(StoredProcedureName, null);
+		}
+
+		public int AddScoutOffer(int _clubid, int _efaid, int _scout, DateTime _date, int _fee, int _suggest)
+		{
+
+			string StoredProcedureName = StoredProcedures.Approachfreescout;
+			Dictionary<string, object> Parameters = new Dictionary<string, object>();
+			Parameters.Add("@clubid", _clubid);
+			Parameters.Add("@efaid", _efaid);
+			Parameters.Add("@scoutid", _scout);
+			Parameters.Add("@feein", _fee);
+			Parameters.Add("@datein", _date);
+			Parameters.Add("@suggest", _suggest);
+			return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+		}
+
 		//Scout related functions
 		public DataTable Order_search_PlayerForScouts(int order, string NameKeyWord,int dir)
         {

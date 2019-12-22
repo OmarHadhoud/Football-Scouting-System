@@ -39,13 +39,18 @@ namespace Football_Scouting_System
 		public static string DeleteC2EOffer = "DeleteC2EOffer";
 		public static string approveC2EOffer = "approveC2EOffer";
 		public static string approveC2COffer = "approveC2COffer";
+		public static string GetAllscouts = "GetAllscouts";
+		public static string Approachfreescout = "Approachfreescout";
+		
+		public static string Getfreescouts = "Getfreescouts";
+
 
 
 
 
 
 		//Staff related
-        public static string GetClubNews = "GetClubNews";
+		public static string GetClubNews = "GetClubNews";
 
 
         

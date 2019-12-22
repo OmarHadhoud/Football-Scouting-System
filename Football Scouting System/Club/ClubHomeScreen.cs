@@ -49,7 +49,7 @@ namespace Football_Scouting_System.Club
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			Signstaff S = new Signstaff(this);
+			Signstaff S = new Signstaff(this,efa,clubID);
 			this.Hide();
 			S.Show();
 		}

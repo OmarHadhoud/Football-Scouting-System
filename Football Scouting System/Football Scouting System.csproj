@@ -133,6 +133,12 @@
     <Compile Include="Club\Signnonfreeplayer.Designer.cs">
       <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Club\signscout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\signscout.Designer.cs">
+      <DependentUpon>signscout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club\Signstaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -444,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signnonfreeplayer.resx">
       <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\signscout.resx">
+      <DependentUpon>signscout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>

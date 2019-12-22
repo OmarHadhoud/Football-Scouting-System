@@ -67,7 +67,7 @@ namespace Football_Scouting_System
                 
             }
             //Check Clubs
-            else if(objcontroller.LogInClub(ID, hashedPass) == 1)
+            else if(objcontroller.LogInClub(ID, "kkkkkkkk") == 1)
             {
                 try
                 {
