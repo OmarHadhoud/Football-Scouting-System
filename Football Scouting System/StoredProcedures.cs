@@ -45,8 +45,9 @@ namespace Football_Scouting_System
 		
 		public static string Getfreescouts = "Getfreescouts";
 		public static string UpdateclubPassword = "UpdateclubPassword";
+		public static string Releaseplayer = "Releaseplayer";
 
-		
+
 
 
 

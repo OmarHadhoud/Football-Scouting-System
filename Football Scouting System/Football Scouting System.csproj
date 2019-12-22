@@ -91,11 +91,11 @@
     <Compile Include="Club\ClubHomeScreen.Designer.cs">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Editclubstadium.cs">
+    <Compile Include="Club\Releaseplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Editclubstadium.Designer.cs">
-      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    <Compile Include="Club\Releaseplayer.Designer.cs">
+      <DependentUpon>Releaseplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Endorsenonsignedscouts.cs">
       <SubType>Form</SubType>
@@ -463,8 +463,8 @@
     <EmbeddedResource Include="Club\ClubHomeScreen.resx">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Editclubstadium.resx">
-      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Releaseplayer.resx">
+      <DependentUpon>Releaseplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Endorsenonsignedscouts.resx">
       <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>

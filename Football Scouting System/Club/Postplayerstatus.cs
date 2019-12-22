@@ -46,7 +46,7 @@ namespace Football_Scouting_System.Club
 				{
 				string stat = GetPLAYERSTATUS();
 
-				Controllerobj.UpdateStatus(stat,Convert.ToInt32(comboBox1.SelectedValue));
+					Controllerobj.UpdateStatus(stat,Convert.ToInt32(comboBox1.SelectedValue));
 					MessageBox.Show("Status updated!");
 					this.Close();
 				}
