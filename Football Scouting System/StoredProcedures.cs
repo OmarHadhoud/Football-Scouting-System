@@ -17,6 +17,7 @@ namespace Football_Scouting_System
         public static string GetFreeScoutsOffers = "GetFreeScoutsOffers";
         public static string DeleteC2EPOffer = "DeleteC2EPOffer";
         public static string DeleteC2ESOffer = "DeleteC2ESOffer";
+        public static string UpdateLeagueStanding = "UpdateLeagueStanding";
         
         //League related procedures
         public static string InsertLeague = "insertLeague";

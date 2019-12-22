@@ -107,7 +107,15 @@ namespace Football_Scouting_System
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
-
+        public int UpdateLeagueStanding(int _FA_ID, string _LeagueName, string _Standing)
+        {
+            string StoredProcedureName = StoredProcedures.UpdateLeagueStanding;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@FAID", _FA_ID);
+            Parameters.Add("@LeagueName", _LeagueName);
+            Parameters.Add("@Stnding", _Standing);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
         //League related functions
         public int insertLeague(int _FA_ID, string _Name)
