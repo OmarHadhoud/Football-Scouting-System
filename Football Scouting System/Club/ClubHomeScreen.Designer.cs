@@ -36,6 +36,8 @@
 			this.Transfersbutton = new System.Windows.Forms.Button();
 			this.button8 = new System.Windows.Forms.Button();
 			this.LogoutButt = new System.Windows.Forms.Button();
+			this.passbutton = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -54,7 +56,7 @@
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(241, 110);
 			this.button3.TabIndex = 2;
-			this.button3.Text = "Sign Staff\r\n(Coach/Scout/Agent)\r\n";
+			this.button3.Text = "Sign Staff\r\n";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
@@ -111,13 +113,34 @@
 			// LogoutButt
 			// 
 			this.LogoutButt.BackColor = System.Drawing.Color.DarkSeaGreen;
-			this.LogoutButt.Location = new System.Drawing.Point(444, 415);
+			this.LogoutButt.Location = new System.Drawing.Point(509, 415);
 			this.LogoutButt.Name = "LogoutButt";
-			this.LogoutButt.Size = new System.Drawing.Size(170, 60);
+			this.LogoutButt.Size = new System.Drawing.Size(241, 60);
 			this.LogoutButt.TabIndex = 10;
 			this.LogoutButt.Text = "Logout";
 			this.LogoutButt.UseVisualStyleBackColor = false;
 			this.LogoutButt.Click += new System.EventHandler(this.LogoutButt_Click);
+			// 
+			// passbutton
+			// 
+			this.passbutton.BackColor = System.Drawing.Color.DarkSeaGreen;
+			this.passbutton.Location = new System.Drawing.Point(509, 365);
+			this.passbutton.Name = "passbutton";
+			this.passbutton.Size = new System.Drawing.Size(241, 44);
+			this.passbutton.TabIndex = 11;
+			this.passbutton.Text = "Change Password";
+			this.passbutton.UseVisualStyleBackColor = false;
+			this.passbutton.Click += new System.EventHandler(this.passbutton_Click);
+			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(373, 365);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(130, 110);
+			this.button2.TabIndex = 12;
+			this.button2.Text = "Release a player";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// ClubHomeScreen
 			// 
@@ -125,6 +148,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGreen;
 			this.ClientSize = new System.Drawing.Size(762, 493);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.passbutton);
 			this.Controls.Add(this.LogoutButt);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.Transfersbutton);
@@ -155,5 +180,7 @@
 		private System.Windows.Forms.Button Transfersbutton;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.Button LogoutButt;
+		private System.Windows.Forms.Button passbutton;
+		private System.Windows.Forms.Button button2;
 	}
 }

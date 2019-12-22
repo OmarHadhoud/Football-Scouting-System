@@ -116,5 +116,9 @@ namespace Football_Scouting_System.FA
             ParentForm_.Show();
         }
 
-    }
+		private void AddClubForm_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

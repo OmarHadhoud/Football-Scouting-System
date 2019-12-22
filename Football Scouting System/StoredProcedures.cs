@@ -40,13 +40,21 @@ namespace Football_Scouting_System
 		public static string DeleteC2EOffer = "DeleteC2EOffer";
 		public static string approveC2EOffer = "approveC2EOffer";
 		public static string approveC2COffer = "approveC2COffer";
+		public static string GetAllscouts = "GetAllscouts";
+		public static string Approachfreescout = "Approachfreescout";
+		
+		public static string Getfreescouts = "Getfreescouts";
+		public static string UpdateclubPassword = "UpdateclubPassword";
+		public static string Releaseplayer = "Releaseplayer";
+
+
 
 
 
 
 
 		//Staff related
-        public static string GetClubNews = "GetClubNews";
+		public static string GetClubNews = "GetClubNews";
 
 
         
@@ -135,8 +143,11 @@ namespace Football_Scouting_System
 		//Journalist
 		public static string InsertArticless = "insertarticles";
 		public static string Journalistrequest = "addjournalisttoclub";
+		public static string UpdatejournalistPassword = "UpdatejournalistPassword";
 
 		
+
+
 
 
 

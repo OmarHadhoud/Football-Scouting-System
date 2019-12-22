@@ -44,5 +44,10 @@ namespace Football_Scouting_System.Scout
         {
             this.Close();
         }
-    }
+
+		private void MatchRLbl_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

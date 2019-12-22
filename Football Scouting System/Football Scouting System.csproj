@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -67,6 +67,12 @@
     <Compile Include="Club\AddPlayer.Designer.cs">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Club\changeclubpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\changeclubpass.Designer.cs">
+      <DependentUpon>changeclubpass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Club\Recievedoffers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,11 @@
     <Compile Include="Club\ClubHomeScreen.Designer.cs">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club\Editclubstadium.cs">
+    <Compile Include="Club\Releaseplayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Club\Editclubstadium.Designer.cs">
-      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    <Compile Include="Club\Releaseplayer.Designer.cs">
+      <DependentUpon>Releaseplayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Endorsenonsignedscouts.cs">
       <SubType>Form</SubType>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="Club\Signnonfreeplayer.Designer.cs">
       <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club\signscout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club\signscout.Designer.cs">
+      <DependentUpon>signscout.cs</DependentUpon>
     </Compile>
     <Compile Include="Club\Signstaff.cs">
       <SubType>Form</SubType>
@@ -245,11 +257,23 @@
     </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
+    <Compile Include="Guestt\ViewLeagues.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewLeagues.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Guestt\ViewClubs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guestt\ViewClubs.Designer.cs">
       <DependentUpon>ViewClubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guestt\ViewLeagueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestt\ViewLeagueForm.Designer.cs">
+      <DependentUpon>ViewLeagueForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Guestt\ViewPlayer.cs">
       <SubType>Form</SubType>
@@ -268,6 +292,12 @@
     </Compile>
     <Compile Include="Guestt\ViewStadiumsForm.Designer.cs">
       <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journalist\changejournalistpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journalist\changejournalistpass.Designer.cs">
+      <DependentUpon>changejournalistpass.cs</DependentUpon>
     </Compile>
     <Compile Include="Journalist\Journalist.cs">
       <SubType>Form</SubType>
@@ -340,6 +370,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Scouting_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Scouting_SystemDataSet2.cs">
+      <DependentUpon>Scouting_SystemDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Scouting_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -418,6 +451,9 @@
     <EmbeddedResource Include="Club\AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Club\changeclubpass.resx">
+      <DependentUpon>changeclubpass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Club\Recievedoffers.resx">
       <DependentUpon>Recievedoffers.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,8 +463,8 @@
     <EmbeddedResource Include="Club\ClubHomeScreen.resx">
       <DependentUpon>ClubHomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Club\Editclubstadium.resx">
-      <DependentUpon>Editclubstadium.cs</DependentUpon>
+    <EmbeddedResource Include="Club\Releaseplayer.resx">
+      <DependentUpon>Releaseplayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Endorsenonsignedscouts.resx">
       <DependentUpon>Endorsenonsignedscouts.cs</DependentUpon>
@@ -450,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signnonfreeplayer.resx">
       <DependentUpon>Signnonfreeplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club\signscout.resx">
+      <DependentUpon>signscout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Club\Signstaff.resx">
       <DependentUpon>Signstaff.cs</DependentUpon>
@@ -505,8 +544,15 @@
     <EmbeddedResource Include="FA\UpdateLeagueStanding.resx">
       <DependentUpon>UpdateLeagueStanding.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewLeagues.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewLeagues.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewClubs.resx">
       <DependentUpon>ViewClubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestt\ViewLeagueForm.resx">
+      <DependentUpon>ViewLeagueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewPlayer.resx">
       <DependentUpon>ViewPlayer.cs</DependentUpon>
@@ -517,6 +563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewStadiumsForm.resx">
       <DependentUpon>ViewStadiumsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journalist\changejournalistpass.resx">
+      <DependentUpon>changejournalistpass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Journalist\Journalist.resx">
       <DependentUpon>Journalist.cs</DependentUpon>

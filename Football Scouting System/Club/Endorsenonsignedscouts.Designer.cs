@@ -31,19 +31,21 @@
 			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.getscoutBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.scouting_SystemDataSet2 = new Football_Scouting_System.Scouting_SystemDataSet2();
 			this.scouting_SystemDataSet1 = new Football_Scouting_System.Scouting_SystemDataSet1();
 			this.scoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.scoutTableAdapter = new Football_Scouting_System.Scouting_SystemDataSet1TableAdapters.ScoutTableAdapter();
-			this.scouting_SystemDataSet2 = new Football_Scouting_System.Scouting_SystemDataSet2();
 			this.getscoutBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.getscoutTableAdapter = new Football_Scouting_System.Scouting_SystemDataSet2TableAdapters.getscoutTableAdapter();
-			this.getscoutBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.button1 = new System.Windows.Forms.Button();
+			this.getscoutBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.scoutBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -59,7 +61,7 @@
 			// 
 			// comboBox1
 			// 
-			this.comboBox1.DataSource = this.getscoutBindingSource1;
+			this.comboBox1.DataSource = this.getscoutBindingSource2;
 			this.comboBox1.DisplayMember = "Name";
 			this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboBox1.FormattingEnabled = true;
@@ -68,6 +70,16 @@
 			this.comboBox1.Size = new System.Drawing.Size(161, 24);
 			this.comboBox1.TabIndex = 1;
 			this.comboBox1.ValueMember = "SID";
+			// 
+			// getscoutBindingSource1
+			// 
+			this.getscoutBindingSource1.DataMember = "getscout";
+			this.getscoutBindingSource1.DataSource = this.scouting_SystemDataSet2;
+			// 
+			// scouting_SystemDataSet2
+			// 
+			this.scouting_SystemDataSet2.DataSetName = "Scouting_SystemDataSet2";
+			this.scouting_SystemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
 			// 
 			// scouting_SystemDataSet1
 			// 
@@ -83,11 +95,6 @@
 			// 
 			this.scoutTableAdapter.ClearBeforeFill = true;
 			// 
-			// scouting_SystemDataSet2
-			// 
-			this.scouting_SystemDataSet2.DataSetName = "Scouting_SystemDataSet2";
-			this.scouting_SystemDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
 			// getscoutBindingSource
 			// 
 			this.getscoutBindingSource.DataMember = "getscout";
@@ -96,11 +103,6 @@
 			// getscoutTableAdapter
 			// 
 			this.getscoutTableAdapter.ClearBeforeFill = true;
-			// 
-			// getscoutBindingSource1
-			// 
-			this.getscoutBindingSource1.DataMember = "getscout";
-			this.getscoutBindingSource1.DataSource = this.scouting_SystemDataSet2;
 			// 
 			// button1
 			// 
@@ -113,6 +115,11 @@
 			this.button1.Text = "Endorse";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// getscoutBindingSource2
+			// 
+			this.getscoutBindingSource2.DataMember = "getscout";
+			this.getscoutBindingSource2.DataSource = this.scouting_SystemDataSet2;
 			// 
 			// Endorsenonsignedscouts
 			// 
@@ -130,11 +137,12 @@
 			this.Text = "Endorse non-signed scouts";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EndorsenonsignedscoutsForm_FormClosed);
 			this.Load += new System.EventHandler(this.Endorsenonsignedscouts_Load);
+			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.scoutBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.scouting_SystemDataSet2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.getscoutBindingSource2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -152,5 +160,6 @@
 		private Scouting_SystemDataSet2TableAdapters.getscoutTableAdapter getscoutTableAdapter;
 		private System.Windows.Forms.BindingSource getscoutBindingSource1;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.BindingSource getscoutBindingSource2;
 	}
 }

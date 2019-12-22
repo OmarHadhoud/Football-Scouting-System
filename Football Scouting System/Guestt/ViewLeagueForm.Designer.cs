@@ -1,6 +1,6 @@
 ﻿namespace Football_Scouting_System.Guestt
 {
-    partial class ViewScoutGuestView
+    partial class ViewLeagueForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ScoutGuest1 = new Football_Scouting_System.Guestt.ScoutGuest();
+            this.ViewLeagues1 = new Football_Scouting_System.Guestt.ViewLeagues();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -39,22 +39,20 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.ScoutGuest1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(600, 366);
+            this.crystalReportViewer1.ReportSource = this.ViewLeagues1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelWidth = 150;
             // 
-            // ViewScoutGuestView
+            // ViewLeagueForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ViewScoutGuestView";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewScoutGuestView_FormClosed);
+            this.Name = "ViewLeagueForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ViewLeagueForm_FormClosed);
+            this.Load += new System.EventHandler(this.ViewLeagueForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -62,6 +60,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private ScoutGuest ScoutGuest1;
+        private ViewLeagues ViewLeagues1;
     }
 }

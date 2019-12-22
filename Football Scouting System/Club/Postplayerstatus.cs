@@ -41,11 +41,12 @@ namespace Football_Scouting_System.Club
 
 		private void updatestatbutton_Click(object sender, EventArgs e)
 		{
+			
 				try
 				{
 				string stat = GetPLAYERSTATUS();
 
-				Controllerobj.UpdateStatus(stat,Convert.ToInt32(comboBox1.SelectedValue));
+					Controllerobj.UpdateStatus(stat,Convert.ToInt32(comboBox1.SelectedValue));
 					MessageBox.Show("Status updated!");
 					this.Close();
 				}
@@ -61,14 +62,19 @@ namespace Football_Scouting_System.Club
 			comboBox1.DataSource = playerstab;
 			comboBox1.DisplayMember = "Fname";
 			comboBox1.ValueMember = "PID";
-			comboBox1.SelectedItem = null;
+			//comboBox1.SelectedItem = null;
 		}
 		private string GetPLAYERSTATUS()
 		{
-			string status = statustext.Text;
-			if (status == "")
-				throw new System.Exception("Please enter the player status!");
-			return status;
+			string Name = statustext.Text;
+			if (Name == "")
+				throw new System.Exception("Please enter the player's status!");
+			for (int i = 0; i < Name.Length; ++i)
+			{
+				if (Name[i] >= '0' && Name[i] <= '9')
+					throw new System.Exception("Please don't enter numbers in the status!");
+			}
+			return Name;
 		}
 
 		/*private void fillByToolStripButton_Click(object sender, EventArgs e)

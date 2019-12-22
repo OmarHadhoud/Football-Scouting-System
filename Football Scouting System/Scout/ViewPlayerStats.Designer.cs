@@ -164,6 +164,7 @@
 			this.MatchRLbl.Size = new System.Drawing.Size(61, 25);
 			this.MatchRLbl.TabIndex = 23;
 			this.MatchRLbl.Text = "-------";
+			this.MatchRLbl.Click += new System.EventHandler(this.MatchRLbl_Click);
 			// 
 			// label9
 			// 
