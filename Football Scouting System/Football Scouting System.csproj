@@ -243,6 +243,12 @@
     <Compile Include="FA\UpdateFA.Designer.cs">
       <DependentUpon>UpdateFA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FA\UpdateLeagueStanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FA\UpdateLeagueStanding.Designer.cs">
+      <DependentUpon>UpdateLeagueStanding.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralClasses\PlayerAttributes.cs" />
     <Compile Include="GeneralClasses\PlayerStats.cs" />
     <Compile Include="Guestt\ViewClubs.cs">
@@ -504,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FA\UpdateFA.resx">
       <DependentUpon>UpdateFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FA\UpdateLeagueStanding.resx">
+      <DependentUpon>UpdateLeagueStanding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guestt\ViewClubs.resx">
       <DependentUpon>ViewClubs.cs</DependentUpon>

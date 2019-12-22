@@ -108,6 +108,11 @@ namespace Football_Scouting_System.FA
                 addFaBtn.Enabled = false;
         }
 
-        
+        private void updtLegStndBtn_Click(object sender, EventArgs e)
+        {
+            UpdateLeagueStanding uls = new UpdateLeagueStanding(this);
+            this.Hide();
+            uls.Show();
+        }
     }
 }

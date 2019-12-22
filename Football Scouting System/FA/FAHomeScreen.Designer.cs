@@ -38,6 +38,7 @@
             this.AddClubToLeagueBtn = new System.Windows.Forms.Button();
             this.addFaBtn = new System.Windows.Forms.Button();
             this.updtFaBtn = new System.Windows.Forms.Button();
+            this.updtLegStndBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addLeagueBtn
@@ -160,12 +161,23 @@
             this.updtFaBtn.UseVisualStyleBackColor = false;
             this.updtFaBtn.Click += new System.EventHandler(this.updtFaBtn_Click);
             // 
+            // updtLegStndBtn
+            // 
+            this.updtLegStndBtn.Location = new System.Drawing.Point(55, 146);
+            this.updtLegStndBtn.Name = "updtLegStndBtn";
+            this.updtLegStndBtn.Size = new System.Drawing.Size(154, 43);
+            this.updtLegStndBtn.TabIndex = 10;
+            this.updtLegStndBtn.Text = "Update League\'s Standings";
+            this.updtLegStndBtn.UseVisualStyleBackColor = true;
+            this.updtLegStndBtn.Click += new System.EventHandler(this.updtLegStndBtn_Click);
+            // 
             // FAHomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(826, 459);
+            this.Controls.Add(this.updtLegStndBtn);
             this.Controls.Add(this.updtFaBtn);
             this.Controls.Add(this.addFaBtn);
             this.Controls.Add(this.AddClubToLeagueBtn);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Button AddClubToLeagueBtn;
         private System.Windows.Forms.Button addFaBtn;
         private System.Windows.Forms.Button updtFaBtn;
+        private System.Windows.Forms.Button updtLegStndBtn;
     }
 }
