@@ -38,7 +38,7 @@ namespace Football_Scouting_System.Guestt
 
             allJournalistsComboBox.DataSource = Journs;
             allJournalistsComboBox.DisplayMember = "Name";
-            allJournalistsComboBox.ValueMember = "JID";
+            allJournalistsComboBox.ValueMember = "ID";
         }
 
         
@@ -62,9 +62,17 @@ namespace Football_Scouting_System.Guestt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string articletxt = (string)dataGridView1.SelectedRows[0].Cells["Text"].Value;
-            string articletitle = (string)dataGridView1.SelectedRows[0].Cells["Title"].Value;
-            MessageBox.Show(articletxt, articletitle);
+			try
+			{
+				string articletxt = (string)dataGridView1.SelectedRows[0].Cells["Text"].Value;
+				string articletitle = (string)dataGridView1.SelectedRows[0].Cells["Title"].Value;
+				MessageBox.Show(articletxt, articletitle);
+			}
+			catch
+			{
+				MessageBox.Show("Please select an article!");
+			}
+           
         }
     }
 }

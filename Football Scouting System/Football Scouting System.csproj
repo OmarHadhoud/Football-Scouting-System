@@ -359,6 +359,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scouting_SystemDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Scouting_SystemDataSet2.cs">
+      <DependentUpon>Scouting_SystemDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Scouting_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
